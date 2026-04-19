@@ -279,6 +279,7 @@ def info_dados_ficticios():
     """, unsafe_allow_html=True)
 
 def layout_chart(altura=280):
+    """Retorna um dicionário base para o layout do Plotly."""
     return {
         "paper_bgcolor": "rgba(0,0,0,0)",
         "plot_bgcolor": "rgba(248,250,252,0.5)",
@@ -588,7 +589,8 @@ def dash_corretora():
         fig = go.Figure(go.Bar(x=top_clientes.values, y=top_clientes.index, orientation="h",
                                marker_color=VERDE, text=top_clientes.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed", tickfont=dict(color="#1e293b", size=10)))
+        fig.update_layout(**layout_chart(340))
+        fig.update_yaxis(autorange="reversed", tickfont=dict(color="#1e293b", size=10))
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
@@ -683,7 +685,8 @@ def dash_contabil():
         fig = go.Figure(go.Bar(x=top_hon.values, y=top_hon.index, orientation="h",
                                marker_color=VERDE, text=top_hon.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed", tickfont=dict(color="#1e293b", size=10)))
+        fig.update_layout(**layout_chart(340))
+        fig.update_yaxis(autorange="reversed", tickfont=dict(color="#1e293b", size=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with t6:
@@ -751,7 +754,8 @@ def dash_clinica():
         fig = go.Figure(go.Bar(y=top.index, x=top.values, orientation="h",
                                marker_color=VERDE, text=top.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(320), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
+        fig.update_layout(**layout_chart(320))
+        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with t3:
@@ -845,7 +849,8 @@ def dash_barbearia():
                                orientation="h", marker_color=VERDE,
                                text=comissao["Comissao_Barbeiro"], textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(260), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
+        fig.update_layout(**layout_chart(260))
+        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with t2:
@@ -853,7 +858,8 @@ def dash_barbearia():
         fig = go.Figure(go.Bar(y=top_prod.index, x=top_prod.values, orientation="h",
                                marker_color=AZUL, text=top_prod.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(260), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
+        fig.update_layout(**layout_chart(260))
+        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with t3:
@@ -872,7 +878,8 @@ def dash_barbearia():
         freq = realizados["Cliente"].value_counts().reset_index().head(10)
         freq.columns = ["Cliente", "Visitas"]
         fig = px.bar(freq, x="Visitas", y="Cliente", orientation="h", color_discrete_sequence=[VERDE])
-        fig.update_layout(**layout_chart(320), yaxis=dict(autorange="reversed", tickfont=dict(color="#1e293b", size=10)))
+        fig.update_layout(**layout_chart(320))
+        fig.update_yaxis(autorange="reversed", tickfont=dict(color="#1e293b", size=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with t5:
@@ -888,7 +895,8 @@ def dash_barbearia():
         fig = go.Figure(go.Bar(y=serv.index, x=serv.values, orientation="h",
                                marker_color=VERDE, text=serv.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(320), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
+        fig.update_layout(**layout_chart(320))
+        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
