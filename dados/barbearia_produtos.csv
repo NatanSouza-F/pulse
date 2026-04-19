@@ -1,0 +1,392 @@
+﻿Data,Cliente,Produto,Quantidade,Preco_Unitario,Custo_Unitario,Receita_Total,Lucro_Bruto
+2026-04-18,Felipe Correia,Balm pós barba,2,35,15,70,40
+2026-04-18,Bernardo Silva,Kit cuidados com barba,1,120,60,120,60
+2026-04-18,João Paulo,Toalha personalizada,1,25,10,25,15
+2026-04-18,Felipe Correia,Minoxidil,1,90,45,90,45
+2026-04-17,Fernando Castro,Finalizador,1,38,17,38,21
+2026-04-17,Leonardo Gomes,Balm pós barba,1,35,15,35,20
+2026-04-17,Renan Mendes,Shampoo para cabelo,1,40,18,40,22
+2026-04-17,Diego Oliveira,Pomada modeladora,1,45,22,45,23
+2026-04-17,João Paulo,Shampoo para cabelo,1,40,18,40,22
+2026-04-16,Tiago Santos,Finalizador,1,38,17,38,21
+2026-04-16,Matheus Rocha,Toalha personalizada,1,25,10,25,15
+2026-04-16,Igor Moreira,Finalizador,2,38,17,76,42
+2026-04-16,Breno Santos,Shampoo para cabelo,1,40,18,40,22
+2026-04-15,Igor Moreira,Finalizador,2,38,17,76,42
+2026-04-15,Josué Carvalho,Pomada modeladora,1,45,22,45,23
+2026-04-15,Renan Mendes,Balm pós barba,1,35,15,35,20
+2026-04-15,Ricardo Brito,Toalha personalizada,1,25,10,25,15
+2026-04-14,Otávio Guimarães,Toalha personalizada,2,25,10,50,30
+2026-04-14,Cesar Ribeiro,Minoxidil,1,90,45,90,45
+2026-04-14,Murilo Barbosa,Óleo para barba,1,55,28,55,27
+2026-04-14,Renan Mendes,Minoxidil,1,90,45,90,45
+2026-04-14,Samuel Freitas,Pomada modeladora,1,45,22,45,23
+2026-04-14,Thiago Pereira,Finalizador,2,38,17,76,42
+2026-04-13,Yuri Monteiro,Kit cuidados com barba,1,120,60,120,60
+2026-04-13,Daniel Freitas,Balm pós barba,2,35,15,70,40
+2026-04-13,Douglas Souza,Kit cuidados com barba,2,120,60,240,120
+2026-04-13,Vinícius Ramos,Kit cuidados com barba,2,120,60,240,120
+2026-04-13,Gabriel Lima,Óleo para barba,1,55,28,55,27
+2026-04-13,Pedro Henrique,Balm pós barba,1,35,15,35,20
+2026-04-13,Sérgio Lopes,Toalha personalizada,1,25,10,25,15
+2026-04-13,Fábio Duarte,Kit cuidados com barba,1,120,60,120,60
+2026-04-11,Rodrigo Teixeira,Balm pós barba,1,35,15,35,20
+2026-04-11,Josué Carvalho,Óleo para barba,1,55,28,55,27
+2026-04-11,Matheus Rocha,Kit cuidados com barba,1,120,60,120,60
+2026-04-11,Rodrigo Teixeira,Óleo para barba,1,55,28,55,27
+2026-04-11,Rodrigo Teixeira,Toalha personalizada,1,25,10,25,15
+2026-04-11,Fábio Duarte,Toalha personalizada,1,25,10,25,15
+2026-04-11,Douglas Souza,Toalha personalizada,1,25,10,25,15
+2026-04-10,Ricardo Brito,Finalizador,1,38,17,38,21
+2026-04-10,Mateus Vieira,Pomada modeladora,1,45,22,45,23
+2026-04-10,Yuri Monteiro,Toalha personalizada,1,25,10,25,15
+2026-04-09,Diego Oliveira,Pomada modeladora,1,45,22,45,23
+2026-04-09,Thiago Pereira,Shampoo para cabelo,1,40,18,40,22
+2026-04-09,Nicolas Ramos,Balm pós barba,1,35,15,35,20
+2026-04-09,Gabriel Lima,Óleo para barba,1,55,28,55,27
+2026-04-09,Breno Santos,Minoxidil,1,90,45,90,45
+2026-04-09,Renan Mendes,Shampoo para cabelo,2,40,18,80,44
+2026-04-09,Heitor Almeida,Minoxidil,1,90,45,90,45
+2026-04-08,Davi Oliveira,Balm pós barba,1,35,15,35,20
+2026-04-08,Lucas Martins,Minoxidil,1,90,45,90,45
+2026-04-08,Carlos Silva,Óleo para barba,1,55,28,55,27
+2026-04-07,Rafael Almeida,Óleo para barba,1,55,28,55,27
+2026-04-07,Erick Campos,Óleo para barba,1,55,28,55,27
+2026-04-07,Nicolas Ramos,Óleo para barba,2,55,28,110,54
+2026-04-07,Henrique Campos,Óleo para barba,1,55,28,55,27
+2026-04-06,Bruno Ferreira,Finalizador,1,38,17,38,21
+2026-04-06,Vitor Araújo,Balm pós barba,1,35,15,35,20
+2026-04-06,Sérgio Lopes,Shampoo para cabelo,1,40,18,40,22
+2026-04-06,Tiago Santos,Finalizador,1,38,17,38,21
+2026-04-06,Paulo Henrique,Finalizador,1,38,17,38,21
+2026-04-04,Alexandre Batista,Kit cuidados com barba,2,120,60,240,120
+2026-04-04,Miguel Santos,Balm pós barba,2,35,15,70,40
+2026-04-04,Marcelo Costa,Pomada modeladora,2,45,22,90,46
+2026-04-04,Heitor Almeida,Shampoo para cabelo,1,40,18,40,22
+2026-04-04,Paulo Henrique,Óleo para barba,1,55,28,55,27
+2026-04-04,Samuel Freitas,Kit cuidados com barba,2,120,60,240,120
+2026-04-04,Paulo Henrique,Finalizador,1,38,17,38,21
+2026-04-03,Fábio Duarte,Minoxidil,1,90,45,90,45
+2026-04-03,Otávio Guimarães,Shampoo para cabelo,1,40,18,40,22
+2026-04-03,Robson Lima,Pomada modeladora,2,45,22,90,46
+2026-04-03,Douglas Souza,Minoxidil,2,90,45,180,90
+2026-04-03,Arthur Pinto,Balm pós barba,1,35,15,35,20
+2026-04-03,Vitor Araújo,Pomada modeladora,1,45,22,45,23
+2026-04-03,Gabriel Lima,Shampoo para cabelo,1,40,18,40,22
+2026-04-02,André Nascimento,Shampoo para cabelo,1,40,18,40,22
+2026-04-02,Cleber Torres,Kit cuidados com barba,2,120,60,240,120
+2026-04-02,Rodrigo Teixeira,Óleo para barba,1,55,28,55,27
+2026-04-02,Thiago Pereira,Minoxidil,1,90,45,90,45
+2026-04-02,Jefferson Pires,Toalha personalizada,1,25,10,25,15
+2026-04-02,Cesar Ribeiro,Shampoo para cabelo,1,40,18,40,22
+2026-04-01,Enzo Martins,Óleo para barba,1,55,28,55,27
+2026-04-01,Benjamin Costa,Shampoo para cabelo,2,40,18,80,44
+2026-04-01,Marcos Vieira,Toalha personalizada,2,25,10,50,30
+2026-04-01,Davi Oliveira,Shampoo para cabelo,1,40,18,40,22
+2026-04-01,Levi Pereira,Minoxidil,2,90,45,180,90
+2026-03-31,Jefferson Pires,Óleo para barba,1,55,28,55,27
+2026-03-31,Josué Carvalho,Kit cuidados com barba,1,120,60,120,60
+2026-03-31,Caio Rodrigues,Shampoo para cabelo,2,40,18,80,44
+2026-03-31,Luiz Augusto,Óleo para barba,2,55,28,110,54
+2026-03-31,Daniel Freitas,Shampoo para cabelo,2,40,18,80,44
+2026-03-31,Erick Campos,Óleo para barba,1,55,28,55,27
+2026-03-31,Fábio Duarte,Shampoo para cabelo,1,40,18,40,22
+2026-03-30,Felipe Correia,Minoxidil,1,90,45,90,45
+2026-03-30,Fernando Castro,Toalha personalizada,1,25,10,25,15
+2026-03-30,Robson Lima,Minoxidil,1,90,45,90,45
+2026-03-30,Marcelo Costa,Balm pós barba,1,35,15,35,20
+2026-03-28,Thiago Pereira,Óleo para barba,1,55,28,55,27
+2026-03-28,Cleber Torres,Pomada modeladora,1,45,22,45,23
+2026-03-28,Lorenzo Fernandes,Minoxidil,1,90,45,90,45
+2026-03-28,Nicolas Ramos,Pomada modeladora,1,45,22,45,23
+2026-03-27,Enzo Martins,Shampoo para cabelo,2,40,18,80,44
+2026-03-27,Igor Moreira,Minoxidil,1,90,45,90,45
+2026-03-27,Matheus Rocha,Balm pós barba,2,35,15,70,40
+2026-03-27,Anderson Moraes,Shampoo para cabelo,2,40,18,80,44
+2026-03-26,Murilo Barbosa,Finalizador,1,38,17,38,21
+2026-03-26,Josué Carvalho,Pomada modeladora,1,45,22,45,23
+2026-03-26,Rodrigo Teixeira,Finalizador,2,38,17,76,42
+2026-03-26,Jefferson Pires,Shampoo para cabelo,2,40,18,80,44
+2026-03-25,Leonardo Gomes,Toalha personalizada,2,25,10,50,30
+2026-03-25,Otávio Guimarães,Finalizador,1,38,17,38,21
+2026-03-25,João Paulo,Balm pós barba,1,35,15,35,20
+2026-03-25,Felipe Correia,Pomada modeladora,1,45,22,45,23
+2026-03-25,Miguel Santos,Kit cuidados com barba,2,120,60,240,120
+2026-03-24,Heitor Almeida,Balm pós barba,1,35,15,35,20
+2026-03-24,Vinícius Ramos,Balm pós barba,1,35,15,35,20
+2026-03-24,Natan Rocha,Shampoo para cabelo,1,40,18,40,22
+2026-03-24,Ricardo Brito,Minoxidil,2,90,45,180,90
+2026-03-24,Igor Moreira,Finalizador,1,38,17,38,21
+2026-03-23,Eduardo Cardoso,Finalizador,1,38,17,38,21
+2026-03-23,Tiago Santos,Toalha personalizada,1,25,10,25,15
+2026-03-23,Matheus Rocha,Kit cuidados com barba,1,120,60,120,60
+2026-03-23,João Paulo,Balm pós barba,2,35,15,70,40
+2026-03-23,Igor Moreira,Finalizador,2,38,17,76,42
+2026-03-21,Samuel Freitas,Minoxidil,1,90,45,90,45
+2026-03-21,Alexandre Batista,Finalizador,1,38,17,38,21
+2026-03-21,Fábio Duarte,Shampoo para cabelo,1,40,18,40,22
+2026-03-20,Robson Lima,Toalha personalizada,1,25,10,25,15
+2026-03-20,Anderson Moraes,Pomada modeladora,2,45,22,90,46
+2026-03-20,Fábio Duarte,Finalizador,2,38,17,76,42
+2026-03-20,Nicolas Ramos,Toalha personalizada,1,25,10,25,15
+2026-03-20,Murilo Barbosa,Pomada modeladora,1,45,22,45,23
+2026-03-20,Wagner Dias,Minoxidil,2,90,45,180,90
+2026-03-20,Luiz Augusto,Toalha personalizada,1,25,10,25,15
+2026-03-20,Nicolas Ramos,Toalha personalizada,1,25,10,25,15
+2026-03-19,Marcos Vieira,Pomada modeladora,1,45,22,45,23
+2026-03-19,Natan Rocha,Shampoo para cabelo,1,40,18,40,22
+2026-03-19,Cleber Torres,Óleo para barba,1,55,28,55,27
+2026-03-19,Bruno Ferreira,Minoxidil,1,90,45,90,45
+2026-03-19,Yuri Monteiro,Pomada modeladora,2,45,22,90,46
+2026-03-19,Lorenzo Fernandes,Óleo para barba,1,55,28,55,27
+2026-03-18,Pedro Henrique,Finalizador,1,38,17,38,21
+2026-03-18,Cleber Torres,Óleo para barba,1,55,28,55,27
+2026-03-17,Caio Rodrigues,Shampoo para cabelo,1,40,18,40,22
+2026-03-17,Caio Rodrigues,Kit cuidados com barba,1,120,60,120,60
+2026-03-17,Bernardo Silva,Óleo para barba,1,55,28,55,27
+2026-03-17,Rafael Almeida,Toalha personalizada,2,25,10,50,30
+2026-03-16,Fábio Duarte,Shampoo para cabelo,1,40,18,40,22
+2026-03-16,João Paulo,Pomada modeladora,2,45,22,90,46
+2026-03-16,Rodrigo Teixeira,Balm pós barba,1,35,15,35,20
+2026-03-14,Sérgio Lopes,Shampoo para cabelo,2,40,18,80,44
+2026-03-14,Paulo Henrique,Shampoo para cabelo,1,40,18,40,22
+2026-03-14,Murilo Barbosa,Pomada modeladora,1,45,22,45,23
+2026-03-14,Natan Rocha,Balm pós barba,1,35,15,35,20
+2026-03-14,Jefferson Pires,Pomada modeladora,1,45,22,45,23
+2026-03-13,Bruno Ferreira,Balm pós barba,2,35,15,70,40
+2026-03-13,Samuel Freitas,Toalha personalizada,1,25,10,25,15
+2026-03-13,Diego Oliveira,Balm pós barba,1,35,15,35,20
+2026-03-13,Thiago Pereira,Shampoo para cabelo,1,40,18,40,22
+2026-03-13,Leonardo Gomes,Toalha personalizada,1,25,10,25,15
+2026-03-12,Leonardo Gomes,Kit cuidados com barba,1,120,60,120,60
+2026-03-12,Yuri Monteiro,Finalizador,1,38,17,38,21
+2026-03-12,Caio Rodrigues,Óleo para barba,2,55,28,110,54
+2026-03-12,Eduardo Cardoso,Balm pós barba,1,35,15,35,20
+2026-03-11,Daniel Freitas,Óleo para barba,2,55,28,110,54
+2026-03-11,Alexandre Batista,Toalha personalizada,1,25,10,25,15
+2026-03-11,Jefferson Pires,Shampoo para cabelo,1,40,18,40,22
+2026-03-11,Wagner Dias,Óleo para barba,1,55,28,55,27
+2026-03-11,Bruno Ferreira,Finalizador,2,38,17,76,42
+2026-03-11,Rodrigo Teixeira,Óleo para barba,1,55,28,55,27
+2026-03-11,Samuel Freitas,Shampoo para cabelo,1,40,18,40,22
+2026-03-11,Fábio Duarte,Finalizador,1,38,17,38,21
+2026-03-10,Robson Lima,Balm pós barba,1,35,15,35,20
+2026-03-10,Benjamin Costa,Balm pós barba,1,35,15,35,20
+2026-03-10,Cleber Torres,Finalizador,1,38,17,38,21
+2026-03-10,Raphael Nunes,Finalizador,1,38,17,38,21
+2026-03-10,Josué Carvalho,Finalizador,1,38,17,38,21
+2026-03-10,Yuri Monteiro,Finalizador,2,38,17,76,42
+2026-03-09,Matheus Rocha,Pomada modeladora,1,45,22,45,23
+2026-03-09,Otávio Guimarães,Balm pós barba,2,35,15,70,40
+2026-03-09,Rodrigo Teixeira,Minoxidil,2,90,45,180,90
+2026-03-09,Miguel Santos,Pomada modeladora,1,45,22,45,23
+2026-03-07,Miguel Santos,Shampoo para cabelo,1,40,18,40,22
+2026-03-07,Samuel Freitas,Finalizador,1,38,17,38,21
+2026-03-07,Cleber Torres,Minoxidil,1,90,45,90,45
+2026-03-07,Leonardo Gomes,Balm pós barba,2,35,15,70,40
+2026-03-07,Levi Pereira,Pomada modeladora,2,45,22,90,46
+2026-03-07,Lucas Martins,Minoxidil,1,90,45,90,45
+2026-03-07,Vinícius Ramos,Toalha personalizada,1,25,10,25,15
+2026-03-07,Miguel Santos,Balm pós barba,1,35,15,35,20
+2026-03-06,Luiz Augusto,Minoxidil,1,90,45,90,45
+2026-03-06,Marcos Vieira,Kit cuidados com barba,1,120,60,120,60
+2026-03-05,Anderson Moraes,Shampoo para cabelo,1,40,18,40,22
+2026-03-05,Pedro Henrique,Pomada modeladora,1,45,22,45,23
+2026-03-05,Luiz Augusto,Pomada modeladora,1,45,22,45,23
+2026-03-05,Thiago Pereira,Balm pós barba,1,35,15,35,20
+2026-03-05,Vitor Araújo,Kit cuidados com barba,1,120,60,120,60
+2026-03-05,Robson Lima,Toalha personalizada,2,25,10,50,30
+2026-03-04,Leonardo Gomes,Toalha personalizada,1,25,10,25,15
+2026-03-04,Vitor Araújo,Óleo para barba,1,55,28,55,27
+2026-03-04,Diego Oliveira,Finalizador,2,38,17,76,42
+2026-03-04,Wagner Dias,Kit cuidados com barba,2,120,60,240,120
+2026-03-04,Cesar Ribeiro,Shampoo para cabelo,1,40,18,40,22
+2026-03-04,Fábio Duarte,Balm pós barba,1,35,15,35,20
+2026-03-04,Nicolas Ramos,Minoxidil,2,90,45,180,90
+2026-03-03,Lorenzo Fernandes,Óleo para barba,1,55,28,55,27
+2026-03-03,Gabriel Lima,Minoxidil,2,90,45,180,90
+2026-03-02,Henrique Campos,Minoxidil,1,90,45,90,45
+2026-03-02,Breno Santos,Finalizador,2,38,17,76,42
+2026-03-02,Jefferson Pires,Óleo para barba,1,55,28,55,27
+2026-03-02,Breno Santos,Balm pós barba,2,35,15,70,40
+2026-03-02,Henrique Campos,Shampoo para cabelo,2,40,18,80,44
+2026-02-28,Robson Lima,Shampoo para cabelo,1,40,18,40,22
+2026-02-28,Vitor Araújo,Óleo para barba,1,55,28,55,27
+2026-02-28,Renan Mendes,Shampoo para cabelo,1,40,18,40,22
+2026-02-28,Leonardo Gomes,Kit cuidados com barba,1,120,60,120,60
+2026-02-28,Erick Campos,Óleo para barba,1,55,28,55,27
+2026-02-28,Rafael Almeida,Toalha personalizada,1,25,10,25,15
+2026-02-28,Arthur Pinto,Shampoo para cabelo,1,40,18,40,22
+2026-02-27,Douglas Souza,Shampoo para cabelo,1,40,18,40,22
+2026-02-27,Sérgio Lopes,Balm pós barba,1,35,15,35,20
+2026-02-27,Miguel Santos,Shampoo para cabelo,2,40,18,80,44
+2026-02-26,Felipe Correia,Shampoo para cabelo,2,40,18,80,44
+2026-02-26,Lorenzo Fernandes,Minoxidil,1,90,45,90,45
+2026-02-26,Marcelo Costa,Finalizador,1,38,17,38,21
+2026-02-26,Carlos Silva,Pomada modeladora,1,45,22,45,23
+2026-02-26,Daniel Freitas,Óleo para barba,1,55,28,55,27
+2026-02-26,Cleber Torres,Pomada modeladora,1,45,22,45,23
+2026-02-26,Benjamin Costa,Pomada modeladora,1,45,22,45,23
+2026-02-26,Pedro Henrique,Óleo para barba,1,55,28,55,27
+2026-02-25,Rodrigo Teixeira,Minoxidil,2,90,45,180,90
+2026-02-25,Marcos Vieira,Finalizador,2,38,17,76,42
+2026-02-25,Lorenzo Fernandes,Shampoo para cabelo,1,40,18,40,22
+2026-02-25,Leonardo Gomes,Shampoo para cabelo,1,40,18,40,22
+2026-02-25,Vitor Araújo,Kit cuidados com barba,1,120,60,120,60
+2026-02-25,Alexandre Batista,Shampoo para cabelo,2,40,18,80,44
+2026-02-25,Gustavo Fonseca,Balm pós barba,1,35,15,35,20
+2026-02-25,Paulo Henrique,Óleo para barba,2,55,28,110,54
+2026-02-24,João Paulo,Óleo para barba,2,55,28,110,54
+2026-02-24,Paulo Henrique,Óleo para barba,1,55,28,55,27
+2026-02-24,Rafael Almeida,Shampoo para cabelo,2,40,18,80,44
+2026-02-24,Henrique Campos,Balm pós barba,1,35,15,35,20
+2026-02-24,Robson Lima,Óleo para barba,1,55,28,55,27
+2026-02-24,Renan Mendes,Minoxidil,1,90,45,90,45
+2026-02-24,Natan Rocha,Finalizador,1,38,17,38,21
+2026-02-23,Gustavo Fonseca,Minoxidil,2,90,45,180,90
+2026-02-23,Jefferson Pires,Balm pós barba,2,35,15,70,40
+2026-02-23,Luiz Augusto,Kit cuidados com barba,1,120,60,120,60
+2026-02-23,Davi Oliveira,Shampoo para cabelo,1,40,18,40,22
+2026-02-23,Robson Lima,Pomada modeladora,1,45,22,45,23
+2026-02-21,Diego Oliveira,Toalha personalizada,1,25,10,25,15
+2026-02-21,Miguel Santos,Kit cuidados com barba,1,120,60,120,60
+2026-02-21,Natan Rocha,Óleo para barba,1,55,28,55,27
+2026-02-21,Cleber Torres,Óleo para barba,1,55,28,55,27
+2026-02-21,Fernando Castro,Minoxidil,1,90,45,90,45
+2026-02-21,Caio Rodrigues,Toalha personalizada,1,25,10,25,15
+2026-02-20,Daniel Freitas,Óleo para barba,1,55,28,55,27
+2026-02-20,Renan Mendes,Toalha personalizada,2,25,10,50,30
+2026-02-20,Robson Lima,Toalha personalizada,2,25,10,50,30
+2026-02-20,Raphael Nunes,Toalha personalizada,1,25,10,25,15
+2026-02-20,Mateus Vieira,Minoxidil,1,90,45,90,45
+2026-02-20,Leonardo Gomes,Minoxidil,1,90,45,90,45
+2026-02-19,Ricardo Brito,Balm pós barba,1,35,15,35,20
+2026-02-19,Erick Campos,Minoxidil,1,90,45,90,45
+2026-02-19,Otávio Guimarães,Finalizador,1,38,17,38,21
+2026-02-19,Samuel Freitas,Finalizador,1,38,17,38,21
+2026-02-19,Josué Carvalho,Óleo para barba,1,55,28,55,27
+2026-02-19,Heitor Almeida,Minoxidil,1,90,45,90,45
+2026-02-19,Leonardo Gomes,Shampoo para cabelo,2,40,18,80,44
+2026-02-18,Rodrigo Teixeira,Finalizador,2,38,17,76,42
+2026-02-18,Tiago Santos,Toalha personalizada,1,25,10,25,15
+2026-02-18,Lorenzo Fernandes,Pomada modeladora,2,45,22,90,46
+2026-02-17,Carlos Silva,Shampoo para cabelo,1,40,18,40,22
+2026-02-17,Anderson Moraes,Toalha personalizada,1,25,10,25,15
+2026-02-17,Henrique Campos,Balm pós barba,1,35,15,35,20
+2026-02-16,Lorenzo Fernandes,Óleo para barba,1,55,28,55,27
+2026-02-16,Ricardo Brito,Óleo para barba,1,55,28,55,27
+2026-02-16,Yuri Monteiro,Toalha personalizada,1,25,10,25,15
+2026-02-16,Caio Rodrigues,Balm pós barba,1,35,15,35,20
+2026-02-16,Rafael Almeida,Kit cuidados com barba,2,120,60,240,120
+2026-02-14,João Paulo,Minoxidil,1,90,45,90,45
+2026-02-14,Matheus Rocha,Kit cuidados com barba,1,120,60,120,60
+2026-02-14,Thiago Pereira,Óleo para barba,2,55,28,110,54
+2026-02-13,João Paulo,Shampoo para cabelo,1,40,18,40,22
+2026-02-13,Nicolas Ramos,Kit cuidados com barba,1,120,60,120,60
+2026-02-13,André Nascimento,Pomada modeladora,1,45,22,45,23
+2026-02-13,Daniel Freitas,Shampoo para cabelo,1,40,18,40,22
+2026-02-12,Enzo Martins,Shampoo para cabelo,2,40,18,80,44
+2026-02-12,Nicolas Ramos,Óleo para barba,1,55,28,55,27
+2026-02-12,Ricardo Brito,Finalizador,2,38,17,76,42
+2026-02-12,Ricardo Brito,Balm pós barba,1,35,15,35,20
+2026-02-12,Alexandre Batista,Balm pós barba,2,35,15,70,40
+2026-02-12,Paulo Henrique,Minoxidil,2,90,45,180,90
+2026-02-11,Sérgio Lopes,Kit cuidados com barba,1,120,60,120,60
+2026-02-11,Igor Moreira,Minoxidil,1,90,45,90,45
+2026-02-11,Henrique Campos,Minoxidil,1,90,45,90,45
+2026-02-11,Breno Santos,Toalha personalizada,1,25,10,25,15
+2026-02-11,Paulo Henrique,Óleo para barba,1,55,28,55,27
+2026-02-11,Vinícius Ramos,Shampoo para cabelo,1,40,18,40,22
+2026-02-11,Lorenzo Fernandes,Shampoo para cabelo,2,40,18,80,44
+2026-02-11,Enzo Martins,Finalizador,1,38,17,38,21
+2026-02-10,Natan Rocha,Pomada modeladora,2,45,22,90,46
+2026-02-10,Nicolas Ramos,Kit cuidados com barba,2,120,60,240,120
+2026-02-09,Vinícius Ramos,Pomada modeladora,1,45,22,45,23
+2026-02-09,João Paulo,Pomada modeladora,2,45,22,90,46
+2026-02-09,Lorenzo Fernandes,Toalha personalizada,2,25,10,50,30
+2026-02-09,Wagner Dias,Pomada modeladora,1,45,22,45,23
+2026-02-07,Mateus Vieira,Finalizador,1,38,17,38,21
+2026-02-07,Renan Mendes,Minoxidil,2,90,45,180,90
+2026-02-07,Enzo Martins,Óleo para barba,1,55,28,55,27
+2026-02-07,Murilo Barbosa,Óleo para barba,1,55,28,55,27
+2026-02-07,Douglas Souza,Pomada modeladora,1,45,22,45,23
+2026-02-07,Douglas Souza,Finalizador,2,38,17,76,42
+2026-02-07,Leonardo Gomes,Kit cuidados com barba,2,120,60,240,120
+2026-02-06,Thiago Pereira,Minoxidil,1,90,45,90,45
+2026-02-06,Heitor Almeida,Óleo para barba,1,55,28,55,27
+2026-02-06,Tiago Santos,Minoxidil,1,90,45,90,45
+2026-02-06,Miguel Santos,Kit cuidados com barba,1,120,60,120,60
+2026-02-06,Mateus Vieira,Óleo para barba,2,55,28,110,54
+2026-02-06,Renan Mendes,Balm pós barba,2,35,15,70,40
+2026-02-06,Renan Mendes,Balm pós barba,2,35,15,70,40
+2026-02-05,Tiago Santos,Finalizador,1,38,17,38,21
+2026-02-05,Heitor Almeida,Balm pós barba,2,35,15,70,40
+2026-02-05,Natan Rocha,Óleo para barba,1,55,28,55,27
+2026-02-05,Gustavo Fonseca,Kit cuidados com barba,1,120,60,120,60
+2026-02-05,Benjamin Costa,Shampoo para cabelo,2,40,18,80,44
+2026-02-04,Wagner Dias,Óleo para barba,2,55,28,110,54
+2026-02-04,Bernardo Silva,Finalizador,1,38,17,38,21
+2026-02-03,Marcelo Costa,Toalha personalizada,1,25,10,25,15
+2026-02-03,Matheus Rocha,Toalha personalizada,1,25,10,25,15
+2026-02-03,Benjamin Costa,Minoxidil,1,90,45,90,45
+2026-02-02,Davi Oliveira,Óleo para barba,2,55,28,110,54
+2026-02-02,Pedro Henrique,Óleo para barba,1,55,28,55,27
+2026-01-31,Enzo Martins,Kit cuidados com barba,1,120,60,120,60
+2026-01-31,Cesar Ribeiro,Balm pós barba,1,35,15,35,20
+2026-01-31,Natan Rocha,Óleo para barba,1,55,28,55,27
+2026-01-31,Miguel Santos,Shampoo para cabelo,2,40,18,80,44
+2026-01-31,Gustavo Fonseca,Óleo para barba,1,55,28,55,27
+2026-01-31,Bernardo Silva,Balm pós barba,1,35,15,35,20
+2026-01-31,João Paulo,Finalizador,1,38,17,38,21
+2026-01-31,João Paulo,Balm pós barba,1,35,15,35,20
+2026-01-30,Yuri Monteiro,Toalha personalizada,1,25,10,25,15
+2026-01-30,Eduardo Cardoso,Finalizador,1,38,17,38,21
+2026-01-29,Alexandre Batista,Óleo para barba,1,55,28,55,27
+2026-01-29,Levi Pereira,Balm pós barba,1,35,15,35,20
+2026-01-28,Natan Rocha,Shampoo para cabelo,1,40,18,40,22
+2026-01-28,Igor Moreira,Toalha personalizada,1,25,10,25,15
+2026-01-28,Miguel Santos,Finalizador,2,38,17,76,42
+2026-01-28,João Paulo,Pomada modeladora,1,45,22,45,23
+2026-01-27,Cleber Torres,Óleo para barba,1,55,28,55,27
+2026-01-27,Lorenzo Fernandes,Finalizador,1,38,17,38,21
+2026-01-27,Bernardo Silva,Balm pós barba,1,35,15,35,20
+2026-01-27,Otávio Guimarães,Shampoo para cabelo,1,40,18,40,22
+2026-01-27,Luiz Augusto,Minoxidil,1,90,45,90,45
+2026-01-27,Murilo Barbosa,Shampoo para cabelo,1,40,18,40,22
+2026-01-26,Diego Oliveira,Toalha personalizada,1,25,10,25,15
+2026-01-26,Felipe Correia,Pomada modeladora,1,45,22,45,23
+2026-01-26,Bernardo Silva,Shampoo para cabelo,1,40,18,40,22
+2026-01-26,João Paulo,Shampoo para cabelo,1,40,18,40,22
+2026-01-24,Enzo Martins,Minoxidil,1,90,45,90,45
+2026-01-24,Leonardo Gomes,Shampoo para cabelo,1,40,18,40,22
+2026-01-24,Breno Santos,Óleo para barba,1,55,28,55,27
+2026-01-24,Anderson Moraes,Finalizador,1,38,17,38,21
+2026-01-24,Bernardo Silva,Toalha personalizada,1,25,10,25,15
+2026-01-24,Caio Rodrigues,Óleo para barba,1,55,28,55,27
+2026-01-24,Heitor Almeida,Shampoo para cabelo,1,40,18,40,22
+2026-01-23,Jefferson Pires,Toalha personalizada,1,25,10,25,15
+2026-01-23,Paulo Henrique,Kit cuidados com barba,2,120,60,240,120
+2026-01-23,Paulo Henrique,Minoxidil,1,90,45,90,45
+2026-01-23,André Nascimento,Toalha personalizada,1,25,10,25,15
+2026-01-23,Igor Moreira,Balm pós barba,1,35,15,35,20
+2026-01-22,João Paulo,Shampoo para cabelo,1,40,18,40,22
+2026-01-22,Breno Santos,Pomada modeladora,1,45,22,45,23
+2026-01-22,Carlos Silva,Shampoo para cabelo,1,40,18,40,22
+2026-01-22,Bernardo Silva,Pomada modeladora,1,45,22,45,23
+2026-01-22,Murilo Barbosa,Pomada modeladora,2,45,22,90,46
+2026-01-22,Lorenzo Fernandes,Toalha personalizada,1,25,10,25,15
+2026-01-22,Wagner Dias,Balm pós barba,2,35,15,70,40
+2026-01-21,Samuel Freitas,Pomada modeladora,2,45,22,90,46
+2026-01-21,Jefferson Pires,Minoxidil,1,90,45,90,45
+2026-01-21,Ricardo Brito,Shampoo para cabelo,2,40,18,80,44
+2026-01-21,Jefferson Pires,Toalha personalizada,1,25,10,25,15
+2026-01-20,Benjamin Costa,Kit cuidados com barba,1,120,60,120,60
+2026-01-20,Jefferson Pires,Balm pós barba,1,35,15,35,20
+2026-01-20,Mateus Vieira,Óleo para barba,2,55,28,110,54
+2026-01-20,Erick Campos,Shampoo para cabelo,1,40,18,40,22
+2026-01-20,Gustavo Fonseca,Balm pós barba,1,35,15,35,20
+2026-01-20,Natan Rocha,Shampoo para cabelo,1,40,18,40,22
+2026-01-19,Fernando Castro,Óleo para barba,2,55,28,110,54
+2026-01-19,Ricardo Brito,Shampoo para cabelo,1,40,18,40,22
+2026-01-19,Eduardo Cardoso,Balm pós barba,1,35,15,35,20
+2026-01-19,Fernando Castro,Toalha personalizada,1,25,10,25,15
