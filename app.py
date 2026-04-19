@@ -4,7 +4,7 @@ O pulso do seu negócio, no seu bolso.
 
 Arquitetura:
   - Tela inicial: escolha do perfil
-  - Dashboard específico por vertical (6+ abas)
+  - Dashboard específico por vertical (5-6 abas)
   - Mobile-first, interativo e com dados realistas
 """
 import streamlit as st
@@ -51,17 +51,11 @@ st.markdown("""
     .block-container { padding: 1rem !important; max-width: 480px !important; }
     h1, h2, h3, h4 { color: #0f172a; letter-spacing: -0.02em; }
 
-    /* ═══ ANIMAÇÃO DE ÍCONES GIRATÓRIOS ═══ */
+    /* ANIMAÇÃO DE ÍCONES GIRATÓRIOS */
     @keyframes float {
         0% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
         50% { transform: translateY(-8px) rotate(8deg); opacity: 1; }
         100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
-    }
-    @keyframes fadeSlide {
-        0% { opacity: 0; transform: translateX(-10px); }
-        20% { opacity: 1; transform: translateX(0); }
-        80% { opacity: 1; transform: translateX(0); }
-        100% { opacity: 0; transform: translateX(10px); }
     }
     .icon-carousel {
         display: flex;
@@ -91,10 +85,6 @@ st.markdown("""
         box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
         transition: all 0.2s;
     }
-    [data-testid="stMetric"]:hover {
-        box-shadow: 0 10px 15px -3px rgba(16,185,129,0.1);
-        transform: translateY(-2px);
-    }
     [data-testid="stMetricLabel"] {
         color: #64748b !important;
         font-size: 0.7rem !important;
@@ -119,11 +109,6 @@ st.markdown("""
         font-size: 0.95rem;
         width: 100%;
         box-shadow: 0 2px 4px rgba(16,185,129,0.2);
-    }
-    .stButton button:hover {
-        background: #059669;
-        transform: translateY(-1px);
-        box-shadow: 0 8px 16px rgba(16,185,129,0.3);
     }
     .stButton button[kind="secondary"] {
         background: #ffffff;
@@ -163,7 +148,7 @@ st.markdown("""
         border: 1px solid #e2e8f0 !important;
     }
 
-    /* Cards e elementos customizados */
+    /* Cards customizados */
     .perfil-card {
         background: #fff;
         border: 1px solid #e2e8f0;
@@ -242,13 +227,9 @@ st.markdown("""
         overflow: hidden;
         box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     }
-
-    /* Melhora visibilidade de textos nos gráficos */
     .plotly .xtick, .plotly .ytick { fill: #1e293b !important; font-weight: 500 !important; }
-    .plotly .legendtext { fill: #1e293b !important; }
 </style>
 
-<!-- Animação de ícones via HTML puro -->
 <div class="icon-carousel">
     <span class="carousel-icon">📊</span>
     <span class="carousel-icon">💚</span>
@@ -327,7 +308,7 @@ def metric_card(label, value, delta, sparkline_data):
 
 
 # ═══════════════════════════════════════════════════════════════
-# GERADORES DE DADOS (COM INFLUÊNCIA DO MÊS/ANO SELECIONADO)
+# GERADORES DE DADOS
 # ═══════════════════════════════════════════════════════════════
 MESES = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
 
@@ -508,7 +489,7 @@ def tela_inicial():
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: CORRETORA DE SEGUROS (6 ABAS)
+# DASHBOARD: CORRETORA (5 ABAS - SEM SEGURADORAS)
 # ═══════════════════════════════════════════════════════════════
 def dash_corretora():
     st.markdown("""
@@ -554,8 +535,8 @@ def dash_corretora():
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    t1, t2, t3, t4, t5, t6 = st.tabs([
-        "📈 Evolução", "🔔 Alertas", "🎯 Mix", "📋 Carteira", "🏆 Top Clientes", "📊 Seguradoras"
+    t1, t2, t3, t4, t5 = st.tabs([
+        "📈 Evolução", "🔔 Alertas", "🎯 Mix", "📋 Carteira", "🏆 Top Clientes"
     ])
 
     with t1:
@@ -608,14 +589,6 @@ def dash_corretora():
                                marker_color=VERDE, text=top_clientes.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
         fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed", tickfont=dict(color="#1e293b", size=10)))
-        st.plotly_chart(fig, use_container_width=True)
-
-    with t6:
-        seg_perf = ativos.groupby("Seguradora").agg({"Comissao_Mensal": "sum", "Cliente": "count"}).reset_index()
-        fig = px.bar(seg_perf, x="Seguradora", y="Comissao_Mensal", color="Cliente",
-                     color_continuous_scale="greens", text="Comissao_Mensal")
-        fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
-        fig.update_layout(**layout_chart(300), coloraxis_showscale=False)
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
@@ -728,7 +701,7 @@ def dash_contabil():
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: CLÍNICA ESTÉTICA (6 ABAS)
+# DASHBOARD: CLÍNICA (6 ABAS)
 # ═══════════════════════════════════════════════════════════════
 def dash_clinica():
     st.markdown("""
@@ -823,7 +796,7 @@ def dash_clinica():
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: BARBEARIA (6 ABAS) – CORRIGIDO
+# DASHBOARD: BARBEARIA (6 ABAS) – TOTALMENTE CORRIGIDO
 # ═══════════════════════════════════════════════════════════════
 def dash_barbearia():
     st.markdown("""
