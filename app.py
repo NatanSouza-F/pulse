@@ -39,7 +39,7 @@ CINZA = "#64748b"
 FUNDO = "#f8fafc"
 
 # ═══════════════════════════════════════════════════════════════
-# CSS GLOBAL – EXPERIÊNCIA MOBILE PREMIUM
+# CSS GLOBAL – EXPERIÊNCIA MOBILE PREMIUM + ANIMAÇÃO
 # ═══════════════════════════════════════════════════════════════
 st.markdown("""
 <style>
@@ -50,6 +50,37 @@ st.markdown("""
     header[data-testid="stHeader"] { background: transparent; height: 0; }
     .block-container { padding: 1rem !important; max-width: 480px !important; }
     h1, h2, h3, h4 { color: #0f172a; letter-spacing: -0.02em; }
+
+    /* ═══ ANIMAÇÃO DE ÍCONES GIRATÓRIOS ═══ */
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+        50% { transform: translateY(-8px) rotate(8deg); opacity: 1; }
+        100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+    }
+    @keyframes fadeSlide {
+        0% { opacity: 0; transform: translateX(-10px); }
+        20% { opacity: 1; transform: translateX(0); }
+        80% { opacity: 1; transform: translateX(0); }
+        100% { opacity: 0; transform: translateX(10px); }
+    }
+    .icon-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 8px;
+        height: 50px;
+        overflow: hidden;
+    }
+    .carousel-icon {
+        font-size: 2.2rem;
+        animation: float 4s ease-in-out infinite;
+        display: inline-block;
+        filter: drop-shadow(0 4px 6px rgba(16,185,129,0.15));
+    }
+    .carousel-icon:nth-child(1) { animation-delay: 0s; }
+    .carousel-icon:nth-child(2) { animation-delay: 1.5s; }
+    .carousel-icon:nth-child(3) { animation-delay: 3s; }
 
     /* KPI Cards */
     [data-testid="stMetric"] {
@@ -148,6 +179,7 @@ st.markdown("""
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
+        margin: 0;
     }
     .demo-badge {
         background: rgba(16,185,129,0.1);
@@ -210,7 +242,19 @@ st.markdown("""
         overflow: hidden;
         box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     }
+
+    /* Melhora visibilidade de textos nos gráficos */
+    .plotly .xtick, .plotly .ytick { fill: #1e293b !important; font-weight: 500 !important; }
+    .plotly .legendtext { fill: #1e293b !important; }
 </style>
+
+<!-- Animação de ícones via HTML puro -->
+<div class="icon-carousel">
+    <span class="carousel-icon">📊</span>
+    <span class="carousel-icon">💚</span>
+    <span class="carousel-icon">🛡️</span>
+    <span class="carousel-icon">💈</span>
+</div>
 """, unsafe_allow_html=True)
 
 
@@ -258,11 +302,11 @@ def layout_chart(altura=280):
         "paper_bgcolor": "rgba(0,0,0,0)",
         "plot_bgcolor": "rgba(248,250,252,0.5)",
         "font": {"family": "Inter", "color": "#0f172a", "size": 11},
-        "xaxis": {"gridcolor": "#e2e8f0", "tickfont": {"color": "#475569"}},
-        "yaxis": {"gridcolor": "#e2e8f0", "tickfont": {"color": "#475569"}},
+        "xaxis": {"gridcolor": "#e2e8f0", "tickfont": {"color": "#1e293b", "size": 10}},
+        "yaxis": {"gridcolor": "#e2e8f0", "tickfont": {"color": "#1e293b", "size": 10}},
         "margin": {"t": 30, "b": 40, "l": 40, "r": 20},
         "height": altura,
-        "hoverlabel": {"bgcolor": "white"},
+        "hoverlabel": {"bgcolor": "white", "font": {"color": "#0f172a"}},
     }
 
 def metric_card(label, value, delta, sparkline_data):
@@ -560,14 +604,16 @@ def dash_corretora():
 
     with t5:
         top_clientes = ativos.groupby("Cliente")["Premio_Anual"].sum().sort_values(ascending=False).head(10)
-        fig = go.Figure(go.Bar(x=top_clientes.values, y=top_clientes.index, orientation="h", marker_color=VERDE))
-        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed"))
+        fig = go.Figure(go.Bar(x=top_clientes.values, y=top_clientes.index, orientation="h",
+                               marker_color=VERDE, text=top_clientes.values, textposition='outside',
+                               texttemplate='%{text:.2s}'))
+        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed", tickfont=dict(color="#1e293b", size=10)))
         st.plotly_chart(fig, use_container_width=True)
 
     with t6:
         seg_perf = ativos.groupby("Seguradora").agg({"Comissao_Mensal": "sum", "Cliente": "count"}).reset_index()
-        fig = px.bar(seg_perf, x="Seguradora", y="Comissao_Mensal", color="Cliente", text="Comissao_Mensal",
-                     color_continuous_scale="greens")
+        fig = px.bar(seg_perf, x="Seguradora", y="Comissao_Mensal", color="Cliente",
+                     color_continuous_scale="greens", text="Comissao_Mensal")
         fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
         fig.update_layout(**layout_chart(300), coloraxis_showscale=False)
         st.plotly_chart(fig, use_container_width=True)
@@ -661,8 +707,10 @@ def dash_contabil():
 
     with t5:
         top_hon = df.groupby("Empresa")["Honorario_Mensal"].sum().sort_values(ascending=False).head(10)
-        fig = go.Figure(go.Bar(x=top_hon.values, y=top_hon.index, orientation="h", marker_color=VERDE))
-        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed"))
+        fig = go.Figure(go.Bar(x=top_hon.values, y=top_hon.index, orientation="h",
+                               marker_color=VERDE, text=top_hon.values, textposition='outside',
+                               texttemplate='%{text:.2s}'))
+        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed", tickfont=dict(color="#1e293b", size=10)))
         st.plotly_chart(fig, use_container_width=True)
 
     with t6:
@@ -727,8 +775,10 @@ def dash_clinica():
 
     with t2:
         top = realizados.groupby("Procedimento")["Valor"].sum().sort_values(ascending=True).tail(6)
-        fig = go.Figure(go.Bar(y=top.index, x=top.values, orientation="h", marker_color=VERDE))
-        fig.update_layout(**layout_chart(320))
+        fig = go.Figure(go.Bar(y=top.index, x=top.values, orientation="h",
+                               marker_color=VERDE, text=top.values, textposition='outside',
+                               texttemplate='%{text:.2s}'))
+        fig.update_layout(**layout_chart(320), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
         st.plotly_chart(fig, use_container_width=True)
 
     with t3:
@@ -773,7 +823,7 @@ def dash_clinica():
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: BARBEARIA (6 ABAS)
+# DASHBOARD: BARBEARIA (6 ABAS) – CORRIGIDO
 # ═══════════════════════════════════════════════════════════════
 def dash_barbearia():
     st.markdown("""
@@ -819,14 +869,18 @@ def dash_barbearia():
     with t1:
         comissao = mes_atual.groupby("Barbeiro")["Comissao_Barbeiro"].sum().reset_index()
         fig = go.Figure(go.Bar(x=comissao["Comissao_Barbeiro"], y=comissao["Barbeiro"],
-                               orientation="h", marker_color=VERDE))
-        fig.update_layout(**layout_chart(260))
+                               orientation="h", marker_color=VERDE,
+                               text=comissao["Comissao_Barbeiro"], textposition='outside',
+                               texttemplate='%{text:.2s}'))
+        fig.update_layout(**layout_chart(260), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
         st.plotly_chart(fig, use_container_width=True)
 
     with t2:
         top_prod = df_prod.groupby("Produto")["Receita_Total"].sum().sort_values(ascending=True).tail(5)
-        fig = go.Figure(go.Bar(y=top_prod.index, x=top_prod.values, orientation="h", marker_color=AZUL))
-        fig.update_layout(**layout_chart(260))
+        fig = go.Figure(go.Bar(y=top_prod.index, x=top_prod.values, orientation="h",
+                               marker_color=AZUL, text=top_prod.values, textposition='outside',
+                               texttemplate='%{text:.2s}'))
+        fig.update_layout(**layout_chart(260), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
         st.plotly_chart(fig, use_container_width=True)
 
     with t3:
@@ -845,7 +899,7 @@ def dash_barbearia():
         freq = realizados["Cliente"].value_counts().reset_index().head(10)
         freq.columns = ["Cliente", "Visitas"]
         fig = px.bar(freq, x="Visitas", y="Cliente", orientation="h", color_discrete_sequence=[VERDE])
-        fig.update_layout(**layout_chart(320), yaxis=dict(autorange="reversed"))
+        fig.update_layout(**layout_chart(320), yaxis=dict(autorange="reversed", tickfont=dict(color="#1e293b", size=10)))
         st.plotly_chart(fig, use_container_width=True)
 
     with t5:
@@ -858,8 +912,10 @@ def dash_barbearia():
 
     with t6:
         serv = realizados.groupby("Servico")["Valor"].sum().sort_values(ascending=True).tail(6)
-        fig = go.Figure(go.Bar(y=serv.index, x=serv.values, orientation="h", marker_color=VERDE))
-        fig.update_layout(**layout_chart(320))
+        fig = go.Figure(go.Bar(y=serv.index, x=serv.values, orientation="h",
+                               marker_color=VERDE, text=serv.values, textposition='outside',
+                               texttemplate='%{text:.2s}'))
+        fig.update_layout(**layout_chart(320), yaxis=dict(tickfont=dict(color="#1e293b", size=10)))
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
