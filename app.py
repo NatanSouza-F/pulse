@@ -24,8 +24,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# WhatsApp do Natan (substituir pelo seu número real)
-WHATSAPP = "5561999999999"
+WHATSAPP = "5561999999999"  # Substitua pelo seu número
 
 # Paleta refinada
 VERDE = "#10b981"
@@ -257,6 +256,7 @@ st.markdown("""
         padding: 12px 14px;
         margin-bottom: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        color: #0f172a;
     }
     .alerta-item.urgente {
         border-left-color: #ef4444;
@@ -289,6 +289,19 @@ st.markdown("""
         overflow: hidden;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
+
+    /* Insight box com texto escuro e legível */
+    .insight-box {
+        background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+        border-radius: 16px;
+        padding: 16px;
+        margin: 16px 0;
+        border: 1px solid #a7f3d0;
+        color: #064e3b;
+    }
+    .insight-box strong {
+        color: #047857;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -303,7 +316,6 @@ if "perfil" not in st.session_state:
 # FUNÇÕES AUXILIARES
 # ═══════════════════════════════════════════════════════════════
 def formatar_brl(valor):
-    """Formata número em R$ brasileiro."""
     return f"R$ {valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 def formatar_inteiro_br(valor):
@@ -341,23 +353,14 @@ def layout_chart(altura=280):
         "paper_bgcolor": "rgba(0,0,0,0)",
         "plot_bgcolor": "rgba(248,250,252,0.5)",
         "font": {"family": "Inter", "color": "#0f172a", "size": 11},
-        "xaxis": {
-            "gridcolor": "#e2e8f0",
-            "linecolor": "#cbd5e1",
-            "tickfont": {"color": "#475569", "size": 10},
-        },
-        "yaxis": {
-            "gridcolor": "#e2e8f0",
-            "linecolor": "#cbd5e1",
-            "tickfont": {"color": "#475569", "size": 10},
-        },
+        "xaxis": {"gridcolor": "#e2e8f0", "linecolor": "#cbd5e1", "tickfont": {"color": "#475569"}},
+        "yaxis": {"gridcolor": "#e2e8f0", "linecolor": "#cbd5e1", "tickfont": {"color": "#475569"}},
         "margin": {"t": 30, "b": 40, "l": 40, "r": 20},
         "height": altura,
         "hoverlabel": {"bgcolor": "white", "font": {"color": "#0f172a"}},
     }
 
 def metric_card(label, value, delta, sparkline_data):
-    """Exibe um KPI com sparkline embutido."""
     cols = st.columns([3, 1])
     with cols[0]:
         st.metric(label=label, value=value, delta=delta)
@@ -373,57 +376,41 @@ def metric_card(label, value, delta, sparkline_data):
         )
         st.plotly_chart(fig_spark, use_container_width=False, config={'displayModeBar': False})
 
-# ═══════════════════════════════════════════════════════════════
-# GERADORES DE DADOS SINTÉTICOS (Substitui os CSVs)
-# ═══════════════════════════════════════════════════════════════
-def gerar_dados_corretora(mes_ref="Jun"):
-    np.random.seed(42)
-    meses_map = {"Jan":1, "Fev":2, "Mar":3, "Abr":4, "Mai":5, "Jun":6,
-                 "Jul":7, "Ago":8, "Set":9, "Out":10, "Nov":11, "Dez":12}
-    mes_num = meses_map.get(mes_ref, 6)
-    base_clientes = 180 + mes_num * 10
 
-    clientes = [f"Cliente {i}" for i in range(1, base_clientes+1)]
+# ═══════════════════════════════════════════════════════════════
+# GERADORES DE DADOS SINTÉTICOS
+# ═══════════════════════════════════════════════════════════════
+def gerar_dados_corretora():
+    np.random.seed(42)
+    meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+    clientes = [f"Cliente {i}" for i in range(1, 251)]
     ramos = ["Auto", "Vida", "Residencial", "Empresarial", "Saúde"]
     seguradoras = ["Porto Seguro", "Bradesco", "SulAmérica", "Allianz", "Mapfre"]
-    status_opts = ["Ativo", "Vencendo", "Cancelado", "Pendente"]
-    pesos_status = [0.7, 0.15, 0.1, 0.05]
 
     dados = []
-    for i, cliente in enumerate(clientes):
-        status = np.random.choice(status_opts, p=pesos_status)
+    for cliente in clientes:
+        status = np.random.choice(["Ativo", "Vencendo", "Cancelado", "Pendente"], p=[0.7, 0.15, 0.1, 0.05])
         ramo = np.random.choice(ramos)
-        premio = np.random.uniform(800, 8000) if ramo != "Vida" else np.random.uniform(200, 2000)
+        premio = np.random.uniform(800, 8000)
         comissao_anual = premio * np.random.uniform(0.05, 0.20)
-        dias_renovacao = np.random.randint(-30, 120) if status == "Ativo" else np.random.randint(-10, 60)
+        dias = np.random.randint(-30, 120)
         dados.append({
-            "Cliente": cliente,
-            "Ramo": ramo,
-            "Seguradora": np.random.choice(seguradoras),
-            "Status": status,
-            "Premio_Anual": round(premio, 2),
-            "Comissao_Anual": round(comissao_anual, 2),
-            "Comissao_Mensal": round(comissao_anual / 12, 2),
-            "Dias_Para_Renovacao": dias_renovacao
+            "Cliente": cliente, "Ramo": ramo, "Seguradora": np.random.choice(seguradoras),
+            "Status": status, "Premio_Anual": round(premio,2),
+            "Comissao_Anual": round(comissao_anual,2),
+            "Comissao_Mensal": round(comissao_anual/12,2),
+            "Dias_Para_Renovacao": dias
         })
     df = pd.DataFrame(dados)
 
-    # Evolução
-    meses_ano = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
     evolucao = []
-    comissao_base = 8000
-    for i, mes in enumerate(meses_ano):
-        sazonal = 1.0 + 0.2 * np.sin((i-3)*np.pi/6)  # pico em Mar/Set
-        tendencia = 1.0 + i*0.03
-        comissao = comissao_base * sazonal * tendencia * np.random.uniform(0.95, 1.05)
+    base = 8000
+    for i, mes in enumerate(meses):
+        comissao = base * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
         novos = int(12 + i*1.5 + np.random.randint(-3,5))
         cancel = int(5 + i*0.3 + np.random.randint(-2,3))
-        evolucao.append({
-            "Mes": mes,
-            "Comissao_Total": round(comissao, 2),
-            "Novos_Contratos": novos,
-            "Cancelamentos": cancel
-        })
+        evolucao.append({"Mes": mes, "Comissao_Total": round(comissao,2),
+                         "Novos_Contratos": novos, "Cancelamentos": cancel})
     df_evo = pd.DataFrame(evolucao)
     return df, df_evo
 
@@ -431,31 +418,26 @@ def gerar_dados_contabil():
     np.random.seed(43)
     empresas = [f"Empresa {i}" for i in range(1, 61)]
     regimes = ["Simples Nacional", "Lucro Presumido", "Lucro Real", "MEI"]
-    status_fech = ["Entregue", "Pendente", "Atrasado"]
-    pesos = [0.6, 0.25, 0.15]
     dados = []
     for emp in empresas:
-        regime = np.random.choice(regimes, p=[0.5, 0.2, 0.1, 0.2])
+        regime = np.random.choice(regimes, p=[0.5,0.2,0.1,0.2])
         honorario = np.random.uniform(400, 3500)
-        status = np.random.choice(status_fech, p=pesos)
-        dias = np.random.randint(-5, 20) if status != "Entregue" else np.random.randint(-30, 0)
+        status = np.random.choice(["Entregue", "Pendente", "Atrasado"], p=[0.6,0.25,0.15])
+        dias = np.random.randint(-5,20) if status != "Entregue" else np.random.randint(-30,0)
         dados.append({
-            "Empresa": emp,
-            "Regime_Tributario": regime,
-            "Honorario_Mensal": round(honorario, 2),
-            "Status_Fechamento": status,
-            "Dias_Para_Entrega": dias,
+            "Empresa": emp, "Regime_Tributario": regime,
+            "Honorario_Mensal": round(honorario,2),
+            "Status_Fechamento": status, "Dias_Para_Entrega": dias,
             "Contato": f"contato{emp[-2:]}@email.com"
         })
     df = pd.DataFrame(dados)
 
     meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
     prod = []
-    horas_base = 120
     for i, mes in enumerate(meses):
-        horas = horas_base * (1 + 0.05*i) * np.random.uniform(0.9, 1.1)
-        receita = 12000 * (1 + 0.03*i) * np.random.uniform(0.95, 1.05)
-        prod.append({"Mes": mes, "Horas_Fechamento": round(horas, 1), "Receita_Honorarios": round(receita, 2)})
+        horas = 120 * (1 + 0.05*i) * np.random.uniform(0.9,1.1)
+        receita = 12000 * (1 + 0.03*i) * np.random.uniform(0.95,1.05)
+        prod.append({"Mes": mes, "Horas_Fechamento": round(horas,1), "Receita_Honorarios": round(receita,2)})
     df_prod = pd.DataFrame(prod)
     return df, df_prod
 
@@ -464,34 +446,25 @@ def gerar_dados_clinica():
     pacientes = [f"Paciente {i}" for i in range(1, 151)]
     procedimentos = ["Limpeza de Pele", "Botox", "Preenchimento", "Massagem", "Depilação a Laser", "Peeling"]
     profissionais = ["Dra. Ana", "Dra. Carla", "Dr. Paulo", "Dra. Fernanda"]
-    status_opts = ["Realizado", "Agendado", "Cancelado"]
-    pesos = [0.7, 0.2, 0.1]
-
     dados = []
     hoje = datetime.now()
     for _ in range(300):
-        data = hoje - timedelta(days=np.random.randint(0, 60))
-        paciente = np.random.choice(pacientes)
-        proc = np.random.choice(procedimentos)
-        prof = np.random.choice(profissionais)
+        data = hoje - timedelta(days=np.random.randint(0,60))
         valor = np.random.uniform(150, 1200)
-        status = np.random.choice(status_opts, p=pesos)
         dados.append({
-            "Data": data,
-            "Paciente": paciente,
-            "Procedimento": proc,
-            "Profissional": prof,
-            "Valor": round(valor, 2),
-            "Status": status,
-            "Forma_Pagamento": np.random.choice(["PIX", "Cartão", "Dinheiro"])
+            "Data": data, "Paciente": np.random.choice(pacientes),
+            "Procedimento": np.random.choice(procedimentos),
+            "Profissional": np.random.choice(profissionais),
+            "Valor": round(valor,2),
+            "Status": np.random.choice(["Realizado","Agendado","Cancelado"], p=[0.7,0.2,0.1]),
+            "Forma_Pagamento": np.random.choice(["PIX","Cartão","Dinheiro"])
         })
     df = pd.DataFrame(dados)
 
-    meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+    meses = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"]
     evo = []
-    rec_base = 28000
     for i, mes in enumerate(meses):
-        rec = rec_base * (1 + 0.03*i) * np.random.uniform(0.9, 1.1)
+        rec = 28000 * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
         ticket = rec / (130 + i*5)
         evo.append({"Mes": mes, "Receita": round(rec,2), "Ticket_Medio": round(ticket,2)})
     df_evo = pd.DataFrame(evo)
@@ -502,62 +475,44 @@ def gerar_dados_barbearia():
     clientes = [f"Cliente {i}" for i in range(1, 201)]
     servicos = ["Corte", "Barba", "Sobrancelha", "Corte + Barba", "Hidratação"]
     barbeiros = ["João", "Pedro", "Lucas", "Mateus", "André"]
-    status_opts = ["Realizado", "Agendado", "Cancelado"]
-    pesos = [0.75, 0.2, 0.05]
-
     dados = []
     hoje = datetime.now()
     for _ in range(500):
-        data = hoje - timedelta(days=np.random.randint(0, 90))
-        cliente = np.random.choice(clientes)
-        serv = np.random.choice(servicos)
-        barb = np.random.choice(barbeiros)
-        valor = np.random.uniform(35, 120)
-        comissao_pct = 0.4 if barb in ["João", "Pedro"] else 0.35
+        data = hoje - timedelta(days=np.random.randint(0,90))
+        valor = np.random.uniform(35,120)
+        comissao_pct = 0.4 if np.random.choice(barbeiros) in ["João","Pedro"] else 0.35
         comissao = valor * comissao_pct
-        gorjeta = np.random.choice([0, 5, 10, 15], p=[0.5, 0.3, 0.15, 0.05])
-        status = np.random.choice(status_opts, p=pesos)
-        telefone = f"1199999{np.random.randint(1000,9999)}"
+        gorjeta = np.random.choice([0,5,10,15], p=[0.5,0.3,0.15,0.05])
         dados.append({
-            "Data": data,
-            "Cliente": cliente,
-            "Servico": serv,
-            "Barbeiro": barb,
-            "Valor": round(valor, 2),
-            "Comissao_Barbeiro": round(comissao, 2),
-            "Gorjeta": gorjeta,
-            "Status": status,
-            "Telefone": telefone
+            "Data": data, "Cliente": np.random.choice(clientes),
+            "Servico": np.random.choice(servicos), "Barbeiro": np.random.choice(barbeiros),
+            "Valor": round(valor,2), "Comissao_Barbeiro": round(comissao,2),
+            "Gorjeta": gorjeta, "Status": np.random.choice(["Realizado","Agendado","Cancelado"], p=[0.75,0.2,0.05]),
+            "Telefone": f"1199999{np.random.randint(1000,9999)}"
         })
     df = pd.DataFrame(dados)
 
-    # Produtos
     produtos = ["Pomada", "Shampoo", "Óleo Barba", "Cera", "Perfume"]
     prod_data = []
     for _ in range(200):
-        data = hoje - timedelta(days=np.random.randint(0, 90))
+        data = hoje - timedelta(days=np.random.randint(0,90))
         prod = np.random.choice(produtos)
-        qtd = np.random.randint(1, 4)
-        preco_unit = np.random.uniform(25, 90)
-        receita = qtd * preco_unit
+        qtd = np.random.randint(1,4)
+        preco = np.random.uniform(25,90)
+        receita = qtd * preco
         lucro = receita * 0.45
         prod_data.append({
-            "Data": data,
-            "Produto": prod,
-            "Quantidade": qtd,
-            "Preco_Unitario": round(preco_unit,2),
-            "Receita_Total": round(receita,2),
+            "Data": data, "Produto": prod, "Quantidade": qtd,
+            "Preco_Unitario": round(preco,2), "Receita_Total": round(receita,2),
             "Lucro_Bruto": round(lucro,2)
         })
     df_prod = pd.DataFrame(prod_data)
 
-    meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+    meses = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"]
     evo = []
-    rec_serv_base = 18000
-    rec_prod_base = 4000
     for i, mes in enumerate(meses):
-        rec_serv = rec_serv_base * (1 + 0.02*i) * np.random.uniform(0.9,1.1)
-        rec_prod = rec_prod_base * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
+        rec_serv = 18000 * (1 + 0.02*i) * np.random.uniform(0.9,1.1)
+        rec_prod = 4000 * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
         atend = int(120 + i*3)
         evo.append({"Mes": mes, "Receita_Servicos": round(rec_serv,2),
                    "Receita_Produtos": round(rec_prod,2), "Atendimentos": atend})
@@ -571,7 +526,6 @@ def gerar_dados_barbearia():
 def tela_inicial():
     st.markdown('<h1 class="pulse-logo">Pulse</h1>', unsafe_allow_html=True)
     st.markdown('<p class="pulse-slogan">O pulso do seu negócio, no seu bolso.</p>', unsafe_allow_html=True)
-
     st.markdown("""
     <p style="text-align: center; color: #475569; font-size: 0.92rem; margin-bottom: 20px;">
         Escolha seu segmento para ver uma demonstração.<br>
@@ -585,7 +539,6 @@ def tela_inicial():
         ("💚", "Sou Clínica Estética", "Agenda, procedimentos, receita e performance dos profissionais.", "clinica"),
         ("💈", "Sou Barbearia", "Agenda, comissão dos barbeiros, venda de produtos e clientes recorrentes.", "barbearia")
     ]
-
     for icon, titulo, desc, perfil in perfis:
         st.markdown(f"""
         <div class="perfil-card">
@@ -614,50 +567,30 @@ def tela_inicial():
 def dash_corretora():
     st.markdown("""
     <div class="dash-header">
-        <div>
-            <div class="dash-title">🛡️ Pulse • Corretora</div>
-            <div class="dash-subtitle">Demo para Corretoras de Seguros</div>
-        </div>
+        <div><div class="dash-title">🛡️ Pulse • Corretora</div><div class="dash-subtitle">Demo para Corretoras de Seguros</div></div>
         <span class="demo-badge">DEMO</span>
     </div>
     """, unsafe_allow_html=True)
 
-    # Filtro de período
-    col1, col2 = st.columns(2)
-    with col1:
-        mes_selecionado = st.selectbox("Mês", ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"], index=5)
-    with col2:
-        ano_selecionado = st.selectbox("Ano", ["2025", "2026"], index=1)
-
-    # Gerar dados baseados no mês (simula filtro real)
-    df, df_evo = gerar_dados_corretora(mes_selecionado)
-
+    df, df_evo = gerar_dados_corretora()
     info_dados_ficticios()
 
-    # Insight contextual
-    st.markdown(f"""
-    <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); 
-                border-radius: 16px; padding: 16px; margin: 16px 0; border: 1px solid #a7f3d0;">
-        <span style="font-size: 1.2rem;">💡</span> 
-        <strong style="font-size: 1rem; color: #064e3b;">Insight de {mes_selecionado}:</strong> 
-        <span style="color: #047857;">
-            Sua taxa de renovação está 8% acima da média. O ticket médio subiu devido ao aumento de apólices de Vida.
-        </span>
-        <div style="margin-top: 8px; font-size: 0.8rem; color: #065f46;">
-            ⚡ Ação: Foco em Auto — concorrência aumentou preços. Oportunidade de cross-sell.
-        </div>
+    st.markdown("""
+    <div class="insight-box">
+        <span style="font-size:1.2rem;">💡</span> 
+        <strong style="font-size:1rem;">Insight do mês:</strong> 
+        Sua taxa de renovação está 8% acima da média. O ticket médio subiu devido ao aumento de apólices de Vida.<br>
+        <span style="font-size:0.8rem;">⚡ Ação: Foco em Auto — concorrência aumentou preços.</span>
     </div>
     """, unsafe_allow_html=True)
 
-    # KPIs com sparklines
     ativos = df[df["Status"] == "Ativo"]
     comissao_mensal = ativos["Comissao_Mensal"].sum()
     renovacoes_30d = df[(df["Dias_Para_Renovacao"] >= 0) & (df["Dias_Para_Renovacao"] <= 30)]
     ticket = comissao_mensal / len(ativos) if len(ativos) > 0 else 0
 
-    # Dados para sparkline (últimos 6 meses da evolução)
     spark_comissao = df_evo["Comissao_Total"].tail(6).tolist()
-    spark_ativos = [len(ativos) + i*2 for i in range(-3,3)]  # simulado
+    spark_ativos = [len(ativos) + i*2 for i in range(-3,3)]
 
     c1, c2 = st.columns(2)
     with c1:
@@ -677,11 +610,9 @@ def dash_corretora():
 
     with t1:
         fig = go.Figure()
-        fig.add_trace(go.Scatter(
-            x=df_evo["Mes"], y=df_evo["Comissao_Total"],
-            mode="lines+markers", line=dict(color=VERDE, width=3),
-            fill="tozeroy", fillcolor="rgba(16,185,129,0.15)",
-        ))
+        fig.add_trace(go.Scatter(x=df_evo["Mes"], y=df_evo["Comissao_Total"],
+                                 mode="lines+markers", line=dict(color=VERDE, width=3),
+                                 fill="tozeroy", fillcolor="rgba(16,185,129,0.15)"))
         fig.update_layout(**layout_chart(280))
         st.plotly_chart(fig, use_container_width=True)
 
@@ -699,7 +630,7 @@ def dash_corretora():
                 urgencia = "urgente" if row["Dias_Para_Renovacao"] <= 7 else ""
                 st.markdown(f"""
                 <div class="alerta-item {urgencia}">
-                    <div style="display: flex; justify-content: space-between;">
+                    <div style="display:flex; justify-content:space-between;">
                         <div><strong>{row['Cliente']}</strong><br><span style="font-size:0.78rem;">{row['Ramo']} • {row['Seguradora']}</span></div>
                         <div style="text-align:right;"><strong style="color:#ef4444;">{int(row['Dias_Para_Renovacao'])} dias</strong><br><span style="font-size:0.78rem;">{formatar_brl(row['Premio_Anual'])}</span></div>
                     </div>
@@ -710,7 +641,8 @@ def dash_corretora():
 
     with t3:
         mix = df[df["Status"]=="Ativo"].groupby("Ramo").size().reset_index(name="total")
-        fig = px.pie(mix, values="total", names="Ramo", hole=0.5, color_discrete_sequence=[VERDE, AZUL, ROXO, AMBAR])
+        fig = px.pie(mix, values="total", names="Ramo", hole=0.5,
+                     color_discrete_sequence=[VERDE, AZUL, ROXO, AMBAR])
         fig.update_traces(textposition="inside", textinfo="percent+label")
         fig.update_layout(**layout_chart(330))
         st.plotly_chart(fig, use_container_width=True)
@@ -720,7 +652,8 @@ def dash_corretora():
         df_view = df.copy()
         if busca:
             df_view = df_view[df_view["Cliente"].str.contains(busca, case=False)]
-        st.dataframe(df_view[["Cliente", "Ramo", "Seguradora", "Status"]].head(20), use_container_width=True, hide_index=True)
+        st.dataframe(df_view[["Cliente", "Ramo", "Seguradora", "Status"]].head(20),
+                     use_container_width=True, hide_index=True)
 
     st.markdown("---")
     cta_whatsapp("Oi Natan! Vi o demo do Pulse para corretoras e quero conversar.")
@@ -738,14 +671,12 @@ def dash_contabil():
     </div>
     """, unsafe_allow_html=True)
 
-    mes_selecionado = st.selectbox("Mês", ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"], index=5, key="mes_cont")
     df, df_prod = gerar_dados_contabil()
     info_dados_ficticios()
 
-    # Insight
-    st.markdown(f"""
-    <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-radius:16px; padding:16px; margin:16px 0;">
-        💡 <strong>Insight de {mes_selecionado}:</strong> 82% das entregas dentro do prazo. Clientes do Simples com maior risco de atraso.
+    st.markdown("""
+    <div class="insight-box">
+        💡 <strong>Insight do mês:</strong> 82% das entregas dentro do prazo. Clientes do Simples com maior risco de atraso.
     </div>
     """, unsafe_allow_html=True)
 
@@ -767,21 +698,35 @@ def dash_contabil():
         st.metric("EM ATRASO", len(atrasados))
 
     t1, t2, t3 = st.tabs(["📈 Produtividade", "⚠️ Atrasados", "📋 Carteira"])
+
     with t1:
-        fig = go.Figure(go.Scatter(x=df_prod["Mes"], y=df_prod["Horas_Fechamento"], mode="lines+markers", line=dict(color=VERDE, width=3), fill="tozeroy"))
+        fig = go.Figure(go.Scatter(x=df_prod["Mes"], y=df_prod["Horas_Fechamento"],
+                                   mode="lines+markers", line=dict(color=VERDE, width=3), fill="tozeroy"))
         fig.update_layout(**layout_chart(280))
         st.plotly_chart(fig, use_container_width=True)
 
     with t2:
         atrasados_df = df[df["Status_Fechamento"]=="Atrasado"]
-        for _, row in atrasados_df.head(6).iterrows():
-            st.markdown(f"""
-            <div class="alerta-item urgente"><strong>{row['Empresa']}</strong><br><span style="font-size:0.78rem;">{row['Regime_Tributario']} • {row['Dias_Para_Entrega']} dias</span></div>
-            """, unsafe_allow_html=True)
+        if not atrasados_df.empty:
+            for _, row in atrasados_df.head(6).iterrows():
+                st.markdown(f"""
+                <div class="alerta-item urgente">
+                    <strong>{row['Empresa']}</strong><br>
+                    <span style="font-size:0.78rem; color:#475569;">{row['Regime_Tributario']} • {row['Dias_Para_Entrega']} dias de atraso</span>
+                </div>
+                """, unsafe_allow_html=True)
+        else:
+            st.info("Nenhum cliente em atraso.")
 
     with t3:
-        st.dataframe(df[["Empresa", "Regime_Tributario", "Status_Fechamento"]], use_container_width=True, hide_index=True)
+        busca = st.text_input("🔍 Buscar empresa", key="busca_cont")
+        df_view = df.copy()
+        if busca:
+            df_view = df_view[df_view["Empresa"].str.contains(busca, case=False)]
+        st.dataframe(df_view[["Empresa", "Regime_Tributario", "Status_Fechamento", "Honorario_Mensal"]],
+                     use_container_width=True, hide_index=True)
 
+    st.markdown("---")
     cta_whatsapp("Oi Natan! Vi o demo do Pulse para contabilidade.")
     botao_voltar()
 
@@ -818,6 +763,7 @@ def dash_clinica():
         st.metric("AGENDADOS", len(df[df["Status"]=="Agendado"]))
 
     t1, t2 = st.tabs(["📈 Receita", "⭐ Top Procedimentos"])
+
     with t1:
         fig = go.Figure(go.Bar(x=df_evo["Mes"], y=df_evo["Receita"], marker_color=VERDE))
         fig.update_layout(**layout_chart(300))
@@ -829,12 +775,13 @@ def dash_clinica():
         fig.update_layout(**layout_chart(320))
         st.plotly_chart(fig, use_container_width=True)
 
+    st.markdown("---")
     cta_whatsapp("Oi Natan! Vi o demo do Pulse para clínicas.")
     botao_voltar()
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: BARBEARIA
+# DASHBOARD: BARBEARIA (CORRIGIDO)
 # ═══════════════════════════════════════════════════════════════
 def dash_barbearia():
     st.markdown("""
@@ -849,7 +796,8 @@ def dash_barbearia():
 
     hoje = datetime.now()
     realizados = df[df["Status"]=="Realizado"]
-    mes_atual = realizados[realizadoss["Data"] >= hoje - timedelta(days=30)]
+    # Correção do erro de digitação: realizadoss -> realizados
+    mes_atual = realizados[realizados["Data"] >= hoje - timedelta(days=30)]
     receita_serv = mes_atual["Valor"].sum()
     receita_prod = df_prod[df_prod["Data"] >= hoje - timedelta(days=30)]["Receita_Total"].sum()
     receita_total = receita_serv + receita_prod
@@ -868,9 +816,11 @@ def dash_barbearia():
         st.metric("AGENDADOS", len(df[df["Status"]=="Agendado"]))
 
     t1, t2 = st.tabs(["💰 Comissões", "🛍️ Produtos"])
+
     with t1:
         comissao_semana = mes_atual.groupby("Barbeiro")["Comissao_Barbeiro"].sum().reset_index()
-        fig = go.Figure(go.Bar(x=comissao_semana["Comissao_Barbeiro"], y=comissao_semana["Barbeiro"], orientation="h", marker_color=VERDE))
+        fig = go.Figure(go.Bar(x=comissao_semana["Comissao_Barbeiro"], y=comissao_semana["Barbeiro"],
+                               orientation="h", marker_color=VERDE))
         fig.update_layout(**layout_chart(260))
         st.plotly_chart(fig, use_container_width=True)
 
@@ -880,6 +830,7 @@ def dash_barbearia():
         fig.update_layout(**layout_chart(260))
         st.plotly_chart(fig, use_container_width=True)
 
+    st.markdown("---")
     cta_whatsapp("Oi Natan! Vi o demo do Pulse para barbearias.")
     botao_voltar()
 
