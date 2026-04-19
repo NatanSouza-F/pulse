@@ -278,9 +278,12 @@ def info_dados_ficticios():
     </div>
     """, unsafe_allow_html=True)
 
-def layout_chart(altura=280):
-    """Retorna um dicionário base para o layout do Plotly."""
-    return {
+def layout_chart(altura=280, yaxis_opts=None):
+    """
+    Retorna um dicionário base para o layout do Plotly.
+    Se yaxis_opts for fornecido, mescla com as opções padrão do eixo Y.
+    """
+    base = {
         "paper_bgcolor": "rgba(0,0,0,0)",
         "plot_bgcolor": "rgba(248,250,252,0.5)",
         "font": {"family": "Inter", "color": "#0f172a", "size": 11},
@@ -290,6 +293,9 @@ def layout_chart(altura=280):
         "height": altura,
         "hoverlabel": {"bgcolor": "white", "font": {"color": "#0f172a"}},
     }
+    if yaxis_opts:
+        base["yaxis"].update(yaxis_opts)
+    return base
 
 def metric_card(label, value, delta, sparkline_data):
     cols = st.columns([3, 1])
@@ -547,10 +553,11 @@ def dash_corretora():
                                  fill="tozeroy", fillcolor="rgba(16,185,129,0.15)"))
         fig.update_layout(**layout_chart(280))
         st.plotly_chart(fig, use_container_width=True)
+
         fig2 = go.Figure()
         fig2.add_trace(go.Bar(name="Novos", x=df_evo["Mes"], y=df_evo["Novos_Contratos"], marker_color=VERDE))
         fig2.add_trace(go.Bar(name="Cancelamentos", x=df_evo["Mes"], y=df_evo["Cancelamentos"], marker_color=VERMELHO))
-        fig2.update_layout(**layout_chart(240), barmode="group")
+        fig2.update_layout(**layout_chart(240, yaxis_opts={"title": None}))
         st.plotly_chart(fig2, use_container_width=True)
 
     with t2:
@@ -589,8 +596,7 @@ def dash_corretora():
         fig = go.Figure(go.Bar(x=top_clientes.values, y=top_clientes.index, orientation="h",
                                marker_color=VERDE, text=top_clientes.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(340))
-        fig.update_yaxis(autorange="reversed", tickfont=dict(color="#1e293b", size=10))
+        fig.update_layout(**layout_chart(340, yaxis_opts={"autorange": "reversed", "tickfont": {"color": "#1e293b", "size": 10}}))
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
@@ -685,8 +691,7 @@ def dash_contabil():
         fig = go.Figure(go.Bar(x=top_hon.values, y=top_hon.index, orientation="h",
                                marker_color=VERDE, text=top_hon.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(340))
-        fig.update_yaxis(autorange="reversed", tickfont=dict(color="#1e293b", size=10))
+        fig.update_layout(**layout_chart(340, yaxis_opts={"autorange": "reversed", "tickfont": {"color": "#1e293b", "size": 10}}))
         st.plotly_chart(fig, use_container_width=True)
 
     with t6:
@@ -754,8 +759,7 @@ def dash_clinica():
         fig = go.Figure(go.Bar(y=top.index, x=top.values, orientation="h",
                                marker_color=VERDE, text=top.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(320))
-        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
+        fig.update_layout(**layout_chart(320, yaxis_opts={"tickfont": {"color": "#1e293b", "size": 10}}))
         st.plotly_chart(fig, use_container_width=True)
 
     with t3:
@@ -776,7 +780,7 @@ def dash_clinica():
         fig = px.bar(perf, x="Profissional", y="Valor", color="Profissional", text="Valor",
                      color_discrete_sequence=[VERDE]*4)
         fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
-        fig.update_layout(**layout_chart(300), showlegend=False)
+        fig.update_layout(**layout_chart(300))
         st.plotly_chart(fig, use_container_width=True)
 
     with t5:
@@ -849,8 +853,7 @@ def dash_barbearia():
                                orientation="h", marker_color=VERDE,
                                text=comissao["Comissao_Barbeiro"], textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(260))
-        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
+        fig.update_layout(**layout_chart(260, yaxis_opts={"tickfont": {"color": "#1e293b", "size": 10}}))
         st.plotly_chart(fig, use_container_width=True)
 
     with t2:
@@ -858,8 +861,7 @@ def dash_barbearia():
         fig = go.Figure(go.Bar(y=top_prod.index, x=top_prod.values, orientation="h",
                                marker_color=AZUL, text=top_prod.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(260))
-        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
+        fig.update_layout(**layout_chart(260, yaxis_opts={"tickfont": {"color": "#1e293b", "size": 10}}))
         st.plotly_chart(fig, use_container_width=True)
 
     with t3:
@@ -878,8 +880,7 @@ def dash_barbearia():
         freq = realizados["Cliente"].value_counts().reset_index().head(10)
         freq.columns = ["Cliente", "Visitas"]
         fig = px.bar(freq, x="Visitas", y="Cliente", orientation="h", color_discrete_sequence=[VERDE])
-        fig.update_layout(**layout_chart(320))
-        fig.update_yaxis(autorange="reversed", tickfont=dict(color="#1e293b", size=10))
+        fig.update_layout(**layout_chart(320, yaxis_opts={"autorange": "reversed", "tickfont": {"color": "#1e293b", "size": 10}}))
         st.plotly_chart(fig, use_container_width=True)
 
     with t5:
@@ -887,7 +888,7 @@ def dash_barbearia():
         ocupacao = np.random.randint(40, 100, size=len(horas))
         fig = go.Figure(go.Scatter(x=horas, y=ocupacao, mode="lines+markers",
                                    fill="tozeroy", line=dict(color=VERDE, width=3)))
-        fig.update_layout(**layout_chart(260), yaxis_title="Ocupação (%)")
+        fig.update_layout(**layout_chart(260, yaxis_opts={"title": "Ocupação (%)"}))
         st.plotly_chart(fig, use_container_width=True)
 
     with t6:
@@ -895,8 +896,7 @@ def dash_barbearia():
         fig = go.Figure(go.Bar(y=serv.index, x=serv.values, orientation="h",
                                marker_color=VERDE, text=serv.values, textposition='outside',
                                texttemplate='%{text:.2s}'))
-        fig.update_layout(**layout_chart(320))
-        fig.update_yaxis(tickfont=dict(color="#1e293b", size=10))
+        fig.update_layout(**layout_chart(320, yaxis_opts={"tickfont": {"color": "#1e293b", "size": 10}}))
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
