@@ -1,11 +1,11 @@
 """
-Pulse — Demo Dashboard
+Pulse — Demo Dashboard Premium
 O pulso do seu negócio, no seu bolso.
 
 Arquitetura:
   - Tela inicial: escolha do perfil
-  - Dashboard específico por vertical
-  - Mobile-first
+  - Dashboard específico por vertical (6+ abas)
+  - Mobile-first, interativo e com dados realistas
 """
 import streamlit as st
 import pandas as pd
@@ -24,9 +24,10 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-WHATSAPP = "5561999999999"  # Substitua pelo seu número
+# ⚙️ Substitua pelo seu número de WhatsApp (com DDD)
+WHATSAPP = "5561999999999"
 
-# Paleta refinada
+# Paleta de cores profissional
 VERDE = "#10b981"
 VERDE_CLARO = "#34d399"
 VERDE_ESCURO = "#047857"
@@ -34,52 +35,33 @@ AZUL = "#3b82f6"
 VERMELHO = "#ef4444"
 AMBAR = "#f59e0b"
 ROXO = "#8b5cf6"
-CINZA_TEXTO = "#64748b"
+CINZA = "#64748b"
 FUNDO = "#f8fafc"
 
 # ═══════════════════════════════════════════════════════════════
-# CSS GLOBAL — VISUAL APP MOBILE PREMIUM
+# CSS GLOBAL – EXPERIÊNCIA MOBILE PREMIUM
 # ═══════════════════════════════════════════════════════════════
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-    html, body, [class*="css"] {
-        font-family: 'Inter', sans-serif;
-    }
+    * { font-family: 'Inter', sans-serif; }
+    .stApp { background: #f8fafc; }
+    header[data-testid="stHeader"] { background: transparent; height: 0; }
+    .block-container { padding: 1rem !important; max-width: 480px !important; }
+    h1, h2, h3, h4 { color: #0f172a; letter-spacing: -0.02em; }
 
-    .stApp {
-        background: #f8fafc;
-    }
-
-    header[data-testid="stHeader"] {
-        background: transparent;
-        height: 0;
-    }
-
-    .block-container {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        max-width: 480px !important;
-    }
-
-    h1, h2, h3, h4 {
-        font-family: 'Inter', sans-serif;
-        color: #0f172a;
-        letter-spacing: -0.02em;
-    }
-
-    /* ───── KPI Card ───── */
+    /* KPI Cards */
     [data-testid="stMetric"] {
         background: #ffffff;
         border: none;
         border-radius: 20px;
         padding: 1rem 1rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
         transition: all 0.2s;
     }
     [data-testid="stMetric"]:hover {
-        box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1);
+        box-shadow: 0 10px 15px -3px rgba(16,185,129,0.1);
         transform: translateY(-2px);
     }
     [data-testid="stMetricLabel"] {
@@ -91,14 +73,11 @@ st.markdown("""
     }
     [data-testid="stMetricValue"] {
         color: #047857 !important;
-        font-size: 1.55rem !important;
+        font-size: 1.5rem !important;
         font-weight: 700 !important;
     }
-    [data-testid="stMetricDelta"] {
-        font-size: 0.8rem !important;
-    }
 
-    /* ───── Botões ───── */
+    /* Botões */
     .stButton button {
         background: #10b981;
         color: white;
@@ -108,15 +87,13 @@ st.markdown("""
         font-weight: 600;
         font-size: 0.95rem;
         width: 100%;
-        transition: all 0.2s;
-        box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+        box-shadow: 0 2px 4px rgba(16,185,129,0.2);
     }
     .stButton button:hover {
         background: #059669;
         transform: translateY(-1px);
-        box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+        box-shadow: 0 8px 16px rgba(16,185,129,0.3);
     }
-
     .stButton button[kind="secondary"] {
         background: #ffffff;
         border: 1px solid #e2e8f0;
@@ -124,11 +101,12 @@ st.markdown("""
         box-shadow: none;
     }
 
-    /* ───── Tabs ───── */
+    /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 4px;
         background: transparent;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .stTabs [data-baseweb="tab"] {
         background: #ffffff;
@@ -136,9 +114,9 @@ st.markdown("""
         border-radius: 10px;
         padding: 0.45rem 0.7rem;
         font-weight: 500;
-        font-size: 0.78rem;
+        font-size: 0.7rem;
         color: #475569;
-        flex: 1;
+        flex: 1 0 auto;
         text-align: center;
     }
     .stTabs [aria-selected="true"] {
@@ -147,85 +125,39 @@ st.markdown("""
         border-color: #10b981 !important;
     }
 
-    /* ───── DataFrame limpo ───── */
+    /* Dataframe */
     div[data-testid="stDataFrame"] {
-        background: #ffffff !important;
-        border: 1px solid #e2e8f0 !important;
         border-radius: 16px !important;
         overflow: hidden;
-    }
-    div[data-testid="stDataFrame"] div {
-        background: #ffffff !important;
-        color: #0f172a !important;
-    }
-    div[data-testid="stDataFrame"] div[role="columnheader"] {
-        background: #f8fafc !important;
-        color: #475569 !important;
-        font-weight: 600 !important;
+        border: 1px solid #e2e8f0 !important;
     }
 
-    /* ───── Splash Cards ───── */
+    /* Cards e elementos customizados */
     .perfil-card {
-        background: #ffffff;
+        background: #fff;
         border: 1px solid #e2e8f0;
         border-radius: 20px;
         padding: 1.5rem;
         margin-bottom: 14px;
-        cursor: pointer;
-        transition: all 0.2s;
         box-shadow: 0 2px 4px rgba(0,0,0,0.02);
     }
-    .perfil-card:hover {
-        border-color: #10b981;
-        box-shadow: 0 12px 24px rgba(16, 185, 129, 0.12);
-        transform: translateY(-2px);
-    }
-    .perfil-icon {
-        font-size: 2.2rem;
-        margin-bottom: 8px;
-    }
-    .perfil-titulo {
-        font-weight: 700;
-        font-size: 1.05rem;
-        color: #0f172a;
-        margin-bottom: 4px;
-    }
-    .perfil-desc {
-        font-size: 0.85rem;
-        color: #64748b;
-        line-height: 1.4;
-    }
-
-    /* ───── Logo Pulse ───── */
     .pulse-logo {
         font-size: 2.8rem;
         font-weight: 800;
-        letter-spacing: -0.04em;
         background: linear-gradient(135deg, #047857 0%, #10b981 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin: 0;
         text-align: center;
     }
-    .pulse-slogan {
-        text-align: center;
-        color: #64748b;
-        font-size: 0.9rem;
-        margin-bottom: 1.8rem;
-        font-weight: 400;
-    }
-
     .demo-badge {
-        background: rgba(16, 185, 129, 0.1);
+        background: rgba(16,185,129,0.1);
         border: 1px solid #10b981;
         color: #047857;
         padding: 4px 10px;
         border-radius: 40px;
         font-size: 0.7rem;
         font-weight: 600;
-        display: inline-block;
     }
-
     .cta-whatsapp {
         background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
         color: white !important;
@@ -234,63 +166,17 @@ st.markdown("""
         text-decoration: none;
         font-weight: 600;
         display: inline-block;
-        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        box-shadow: 0 8px 20px rgba(37,211,102,0.3);
         margin: 12px 0;
     }
-
     .info-box {
         background: #ecfdf5;
         border-left: 3px solid #10b981;
         padding: 12px 16px;
         border-radius: 12px;
         margin: 12px 0;
-        font-size: 0.85rem;
         color: #064e3b;
     }
-
-    .alerta-item {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-left: 4px solid #f59e0b;
-        border-radius: 14px;
-        padding: 12px 14px;
-        margin-bottom: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        color: #0f172a;
-    }
-    .alerta-item.urgente {
-        border-left-color: #ef4444;
-    }
-    .alerta-item.ok {
-        border-left-color: #10b981;
-    }
-
-    .dash-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-        padding: 8px 0;
-        border-bottom: 1px solid #e2e8f0;
-    }
-    .dash-title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #0f172a;
-    }
-    .dash-subtitle {
-        font-size: 0.78rem;
-        color: #64748b;
-    }
-
-    /* Gráficos com borda arredondada */
-    .js-plotly-plot {
-        border-radius: 20px !important;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Insight box com texto escuro e legível */
     .insight-box {
         background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
         border-radius: 16px;
@@ -299,22 +185,41 @@ st.markdown("""
         border: 1px solid #a7f3d0;
         color: #064e3b;
     }
-    .insight-box strong {
-        color: #047857;
+    .alerta-item {
+        background: #fff;
+        border-left: 4px solid #f59e0b;
+        border-radius: 14px;
+        padding: 12px 14px;
+        margin-bottom: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        color: #0f172a;
+    }
+    .alerta-item.urgente { border-left-color: #ef4444; }
+    .alerta-item.ok { border-left-color: #10b981; }
+    .dash-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        padding: 8px 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    .dash-title { font-size: 1.1rem; font-weight: 700; color: #0f172a; }
+    .js-plotly-plot {
+        border-radius: 20px !important;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     }
 </style>
 """, unsafe_allow_html=True)
 
 
 # ═══════════════════════════════════════════════════════════════
-# ESTADO DA SESSÃO
+# ESTADO DA SESSÃO & FUNÇÕES AUXILIARES
 # ═══════════════════════════════════════════════════════════════
 if "perfil" not in st.session_state:
     st.session_state.perfil = None
 
-# ═══════════════════════════════════════════════════════════════
-# FUNÇÕES AUXILIARES
-# ═══════════════════════════════════════════════════════════════
 def formatar_brl(valor):
     return f"R$ {valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
@@ -353,11 +258,11 @@ def layout_chart(altura=280):
         "paper_bgcolor": "rgba(0,0,0,0)",
         "plot_bgcolor": "rgba(248,250,252,0.5)",
         "font": {"family": "Inter", "color": "#0f172a", "size": 11},
-        "xaxis": {"gridcolor": "#e2e8f0", "linecolor": "#cbd5e1", "tickfont": {"color": "#475569"}},
-        "yaxis": {"gridcolor": "#e2e8f0", "linecolor": "#cbd5e1", "tickfont": {"color": "#475569"}},
+        "xaxis": {"gridcolor": "#e2e8f0", "tickfont": {"color": "#475569"}},
+        "yaxis": {"gridcolor": "#e2e8f0", "tickfont": {"color": "#475569"}},
         "margin": {"t": 30, "b": 40, "l": 40, "r": 20},
         "height": altura,
-        "hoverlabel": {"bgcolor": "white", "font": {"color": "#0f172a"}},
+        "hoverlabel": {"bgcolor": "white"},
     }
 
 def metric_card(label, value, delta, sparkline_data):
@@ -378,18 +283,20 @@ def metric_card(label, value, delta, sparkline_data):
 
 
 # ═══════════════════════════════════════════════════════════════
-# GERADORES DE DADOS SINTÉTICOS
+# GERADORES DE DADOS (COM INFLUÊNCIA DO MÊS/ANO SELECIONADO)
 # ═══════════════════════════════════════════════════════════════
-def gerar_dados_corretora():
-    np.random.seed(42)
-    meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
-    clientes = [f"Cliente {i}" for i in range(1, 251)]
+MESES = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+
+def gerar_dados_corretora(mes_ref="Jun", ano_ref="2026"):
+    np.random.seed(42 + MESES.index(mes_ref))
+    base_clientes = 200 + MESES.index(mes_ref) * 8
+    clientes = [f"Cliente {i}" for i in range(1, base_clientes+1)]
     ramos = ["Auto", "Vida", "Residencial", "Empresarial", "Saúde"]
     seguradoras = ["Porto Seguro", "Bradesco", "SulAmérica", "Allianz", "Mapfre"]
 
     dados = []
     for cliente in clientes:
-        status = np.random.choice(["Ativo", "Vencendo", "Cancelado", "Pendente"], p=[0.7, 0.15, 0.1, 0.05])
+        status = np.random.choice(["Ativo", "Vencendo", "Cancelado"], p=[0.7, 0.2, 0.1])
         ramo = np.random.choice(ramos)
         premio = np.random.uniform(800, 8000)
         comissao_anual = premio * np.random.uniform(0.05, 0.20)
@@ -404,9 +311,8 @@ def gerar_dados_corretora():
     df = pd.DataFrame(dados)
 
     evolucao = []
-    base = 8000
-    for i, mes in enumerate(meses):
-        comissao = base * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
+    for i, mes in enumerate(MESES):
+        comissao = 8000 * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
         novos = int(12 + i*1.5 + np.random.randint(-3,5))
         cancel = int(5 + i*0.3 + np.random.randint(-2,3))
         evolucao.append({"Mes": mes, "Comissao_Total": round(comissao,2),
@@ -414,8 +320,8 @@ def gerar_dados_corretora():
     df_evo = pd.DataFrame(evolucao)
     return df, df_evo
 
-def gerar_dados_contabil():
-    np.random.seed(43)
+def gerar_dados_contabil(mes_ref="Jun", ano_ref="2026"):
+    np.random.seed(43 + MESES.index(mes_ref))
     empresas = [f"Empresa {i}" for i in range(1, 61)]
     regimes = ["Simples Nacional", "Lucro Presumido", "Lucro Real", "MEI"]
     dados = []
@@ -432,23 +338,22 @@ def gerar_dados_contabil():
         })
     df = pd.DataFrame(dados)
 
-    meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
     prod = []
-    for i, mes in enumerate(meses):
+    for i, mes in enumerate(MESES):
         horas = 120 * (1 + 0.05*i) * np.random.uniform(0.9,1.1)
         receita = 12000 * (1 + 0.03*i) * np.random.uniform(0.95,1.05)
         prod.append({"Mes": mes, "Horas_Fechamento": round(horas,1), "Receita_Honorarios": round(receita,2)})
     df_prod = pd.DataFrame(prod)
     return df, df_prod
 
-def gerar_dados_clinica():
-    np.random.seed(44)
+def gerar_dados_clinica(mes_ref="Jun", ano_ref="2026"):
+    np.random.seed(44 + MESES.index(mes_ref))
     pacientes = [f"Paciente {i}" for i in range(1, 151)]
     procedimentos = ["Limpeza de Pele", "Botox", "Preenchimento", "Massagem", "Depilação a Laser", "Peeling"]
     profissionais = ["Dra. Ana", "Dra. Carla", "Dr. Paulo", "Dra. Fernanda"]
     dados = []
     hoje = datetime.now()
-    for _ in range(300):
+    for _ in range(350):
         data = hoje - timedelta(days=np.random.randint(0,60))
         valor = np.random.uniform(150, 1200)
         dados.append({
@@ -461,17 +366,16 @@ def gerar_dados_clinica():
         })
     df = pd.DataFrame(dados)
 
-    meses = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"]
     evo = []
-    for i, mes in enumerate(meses):
+    for i, mes in enumerate(MESES):
         rec = 28000 * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
         ticket = rec / (130 + i*5)
         evo.append({"Mes": mes, "Receita": round(rec,2), "Ticket_Medio": round(ticket,2)})
     df_evo = pd.DataFrame(evo)
     return df, df_evo
 
-def gerar_dados_barbearia():
-    np.random.seed(45)
+def gerar_dados_barbearia(mes_ref="Jun", ano_ref="2026"):
+    np.random.seed(45 + MESES.index(mes_ref))
     clientes = [f"Cliente {i}" for i in range(1, 201)]
     servicos = ["Corte", "Barba", "Sobrancelha", "Corte + Barba", "Hidratação"]
     barbeiros = ["João", "Pedro", "Lucas", "Mateus", "André"]
@@ -508,9 +412,8 @@ def gerar_dados_barbearia():
         })
     df_prod = pd.DataFrame(prod_data)
 
-    meses = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"]
     evo = []
-    for i, mes in enumerate(meses):
+    for i, mes in enumerate(MESES):
         rec_serv = 18000 * (1 + 0.02*i) * np.random.uniform(0.9,1.1)
         rec_prod = 4000 * (1 + 0.03*i) * np.random.uniform(0.9,1.1)
         atend = int(120 + i*3)
@@ -525,61 +428,63 @@ def gerar_dados_barbearia():
 # ═══════════════════════════════════════════════════════════════
 def tela_inicial():
     st.markdown('<h1 class="pulse-logo">Pulse</h1>', unsafe_allow_html=True)
-    st.markdown('<p class="pulse-slogan">O pulso do seu negócio, no seu bolso.</p>', unsafe_allow_html=True)
+    st.markdown('<p style="text-align:center; color:#64748b;">O pulso do seu negócio, no seu bolso.</p>', unsafe_allow_html=True)
     st.markdown("""
-    <p style="text-align: center; color: #475569; font-size: 0.92rem; margin-bottom: 20px;">
+    <p style="text-align:center; color:#475569; font-size:0.92rem;">
         Escolha seu segmento para ver uma demonstração.<br>
-        <span style="font-size: 0.78rem; color: #94a3b8;">Dados fictícios, estrutura real.</span>
+        <span style="font-size:0.78rem;">Dados fictícios, estrutura real.</span>
     </p>
     """, unsafe_allow_html=True)
 
     perfis = [
-        ("🛡️", "Sou Corretora de Seguros", "Carteira, comissões, renovações e alertas de vencimento.", "corretora"),
-        ("📊", "Sou Escritório Contábil", "Gestão de carteira, fechamentos mensais e produtividade.", "contabil"),
-        ("💚", "Sou Clínica Estética", "Agenda, procedimentos, receita e performance dos profissionais.", "clinica"),
-        ("💈", "Sou Barbearia", "Agenda, comissão dos barbeiros, venda de produtos e clientes recorrentes.", "barbearia")
+        ("🛡️", "Sou Corretora de Seguros", "Carteira, comissões, renovações e alertas.", "corretora"),
+        ("📊", "Sou Escritório Contábil", "Gestão de carteira, fechamentos e produtividade.", "contabil"),
+        ("💚", "Sou Clínica Estética", "Agenda, receita e performance dos profissionais.", "clinica"),
+        ("💈", "Sou Barbearia", "Agenda, comissão dos barbeiros e produtos.", "barbearia")
     ]
     for icon, titulo, desc, perfil in perfis:
         st.markdown(f"""
         <div class="perfil-card">
-            <div class="perfil-icon">{icon}</div>
-            <div class="perfil-titulo">{titulo}</div>
-            <div class="perfil-desc">{desc}</div>
+            <div style="font-size:2.2rem;">{icon}</div>
+            <div style="font-weight:700; font-size:1.05rem;">{titulo}</div>
+            <div style="font-size:0.85rem; color:#64748b;">{desc}</div>
         </div>
         """, unsafe_allow_html=True)
         if st.button(f"Ver demo para {titulo.split()[-1]}", key=f"btn_{perfil}"):
             st.session_state.perfil = perfil
             st.rerun()
-        st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
+        st.markdown("<div style='height:8px;'></div>", unsafe_allow_html=True)
 
     st.markdown("""
-    <div style="text-align: center; margin-top: 32px; padding-top: 20px;
-                border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.75rem;">
-        Desenvolvido por <strong style="color: #059669;">Natan Souza</strong><br>
+    <div style="text-align:center; margin-top:32px; padding-top:20px; border-top:1px solid #e2e8f0; color:#94a3b8; font-size:0.75rem;">
+        Desenvolvido por <strong style="color:#059669;">Natan Souza</strong><br>
         Consultoria em Dados e Inteligência Comercial
     </div>
     """, unsafe_allow_html=True)
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: CORRETORA
+# DASHBOARD: CORRETORA DE SEGUROS (6 ABAS)
 # ═══════════════════════════════════════════════════════════════
 def dash_corretora():
     st.markdown("""
     <div class="dash-header">
-        <div><div class="dash-title">🛡️ Pulse • Corretora</div><div class="dash-subtitle">Demo para Corretoras de Seguros</div></div>
+        <div><div class="dash-title">🛡️ Pulse • Corretora</div><div class="dash-subtitle">Demo para Corretoras</div></div>
         <span class="demo-badge">DEMO</span>
     </div>
     """, unsafe_allow_html=True)
 
-    df, df_evo = gerar_dados_corretora()
-    info_dados_ficticios()
+    col1, col2 = st.columns(2)
+    with col1:
+        mes = st.selectbox("Mês", MESES, index=5, key="cor_mes")
+    with col2:
+        ano = st.selectbox("Ano", ["2025", "2026"], index=1, key="cor_ano")
+    df, df_evo = gerar_dados_corretora(mes, ano)
 
-    st.markdown("""
+    info_dados_ficticios()
+    st.markdown(f"""
     <div class="insight-box">
-        <span style="font-size:1.2rem;">💡</span> 
-        <strong style="font-size:1rem;">Insight do mês:</strong> 
-        Sua taxa de renovação está 8% acima da média. O ticket médio subiu devido ao aumento de apólices de Vida.<br>
+        💡 <strong>Insight de {mes}/{ano}:</strong> Sua taxa de renovação está 8% acima da média. O ticket médio subiu devido ao aumento de apólices de Vida.<br>
         <span style="font-size:0.8rem;">⚡ Ação: Foco em Auto — concorrência aumentou preços.</span>
     </div>
     """, unsafe_allow_html=True)
@@ -594,10 +499,9 @@ def dash_corretora():
 
     c1, c2 = st.columns(2)
     with c1:
-        metric_card("CARTEIRA ATIVA", formatar_inteiro_br(len(ativos)), "+12 vs mês ant.", spark_ativos)
+        metric_card("CARTEIRA ATIVA", formatar_inteiro_br(len(ativos)), "+12", spark_ativos)
     with c2:
         metric_card("COMISSÃO / MÊS", formatar_brl(comissao_mensal), "+8%", spark_comissao)
-
     c3, c4 = st.columns(2)
     with c3:
         st.metric("VENCENDO EM 30d", len(renovacoes_30d))
@@ -606,7 +510,9 @@ def dash_corretora():
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    t1, t2, t3, t4 = st.tabs(["📈 Evolução", "🔔 Alertas", "🎯 Mix", "📋 Carteira"])
+    t1, t2, t3, t4, t5, t6 = st.tabs([
+        "📈 Evolução", "🔔 Alertas", "🎯 Mix", "📋 Carteira", "🏆 Top Clientes", "📊 Seguradoras"
+    ])
 
     with t1:
         fig = go.Figure()
@@ -615,7 +521,6 @@ def dash_corretora():
                                  fill="tozeroy", fillcolor="rgba(16,185,129,0.15)"))
         fig.update_layout(**layout_chart(280))
         st.plotly_chart(fig, use_container_width=True)
-
         fig2 = go.Figure()
         fig2.add_trace(go.Bar(name="Novos", x=df_evo["Mes"], y=df_evo["Novos_Contratos"], marker_color=VERDE))
         fig2.add_trace(go.Bar(name="Cancelamentos", x=df_evo["Mes"], y=df_evo["Cancelamentos"], marker_color=VERMELHO))
@@ -623,16 +528,15 @@ def dash_corretora():
         st.plotly_chart(fig2, use_container_width=True)
 
     with t2:
-        urgentes = df[df["Dias_Para_Renovacao"].between(0, 15)].sort_values("Dias_Para_Renovacao")
+        urgentes = df[df["Dias_Para_Renovacao"].between(0,15)].sort_values("Dias_Para_Renovacao")
         if not urgentes.empty:
-            st.markdown("**Vencendo nos próximos 15 dias:**")
             for _, row in urgentes.head(8).iterrows():
                 urgencia = "urgente" if row["Dias_Para_Renovacao"] <= 7 else ""
                 st.markdown(f"""
                 <div class="alerta-item {urgencia}">
                     <div style="display:flex; justify-content:space-between;">
                         <div><strong>{row['Cliente']}</strong><br><span style="font-size:0.78rem;">{row['Ramo']} • {row['Seguradora']}</span></div>
-                        <div style="text-align:right;"><strong style="color:#ef4444;">{int(row['Dias_Para_Renovacao'])} dias</strong><br><span style="font-size:0.78rem;">{formatar_brl(row['Premio_Anual'])}</span></div>
+                        <div style="text-align:right;"><strong style="color:#ef4444;">{int(row['Dias_Para_Renovacao'])}d</strong><br><span style="font-size:0.78rem;">{formatar_brl(row['Premio_Anual'])}</span></div>
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -641,8 +545,7 @@ def dash_corretora():
 
     with t3:
         mix = df[df["Status"]=="Ativo"].groupby("Ramo").size().reset_index(name="total")
-        fig = px.pie(mix, values="total", names="Ramo", hole=0.5,
-                     color_discrete_sequence=[VERDE, AZUL, ROXO, AMBAR])
+        fig = px.pie(mix, values="total", names="Ramo", hole=0.5, color_discrete_sequence=[VERDE, AZUL, ROXO, AMBAR])
         fig.update_traces(textposition="inside", textinfo="percent+label")
         fig.update_layout(**layout_chart(330))
         st.plotly_chart(fig, use_container_width=True)
@@ -652,8 +555,22 @@ def dash_corretora():
         df_view = df.copy()
         if busca:
             df_view = df_view[df_view["Cliente"].str.contains(busca, case=False)]
-        st.dataframe(df_view[["Cliente", "Ramo", "Seguradora", "Status"]].head(20),
+        st.dataframe(df_view[["Cliente", "Ramo", "Seguradora", "Status", "Premio_Anual"]].head(20),
                      use_container_width=True, hide_index=True)
+
+    with t5:
+        top_clientes = ativos.groupby("Cliente")["Premio_Anual"].sum().sort_values(ascending=False).head(10)
+        fig = go.Figure(go.Bar(x=top_clientes.values, y=top_clientes.index, orientation="h", marker_color=VERDE))
+        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed"))
+        st.plotly_chart(fig, use_container_width=True)
+
+    with t6:
+        seg_perf = ativos.groupby("Seguradora").agg({"Comissao_Mensal": "sum", "Cliente": "count"}).reset_index()
+        fig = px.bar(seg_perf, x="Seguradora", y="Comissao_Mensal", color="Cliente", text="Comissao_Mensal",
+                     color_continuous_scale="greens")
+        fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        fig.update_layout(**layout_chart(300), coloraxis_showscale=False)
+        st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
     cta_whatsapp("Oi Natan! Vi o demo do Pulse para corretoras e quero conversar.")
@@ -661,7 +578,7 @@ def dash_corretora():
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: CONTÁBIL
+# DASHBOARD: CONTÁBIL (6 ABAS)
 # ═══════════════════════════════════════════════════════════════
 def dash_contabil():
     st.markdown("""
@@ -671,33 +588,41 @@ def dash_contabil():
     </div>
     """, unsafe_allow_html=True)
 
-    df, df_prod = gerar_dados_contabil()
-    info_dados_ficticios()
+    col1, col2 = st.columns(2)
+    with col1:
+        mes = st.selectbox("Mês", MESES, index=5, key="cont_mes")
+    with col2:
+        ano = st.selectbox("Ano", ["2025", "2026"], index=1, key="cont_ano")
+    df, df_prod = gerar_dados_contabil(mes, ano)
 
-    st.markdown("""
+    info_dados_ficticios()
+    st.markdown(f"""
     <div class="insight-box">
-        💡 <strong>Insight do mês:</strong> 82% das entregas dentro do prazo. Clientes do Simples com maior risco de atraso.
+        💡 <strong>Insight de {mes}/{ano}:</strong> 82% das entregas dentro do prazo. Clientes do Simples com maior risco de atraso.
     </div>
     """, unsafe_allow_html=True)
 
     honorarios = df["Honorario_Mensal"].sum()
     entregues = df[df["Status_Fechamento"]=="Entregue"]
     atrasados = df[df["Status_Fechamento"]=="Atrasado"]
-
     spark_hon = df_prod["Receita_Honorarios"].tail(6).tolist()
+
     c1, c2 = st.columns(2)
     with c1:
         metric_card("EMPRESAS", len(df), "+2", [58,60,61,62,61,63])
     with c2:
         metric_card("HONORÁRIOS", formatar_brl(honorarios), "+5%", spark_hon)
-
     c3, c4 = st.columns(2)
     with c3:
         st.metric("ENTREGUES NO PRAZO", f"{(len(entregues)/len(df))*100:.0f}%")
     with c4:
         st.metric("EM ATRASO", len(atrasados))
 
-    t1, t2, t3 = st.tabs(["📈 Produtividade", "⚠️ Atrasados", "📋 Carteira"])
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    t1, t2, t3, t4, t5, t6 = st.tabs([
+        "📈 Produtividade", "⚠️ Atrasados", "📋 Carteira", "🥧 Regimes", "💰 Top Clientes", "📅 Obrigações"
+    ])
 
     with t1:
         fig = go.Figure(go.Scatter(x=df_prod["Mes"], y=df_prod["Horas_Fechamento"],
@@ -712,7 +637,7 @@ def dash_contabil():
                 st.markdown(f"""
                 <div class="alerta-item urgente">
                     <strong>{row['Empresa']}</strong><br>
-                    <span style="font-size:0.78rem; color:#475569;">{row['Regime_Tributario']} • {row['Dias_Para_Entrega']} dias de atraso</span>
+                    <span style="font-size:0.78rem;">{row['Regime_Tributario']} • {row['Dias_Para_Entrega']} dias de atraso</span>
                 </div>
                 """, unsafe_allow_html=True)
         else:
@@ -726,13 +651,36 @@ def dash_contabil():
         st.dataframe(df_view[["Empresa", "Regime_Tributario", "Status_Fechamento", "Honorario_Mensal"]],
                      use_container_width=True, hide_index=True)
 
+    with t4:
+        regime_counts = df["Regime_Tributario"].value_counts().reset_index()
+        regime_counts.columns = ["Regime", "Quantidade"]
+        fig = px.pie(regime_counts, values="Quantidade", names="Regime", hole=0.5,
+                     color_discrete_sequence=[VERDE, AZUL, ROXO, AMBAR])
+        fig.update_layout(**layout_chart(300))
+        st.plotly_chart(fig, use_container_width=True)
+
+    with t5:
+        top_hon = df.groupby("Empresa")["Honorario_Mensal"].sum().sort_values(ascending=False).head(10)
+        fig = go.Figure(go.Bar(x=top_hon.values, y=top_hon.index, orientation="h", marker_color=VERDE))
+        fig.update_layout(**layout_chart(340), yaxis=dict(autorange="reversed"))
+        st.plotly_chart(fig, use_container_width=True)
+
+    with t6:
+        st.markdown("**📌 Próximas obrigações fiscais**")
+        obrigacoes = pd.DataFrame({
+            "Obrigação": ["DASN-SIMEI", "EFD-Contribuições", "DCTF", "DIRF", "ECD"],
+            "Vencimento": ["31/05", "10/06", "15/06", "20/06", "30/06"],
+            "Status": ["Pendente", "Pendente", "Pendente", "Pendente", "Pendente"]
+        })
+        st.dataframe(obrigacoes, use_container_width=True, hide_index=True)
+
     st.markdown("---")
     cta_whatsapp("Oi Natan! Vi o demo do Pulse para contabilidade.")
     botao_voltar()
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: CLÍNICA
+# DASHBOARD: CLÍNICA ESTÉTICA (6 ABAS)
 # ═══════════════════════════════════════════════════════════════
 def dash_clinica():
     st.markdown("""
@@ -742,27 +690,35 @@ def dash_clinica():
     </div>
     """, unsafe_allow_html=True)
 
-    df, df_evo = gerar_dados_clinica()
-    info_dados_ficticios()
+    col1, col2 = st.columns(2)
+    with col1:
+        mes = st.selectbox("Mês", MESES, index=5, key="cli_mes")
+    with col2:
+        ano = st.selectbox("Ano", ["2025", "2026"], index=1, key="cli_ano")
+    df, df_evo = gerar_dados_clinica(mes, ano)
 
+    info_dados_ficticios()
     realizados = df[df["Status"]=="Realizado"]
     receita_mes = realizados["Valor"].sum()
     ticket = realizados["Valor"].mean()
-
     spark_rec = df_evo["Receita"].tail(6).tolist()
+
     c1, c2 = st.columns(2)
     with c1:
         metric_card("RECEITA / MÊS", formatar_brl(receita_mes), "+12%", spark_rec)
     with c2:
         st.metric("ATENDIMENTOS", len(realizados))
-
     c3, c4 = st.columns(2)
     with c3:
         st.metric("TICKET MÉDIO", formatar_brl(ticket))
     with c4:
         st.metric("AGENDADOS", len(df[df["Status"]=="Agendado"]))
 
-    t1, t2 = st.tabs(["📈 Receita", "⭐ Top Procedimentos"])
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    t1, t2, t3, t4, t5, t6 = st.tabs([
+        "📈 Receita", "⭐ Top Proced.", "📅 Agenda", "👩‍⚕️ Profissionais", "🔄 Fidelização", "💳 Pagamentos"
+    ])
 
     with t1:
         fig = go.Figure(go.Bar(x=df_evo["Mes"], y=df_evo["Receita"], marker_color=VERDE))
@@ -775,13 +731,49 @@ def dash_clinica():
         fig.update_layout(**layout_chart(320))
         st.plotly_chart(fig, use_container_width=True)
 
+    with t3:
+        hoje = datetime.now()
+        agenda = df[(df["Status"]=="Agendado") & (df["Data"] >= hoje)].sort_values("Data").head(10)
+        for _, row in agenda.iterrows():
+            st.markdown(f"""
+            <div class="alerta-item ok">
+                <div style="display:flex; justify-content:space-between;">
+                    <div><strong>{row['Paciente']}</strong><br><span style="font-size:0.78rem;">{row['Procedimento']} • {row['Profissional']}</span></div>
+                    <div><strong>{row['Data'].strftime('%d/%m %H:%M')}</strong></div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    with t4:
+        perf = realizados.groupby("Profissional")["Valor"].sum().reset_index()
+        fig = px.bar(perf, x="Profissional", y="Valor", color="Profissional", text="Valor",
+                     color_discrete_sequence=[VERDE]*4)
+        fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+        fig.update_layout(**layout_chart(300), showlegend=False)
+        st.plotly_chart(fig, use_container_width=True)
+
+    with t5:
+        freq = realizados["Paciente"].value_counts().reset_index()
+        freq.columns = ["Paciente", "Visitas"]
+        fig = px.histogram(freq, x="Visitas", nbins=10, color_discrete_sequence=[VERDE])
+        fig.update_layout(**layout_chart(280))
+        st.plotly_chart(fig, use_container_width=True)
+        st.caption("Clientes que voltam mais vezes")
+
+    with t6:
+        pgto = realizados["Forma_Pagamento"].value_counts().reset_index()
+        pgto.columns = ["Forma", "Qtd"]
+        fig = px.pie(pgto, values="Qtd", names="Forma", hole=0.5, color_discrete_sequence=[VERDE, AZUL, ROXO])
+        fig.update_layout(**layout_chart(300))
+        st.plotly_chart(fig, use_container_width=True)
+
     st.markdown("---")
     cta_whatsapp("Oi Natan! Vi o demo do Pulse para clínicas.")
     botao_voltar()
 
 
 # ═══════════════════════════════════════════════════════════════
-# DASHBOARD: BARBEARIA (CORRIGIDO)
+# DASHBOARD: BARBEARIA (6 ABAS)
 # ═══════════════════════════════════════════════════════════════
 def dash_barbearia():
     st.markdown("""
@@ -791,35 +783,42 @@ def dash_barbearia():
     </div>
     """, unsafe_allow_html=True)
 
-    df, df_prod, df_evo = gerar_dados_barbearia()
-    info_dados_ficticios()
+    col1, col2 = st.columns(2)
+    with col1:
+        mes = st.selectbox("Mês", MESES, index=5, key="bar_mes")
+    with col2:
+        ano = st.selectbox("Ano", ["2025", "2026"], index=1, key="bar_ano")
+    df, df_prod, df_evo = gerar_dados_barbearia(mes, ano)
 
+    info_dados_ficticios()
     hoje = datetime.now()
     realizados = df[df["Status"]=="Realizado"]
-    # Correção do erro de digitação: realizadoss -> realizados
     mes_atual = realizados[realizados["Data"] >= hoje - timedelta(days=30)]
     receita_serv = mes_atual["Valor"].sum()
     receita_prod = df_prod[df_prod["Data"] >= hoje - timedelta(days=30)]["Receita_Total"].sum()
     receita_total = receita_serv + receita_prod
-
     spark_rec = df_evo["Receita_Servicos"].tail(6).tolist()
+
     c1, c2 = st.columns(2)
     with c1:
         metric_card("RECEITA TOTAL", formatar_brl(receita_total), "+15%", spark_rec)
     with c2:
         st.metric("ATENDIMENTOS", len(mes_atual))
-
     c3, c4 = st.columns(2)
     with c3:
         st.metric("TICKET MÉDIO", formatar_brl(mes_atual["Valor"].mean()))
     with c4:
         st.metric("AGENDADOS", len(df[df["Status"]=="Agendado"]))
 
-    t1, t2 = st.tabs(["💰 Comissões", "🛍️ Produtos"])
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    t1, t2, t3, t4, t5, t6 = st.tabs([
+        "💰 Comissões", "🛍️ Produtos", "📅 Agenda", "👥 Clientes", "📊 Ocupação", "🏆 Serviços"
+    ])
 
     with t1:
-        comissao_semana = mes_atual.groupby("Barbeiro")["Comissao_Barbeiro"].sum().reset_index()
-        fig = go.Figure(go.Bar(x=comissao_semana["Comissao_Barbeiro"], y=comissao_semana["Barbeiro"],
+        comissao = mes_atual.groupby("Barbeiro")["Comissao_Barbeiro"].sum().reset_index()
+        fig = go.Figure(go.Bar(x=comissao["Comissao_Barbeiro"], y=comissao["Barbeiro"],
                                orientation="h", marker_color=VERDE))
         fig.update_layout(**layout_chart(260))
         st.plotly_chart(fig, use_container_width=True)
@@ -828,6 +827,39 @@ def dash_barbearia():
         top_prod = df_prod.groupby("Produto")["Receita_Total"].sum().sort_values(ascending=True).tail(5)
         fig = go.Figure(go.Bar(y=top_prod.index, x=top_prod.values, orientation="h", marker_color=AZUL))
         fig.update_layout(**layout_chart(260))
+        st.plotly_chart(fig, use_container_width=True)
+
+    with t3:
+        agenda = df[(df["Status"]=="Agendado") & (df["Data"] >= hoje)].sort_values("Data").head(10)
+        for _, row in agenda.iterrows():
+            st.markdown(f"""
+            <div class="alerta-item ok">
+                <div style="display:flex; justify-content:space-between;">
+                    <div><strong>{row['Cliente']}</strong><br><span style="font-size:0.78rem;">{row['Servico']} • {row['Barbeiro']}</span></div>
+                    <div><strong>{row['Data'].strftime('%d/%m %H:%M')}</strong></div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    with t4:
+        freq = realizados["Cliente"].value_counts().reset_index().head(10)
+        freq.columns = ["Cliente", "Visitas"]
+        fig = px.bar(freq, x="Visitas", y="Cliente", orientation="h", color_discrete_sequence=[VERDE])
+        fig.update_layout(**layout_chart(320), yaxis=dict(autorange="reversed"))
+        st.plotly_chart(fig, use_container_width=True)
+
+    with t5:
+        horas = ["09h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h"]
+        ocupacao = np.random.randint(40, 100, size=len(horas))
+        fig = go.Figure(go.Scatter(x=horas, y=ocupacao, mode="lines+markers",
+                                   fill="tozeroy", line=dict(color=VERDE, width=3)))
+        fig.update_layout(**layout_chart(260), yaxis_title="Ocupação (%)")
+        st.plotly_chart(fig, use_container_width=True)
+
+    with t6:
+        serv = realizados.groupby("Servico")["Valor"].sum().sort_values(ascending=True).tail(6)
+        fig = go.Figure(go.Bar(y=serv.index, x=serv.values, orientation="h", marker_color=VERDE))
+        fig.update_layout(**layout_chart(320))
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
