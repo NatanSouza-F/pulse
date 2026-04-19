@@ -1,0 +1,451 @@
+﻿Data,Paciente,Telefone,Procedimento,Profissional,Valor,Status,Forma_Pagamento
+2026-04-18 23:30,Natália Monteiro,(61) 99379-9920,Preenchimento Labial,Bruna (Esteticista),1656,Realizado,Dinheiro
+2026-04-18 21:00,Aline Coelho,(61) 99280-2932,Drenagem Linfática,Bruna (Esteticista),199,Realizado,Cartão Crédito
+2026-04-18 15:00,Rodrigo Teixeira,(61) 99785-2426,Depilação a Laser,Marina (Esteticista),229,Realizado,Cartão Débito
+2026-04-18 14:00,Ana Beatriz Oliveira,(61) 98697-3907,Depilação a Laser,Dr. Rafael Souza,322,Realizado,Cartão Débito
+2026-04-18 08:00,Camila Rodrigues,(61) 98587-8687,Drenagem Linfática,Dra. Juliana Costa,152,Realizado,PIX
+2026-04-18 04:00,Rodrigo Teixeira,(61) 98093-2189,Botox,Marina (Esteticista),1347,Faltou,Cartão Débito
+2026-04-17 18:00,Amanda Barbosa,(61) 99529-8846,Massagem Modeladora,Dra. Patrícia Lima,158,Realizado,Cartão Crédito
+2026-04-17 13:00,Juliana Ribeiro,(61) 99154-5979,Depilação a Laser,Dra. Juliana Costa,316,Realizado,Cartão Crédito
+2026-04-17 09:00,Leonardo Gomes,(61) 98860-6104,Botox,Dra. Juliana Costa,954,Agendado,Dinheiro
+2026-04-17 03:00,Priscila Araújo,(61) 99401-3717,Massagem Modeladora,Marina (Esteticista),184,Realizado,Cartão Crédito
+2026-04-17 02:00,Ricardo Brito,(61) 98335-9133,Preenchimento Labial,Dra. Patrícia Lima,1444,Realizado,Cartão Débito
+2026-04-17 01:30,Daniel Freitas,(61) 98588-2523,Depilação a Laser,Dr. Rafael Souza,337,Realizado,Dinheiro
+2026-04-17 00:30,Débora Pires,(61) 99162-4164,Drenagem Linfática,Dra. Juliana Costa,197,Realizado,Cartão Crédito
+2026-04-16 11:30,Vanessa Moura,(61) 99527-4570,Peeling Químico,Dra. Patrícia Lima,457,Realizado,PIX
+2026-04-16 03:00,Beatriz Moreira,(61) 99866-3167,Criolipólise,Bruna (Esteticista),1125,Realizado,Cartão Crédito
+2026-04-16 03:00,Matheus Rocha,(61) 98463-6641,Depilação a Laser,Dr. Rafael Souza,248,Realizado,Cartão Débito
+2026-04-15 13:30,Renata Carvalho,(61) 98621-8258,Massagem Modeladora,Bruna (Esteticista),138,Realizado,Cartão Débito
+2026-04-15 01:30,Cristiane Reis,(61) 99154-3328,Massagem Modeladora,Marina (Esteticista),195,Agendado,Cartão Crédito
+2026-04-15 01:00,Renata Carvalho,(61) 99212-8037,Criolipólise,Bruna (Esteticista),1005,Realizado,Dinheiro
+2026-04-14 21:30,Mariana Castro,(61) 98754-7208,Microagulhamento,Dra. Juliana Costa,534,Realizado,PIX
+2026-04-14 18:00,João Pedro Santos,(61) 98392-2617,Preenchimento Labial,Bruna (Esteticista),1565,Realizado,PIX
+2026-04-14 17:30,Rebeca Farias,(61) 99067-4415,Peeling Químico,Dra. Patrícia Lima,426,Realizado,Dinheiro
+2026-04-14 11:00,Lucas Martins,(61) 99946-7767,Harmonização Facial,Dra. Juliana Costa,3426,Realizado,Cartão Crédito
+2026-04-14 04:00,Simone Machado,(61) 98318-8546,Peeling Químico,Bruna (Esteticista),542,Faltou,Cartão Débito
+2026-04-14 00:00,Cristiane Reis,(61) 98673-6857,Botox,Dr. Rafael Souza,897,Agendado,Dinheiro
+2026-04-13 22:30,Rodrigo Teixeira,(61) 99441-9542,Peeling Químico,Dra. Patrícia Lima,532,Realizado,Cartão Débito
+2026-04-13 19:30,Isabela Cunha,(61) 98104-5934,Peeling Químico,Marina (Esteticista),379,Realizado,Dinheiro
+2026-04-13 17:00,Carolina Xavier,(61) 98319-2405,Preenchimento Labial,Dra. Juliana Costa,2102,Realizado,PIX
+2026-04-13 13:30,Carolina Xavier,(61) 99650-4478,Criolipólise,Marina (Esteticista),1023,Realizado,PIX
+2026-04-13 11:30,Fábio Duarte,(61) 99105-4559,Limpeza de Pele,Dr. Rafael Souza,151,Realizado,PIX
+2026-04-13 08:30,Otávio Guimarães,(61) 98645-9066,Depilação a Laser,Marina (Esteticista),445,Cancelado,Cartão Débito
+2026-04-13 04:30,Fernanda Dias,(61) 98807-9784,Criolipólise,Dra. Juliana Costa,1014,Cancelado,PIX
+2026-04-12 19:00,Eduardo Cardoso,(61) 99325-4688,Limpeza de Pele,Dr. Rafael Souza,169,Realizado,Cartão Crédito
+2026-04-12 18:30,Débora Pires,(61) 98975-5937,Drenagem Linfática,Bruna (Esteticista),179,Agendado,Dinheiro
+2026-04-12 08:00,Fernanda Dias,(61) 99317-7203,Massagem Modeladora,Marina (Esteticista),155,Agendado,Dinheiro
+2026-04-12 06:30,Patrícia Souza,(61) 98149-5762,Preenchimento Labial,Marina (Esteticista),2361,Realizado,PIX
+2026-04-12 03:00,Ana Beatriz Oliveira,(61) 98546-3636,Criolipólise,Dr. Rafael Souza,748,Realizado,Cartão Débito
+2026-04-12 02:30,Henrique Campos,(61) 99541-9269,Harmonização Facial,Bruna (Esteticista),3127,Agendado,PIX
+2026-04-11 17:00,Renata Carvalho,(61) 98103-6904,Harmonização Facial,Bruna (Esteticista),3322,Realizado,Cartão Crédito
+2026-04-11 10:00,Juliana Ribeiro,(61) 98850-8484,Depilação a Laser,Marina (Esteticista),314,Agendado,PIX
+2026-04-11 09:00,Mariana Castro,(61) 98322-5179,Depilação a Laser,Dra. Juliana Costa,292,Realizado,PIX
+2026-04-11 06:30,Aline Coelho,(61) 99141-9683,Preenchimento Labial,Bruna (Esteticista),2148,Realizado,Cartão Crédito
+2026-04-11 01:30,Simone Machado,(61) 99543-9866,Drenagem Linfática,Dr. Rafael Souza,187,Realizado,PIX
+2026-04-10 19:30,Raphael Nunes,(61) 98694-7147,Massagem Modeladora,Dra. Patrícia Lima,165,Faltou,Cartão Crédito
+2026-04-10 18:30,Cristiane Reis,(61) 99003-6323,Harmonização Facial,Marina (Esteticista),3337,Agendado,Dinheiro
+2026-04-10 15:30,Leonardo Gomes,(61) 98087-4387,Peeling Químico,Dr. Rafael Souza,418,Realizado,Cartão Débito
+2026-04-10 14:30,Otávio Guimarães,(61) 98249-5496,Criolipólise,Dr. Rafael Souza,1163,Realizado,Cartão Débito
+2026-04-10 08:00,Fábio Duarte,(61) 98605-5314,Depilação a Laser,Bruna (Esteticista),241,Realizado,Cartão Débito
+2026-04-09 16:30,Camila Rodrigues,(61) 98343-2453,Massagem Modeladora,Dra. Juliana Costa,215,Realizado,Cartão Débito
+2026-04-09 16:30,Tatiana Mendes,(61) 99496-2678,Preenchimento Labial,Dra. Patrícia Lima,2178,Realizado,PIX
+2026-04-09 06:00,Henrique Campos,(61) 99356-3141,Preenchimento Labial,Bruna (Esteticista),2007,Realizado,Cartão Crédito
+2026-04-09 05:30,Sérgio Lopes,(61) 99028-1862,Massagem Modeladora,Dra. Patrícia Lima,154,Realizado,Cartão Crédito
+2026-04-09 01:30,Raphael Nunes,(61) 98450-4012,Depilação a Laser,Marina (Esteticista),291,Realizado,PIX
+2026-04-08 11:30,Vanessa Moura,(61) 99560-3209,Criolipólise,Dr. Rafael Souza,868,Realizado,Dinheiro
+2026-04-08 11:00,Rodrigo Teixeira,(61) 99565-5454,Harmonização Facial,Marina (Esteticista),3577,Realizado,Cartão Débito
+2026-04-08 10:00,Carlos Silva,(61) 99142-7814,Harmonização Facial,Dra. Juliana Costa,4512,Realizado,Cartão Débito
+2026-04-08 08:30,Maria Fernanda Costa,(61) 99158-2562,Limpeza de Pele,Dra. Juliana Costa,141,Realizado,PIX
+2026-04-08 03:30,Bruno Ferreira,(61) 98469-5053,Drenagem Linfática,Dra. Juliana Costa,189,Agendado,Cartão Débito
+2026-04-07 22:00,Mariana Castro,(61) 99626-5127,Massagem Modeladora,Dr. Rafael Souza,124,Realizado,PIX
+2026-04-07 21:30,Camila Rodrigues,(61) 98759-2311,Peeling Químico,Dr. Rafael Souza,522,Realizado,PIX
+2026-04-07 19:00,Matheus Rocha,(61) 99979-8503,Peeling Químico,Marina (Esteticista),572,Realizado,PIX
+2026-04-07 18:00,Matheus Rocha,(61) 99849-1003,Peeling Químico,Marina (Esteticista),331,Realizado,Cartão Crédito
+2026-04-07 13:30,Sérgio Lopes,(61) 98883-3703,Botox,Dra. Patrícia Lima,1360,Realizado,Dinheiro
+2026-04-06 20:00,Amanda Barbosa,(61) 99495-7291,Botox,Marina (Esteticista),1718,Realizado,Cartão Débito
+2026-04-06 16:00,Juliana Ribeiro,(61) 98606-5327,Depilação a Laser,Bruna (Esteticista),219,Realizado,Dinheiro
+2026-04-06 11:00,Henrique Campos,(61) 98697-7499,Massagem Modeladora,Dra. Patrícia Lima,126,Realizado,Cartão Débito
+2026-04-06 08:00,Rebeca Farias,(61) 99483-1598,Massagem Modeladora,Dr. Rafael Souza,138,Realizado,Dinheiro
+2026-04-06 04:30,Renata Carvalho,(61) 99496-7251,Peeling Químico,Dra. Patrícia Lima,595,Realizado,PIX
+2026-04-06 01:00,Amanda Barbosa,(61) 98789-4104,Depilação a Laser,Marina (Esteticista),224,Cancelado,Cartão Crédito
+2026-04-06 00:00,Rodrigo Teixeira,(61) 99760-9263,Criolipólise,Marina (Esteticista),735,Realizado,Dinheiro
+2026-04-05 23:30,Rodrigo Teixeira,(61) 98473-7237,Drenagem Linfática,Bruna (Esteticista),242,Agendado,PIX
+2026-04-05 11:00,Isabela Cunha,(61) 99376-5659,Botox,Dr. Rafael Souza,850,Realizado,Cartão Crédito
+2026-04-05 09:00,Eduardo Cardoso,(61) 98409-5308,Botox,Marina (Esteticista),1603,Realizado,Cartão Crédito
+2026-04-05 00:00,Camila Rodrigues,(61) 99111-6739,Preenchimento Labial,Dr. Rafael Souza,1760,Realizado,Cartão Débito
+2026-04-04 13:00,Natália Monteiro,(61) 99870-2517,Drenagem Linfática,Dr. Rafael Souza,194,Realizado,Dinheiro
+2026-04-03 16:30,Simone Machado,(61) 98374-7116,Preenchimento Labial,Dra. Patrícia Lima,1841,Cancelado,Cartão Crédito
+2026-04-02 19:00,Camila Rodrigues,(61) 99263-5372,Harmonização Facial,Marina (Esteticista),2937,Realizado,Cartão Crédito
+2026-04-02 17:30,Carlos Silva,(61) 99405-2376,Limpeza de Pele,Dra. Juliana Costa,148,Realizado,Cartão Débito
+2026-04-02 06:00,Vinícius Ramos,(61) 99476-5422,Preenchimento Labial,Dra. Patrícia Lima,2370,Cancelado,Cartão Crédito
+2026-04-02 00:30,Eduardo Cardoso,(61) 99562-3999,Botox,Marina (Esteticista),1282,Realizado,Cartão Débito
+2026-04-01 17:30,Daniel Freitas,(61) 99035-9109,Limpeza de Pele,Marina (Esteticista),182,Realizado,Dinheiro
+2026-04-01 16:00,Paulo Henrique,(61) 99447-8168,Criolipólise,Bruna (Esteticista),966,Agendado,Cartão Débito
+2026-04-01 12:00,Matheus Rocha,(61) 98140-9691,Massagem Modeladora,Dr. Rafael Souza,158,Realizado,PIX
+2026-04-01 11:00,Juliana Ribeiro,(61) 98510-9907,Drenagem Linfática,Marina (Esteticista),248,Realizado,PIX
+2026-04-01 09:00,Carolina Xavier,(61) 99531-7121,Harmonização Facial,Bruna (Esteticista),3397,Faltou,Dinheiro
+2026-04-01 04:00,Otávio Guimarães,(61) 99448-3474,Limpeza de Pele,Dra. Patrícia Lima,172,Realizado,PIX
+2026-04-01 03:30,Eduardo Cardoso,(61) 99825-7266,Criolipólise,Dra. Juliana Costa,784,Agendado,Dinheiro
+2026-04-01 01:30,João Pedro Santos,(61) 98520-4209,Preenchimento Labial,Dra. Patrícia Lima,2208,Realizado,Cartão Crédito
+2026-03-31 12:30,Juliana Ribeiro,(61) 98932-4389,Botox,Dra. Juliana Costa,1651,Agendado,Dinheiro
+2026-03-31 06:00,Patrícia Souza,(61) 99152-2654,Criolipólise,Dra. Patrícia Lima,753,Realizado,Cartão Débito
+2026-03-31 05:30,Fernanda Dias,(61) 98768-8405,Criolipólise,Bruna (Esteticista),1101,Realizado,PIX
+2026-03-31 04:30,Renata Carvalho,(61) 98810-6431,Drenagem Linfática,Dra. Patrícia Lima,253,Faltou,Cartão Crédito
+2026-03-30 21:00,Fernanda Dias,(61) 99384-9071,Microagulhamento,Dra. Patrícia Lima,532,Realizado,PIX
+2026-03-30 19:30,João Pedro Santos,(61) 99821-5093,Peeling Químico,Dra. Juliana Costa,482,Realizado,Cartão Crédito
+2026-03-30 17:00,Bruno Ferreira,(61) 99078-5135,Botox,Marina (Esteticista),1336,Realizado,Cartão Débito
+2026-03-30 13:00,Rebeca Farias,(61) 98214-5840,Microagulhamento,Bruna (Esteticista),606,Realizado,Dinheiro
+2026-03-30 02:00,Beatriz Moreira,(61) 99368-6632,Microagulhamento,Dra. Patrícia Lima,381,Realizado,Dinheiro
+2026-03-29 23:00,Priscila Araújo,(61) 98975-2577,Botox,Dra. Juliana Costa,1507,Cancelado,Dinheiro
+2026-03-29 22:30,Daniel Freitas,(61) 99409-8875,Criolipólise,Dr. Rafael Souza,902,Realizado,Cartão Débito
+2026-03-29 21:30,Maria Fernanda Costa,(61) 98826-3222,Depilação a Laser,Marina (Esteticista),402,Agendado,PIX
+2026-03-29 20:00,Gabriel Lima,(61) 98300-1916,Microagulhamento,Marina (Esteticista),653,Realizado,Cartão Crédito
+2026-03-29 19:00,Felipe Correia,(61) 99709-5140,Depilação a Laser,Marina (Esteticista),236,Realizado,Cartão Crédito
+2026-03-29 09:00,Otávio Guimarães,(61) 99258-8105,Preenchimento Labial,Dr. Rafael Souza,2380,Agendado,Dinheiro
+2026-03-29 07:00,Priscila Araújo,(61) 99529-7406,Limpeza de Pele,Dr. Rafael Souza,180,Realizado,Cartão Débito
+2026-03-29 04:00,Rodrigo Teixeira,(61) 99066-3001,Drenagem Linfática,Marina (Esteticista),232,Realizado,Cartão Débito
+2026-03-28 18:30,Paulo Henrique,(61) 98691-3591,Criolipólise,Marina (Esteticista),706,Realizado,Dinheiro
+2026-03-28 18:00,Patrícia Souza,(61) 98087-7936,Peeling Químico,Dr. Rafael Souza,388,Realizado,PIX
+2026-03-28 17:00,Henrique Campos,(61) 99317-5600,Preenchimento Labial,Marina (Esteticista),2100,Realizado,Cartão Crédito
+2026-03-28 14:30,Daniel Freitas,(61) 99176-3087,Peeling Químico,Marina (Esteticista),536,Realizado,PIX
+2026-03-28 14:00,Vanessa Moura,(61) 99779-3369,Criolipólise,Dr. Rafael Souza,644,Cancelado,Cartão Crédito
+2026-03-28 13:30,Raphael Nunes,(61) 99393-4365,Depilação a Laser,Dra. Patrícia Lima,238,Realizado,Dinheiro
+2026-03-28 10:30,Bruna Viana,(61) 98613-8933,Preenchimento Labial,Bruna (Esteticista),1329,Realizado,PIX
+2026-03-28 10:30,Rebeca Farias,(61) 99882-1893,Drenagem Linfática,Marina (Esteticista),268,Realizado,Cartão Crédito
+2026-03-28 06:00,Maria Fernanda Costa,(61) 99656-1447,Peeling Químico,Dra. Juliana Costa,596,Cancelado,Cartão Débito
+2026-03-28 05:30,João Pedro Santos,(61) 99016-1483,Peeling Químico,Bruna (Esteticista),325,Realizado,Dinheiro
+2026-03-28 00:30,Carolina Xavier,(61) 99221-2127,Depilação a Laser,Bruna (Esteticista),267,Realizado,Cartão Crédito
+2026-03-27 22:30,Maria Fernanda Costa,(61) 99641-6123,Botox,Dra. Juliana Costa,1632,Realizado,Dinheiro
+2026-03-27 22:30,Larissa Pinto,(61) 98659-5067,Criolipólise,Dr. Rafael Souza,753,Realizado,Dinheiro
+2026-03-27 14:00,Bruna Viana,(61) 98925-5481,Massagem Modeladora,Dra. Patrícia Lima,200,Faltou,Cartão Crédito
+2026-03-27 12:30,Vanessa Moura,(61) 98628-6641,Depilação a Laser,Dra. Juliana Costa,323,Realizado,Dinheiro
+2026-03-27 09:00,Camila Rodrigues,(61) 99030-2925,Microagulhamento,Marina (Esteticista),399,Realizado,PIX
+2026-03-27 09:00,Bruna Viana,(61) 98115-4811,Depilação a Laser,Dra. Patrícia Lima,279,Agendado,Cartão Crédito
+2026-03-26 20:30,Maria Fernanda Costa,(61) 98256-8183,Depilação a Laser,Dra. Juliana Costa,205,Realizado,PIX
+2026-03-26 08:00,Paulo Henrique,(61) 98172-3376,Harmonização Facial,Dra. Juliana Costa,4486,Realizado,Cartão Crédito
+2026-03-26 07:00,Gabriel Lima,(61) 98069-2217,Depilação a Laser,Marina (Esteticista),325,Realizado,PIX
+2026-03-26 06:30,Camila Rodrigues,(61) 99739-4692,Drenagem Linfática,Dr. Rafael Souza,246,Realizado,Cartão Débito
+2026-03-26 05:00,Raphael Nunes,(61) 99444-6152,Microagulhamento,Dra. Juliana Costa,549,Realizado,PIX
+2026-03-26 04:30,Rebeca Farias,(61) 98452-2705,Microagulhamento,Marina (Esteticista),366,Realizado,Dinheiro
+2026-03-25 18:30,Bruna Viana,(61) 98467-4675,Massagem Modeladora,Dra. Patrícia Lima,216,Realizado,Cartão Crédito
+2026-03-25 15:30,Alexandre Batista,(61) 98249-5078,Peeling Químico,Dra. Patrícia Lima,392,Faltou,Dinheiro
+2026-03-25 13:30,Eduardo Cardoso,(61) 98672-6008,Microagulhamento,Bruna (Esteticista),385,Faltou,Cartão Crédito
+2026-03-25 10:00,Sérgio Lopes,(61) 99517-8937,Criolipólise,Bruna (Esteticista),691,Realizado,Cartão Débito
+2026-03-24 20:00,Vanessa Moura,(61) 99650-1159,Criolipólise,Bruna (Esteticista),990,Realizado,Cartão Crédito
+2026-03-24 17:00,Renata Carvalho,(61) 98423-4755,Harmonização Facial,Dra. Juliana Costa,4543,Realizado,Cartão Crédito
+2026-03-24 03:30,Rafael Almeida,(61) 98188-6432,Limpeza de Pele,Dr. Rafael Souza,128,Realizado,PIX
+2026-03-23 18:00,Lucas Martins,(61) 98718-9720,Microagulhamento,Marina (Esteticista),421,Realizado,Cartão Débito
+2026-03-23 17:00,Vinícius Ramos,(61) 98525-2770,Limpeza de Pele,Dra. Juliana Costa,153,Realizado,PIX
+2026-03-23 14:00,Rodrigo Teixeira,(61) 99734-7079,Harmonização Facial,Bruna (Esteticista),3544,Realizado,PIX
+2026-03-23 10:30,Renata Carvalho,(61) 99749-7563,Peeling Químico,Dra. Juliana Costa,517,Realizado,Cartão Débito
+2026-03-23 06:00,Gustavo Fonseca,(61) 98045-4992,Peeling Químico,Bruna (Esteticista),545,Realizado,PIX
+2026-03-23 06:00,Renata Carvalho,(61) 99902-2260,Massagem Modeladora,Bruna (Esteticista),122,Cancelado,Cartão Débito
+2026-03-23 02:00,Natália Monteiro,(61) 98119-2790,Criolipólise,Marina (Esteticista),1137,Realizado,PIX
+2026-03-22 11:00,Otávio Guimarães,(61) 98609-1528,Peeling Químico,Dr. Rafael Souza,579,Realizado,Dinheiro
+2026-03-22 05:30,Fábio Duarte,(61) 98839-8239,Peeling Químico,Bruna (Esteticista),421,Realizado,PIX
+2026-03-21 10:30,Luana Azevedo,(61) 98124-3869,Preenchimento Labial,Dra. Juliana Costa,2267,Realizado,Dinheiro
+2026-03-21 08:00,Carlos Silva,(61) 98766-7408,Botox,Bruna (Esteticista),1064,Realizado,Dinheiro
+2026-03-21 07:30,Rafael Almeida,(61) 98016-6629,Preenchimento Labial,Dra. Patrícia Lima,2415,Faltou,PIX
+2026-03-21 06:30,Eduardo Cardoso,(61) 99598-8492,Limpeza de Pele,Dr. Rafael Souza,155,Faltou,Dinheiro
+2026-03-21 03:30,Thiago Pereira,(61) 99119-4218,Microagulhamento,Marina (Esteticista),576,Realizado,Cartão Crédito
+2026-03-20 21:30,Gabriel Lima,(61) 99795-9908,Drenagem Linfática,Marina (Esteticista),272,Realizado,Dinheiro
+2026-03-20 21:30,Daniel Freitas,(61) 98749-7753,Peeling Químico,Dra. Juliana Costa,576,Realizado,Cartão Débito
+2026-03-20 19:30,Paulo Henrique,(61) 99585-6257,Botox,Bruna (Esteticista),1795,Agendado,Cartão Débito
+2026-03-20 10:00,Cristiane Reis,(61) 98439-9328,Preenchimento Labial,Dra. Patrícia Lima,1443,Realizado,Dinheiro
+2026-03-20 08:30,Paulo Henrique,(61) 99206-2600,Depilação a Laser,Dra. Juliana Costa,309,Agendado,Dinheiro
+2026-03-20 00:30,Gabriel Lima,(61) 99224-6253,Depilação a Laser,Marina (Esteticista),274,Realizado,Cartão Crédito
+2026-03-19 21:00,Ricardo Brito,(61) 99170-9043,Drenagem Linfática,Bruna (Esteticista),226,Realizado,Cartão Crédito
+2026-03-19 18:00,João Pedro Santos,(61) 99216-1550,Criolipólise,Dra. Patrícia Lima,616,Agendado,Dinheiro
+2026-03-19 10:30,Bruno Ferreira,(61) 99991-3332,Harmonização Facial,Dra. Patrícia Lima,4670,Realizado,Cartão Débito
+2026-03-19 09:00,Bruna Viana,(61) 99820-1197,Criolipólise,Marina (Esteticista),715,Realizado,Cartão Débito
+2026-03-19 04:00,Patrícia Souza,(61) 99397-6258,Massagem Modeladora,Dra. Patrícia Lima,177,Realizado,Dinheiro
+2026-03-19 02:30,Bruna Viana,(61) 98431-6653,Criolipólise,Dr. Rafael Souza,992,Cancelado,PIX
+2026-03-18 23:30,Gabriel Lima,(61) 98482-8319,Peeling Químico,Bruna (Esteticista),465,Realizado,Cartão Débito
+2026-03-18 16:00,Tatiana Mendes,(61) 99133-5668,Massagem Modeladora,Dr. Rafael Souza,137,Realizado,PIX
+2026-03-18 13:30,Eduardo Cardoso,(61) 99672-7437,Peeling Químico,Dra. Juliana Costa,594,Agendado,Cartão Débito
+2026-03-18 09:30,Alexandre Batista,(61) 98564-4088,Criolipólise,Dr. Rafael Souza,835,Realizado,PIX
+2026-03-18 06:30,Fábio Duarte,(61) 99287-4401,Microagulhamento,Marina (Esteticista),353,Realizado,PIX
+2026-03-17 21:30,Marcelo Costa,(61) 99037-6307,Harmonização Facial,Dra. Juliana Costa,3653,Agendado,PIX
+2026-03-17 04:30,Fábio Duarte,(61) 98867-7168,Limpeza de Pele,Dra. Juliana Costa,148,Realizado,Cartão Débito
+2026-03-16 21:00,Eduardo Cardoso,(61) 98348-7151,Limpeza de Pele,Dra. Juliana Costa,160,Realizado,Cartão Crédito
+2026-03-16 18:30,Natália Monteiro,(61) 99535-5403,Depilação a Laser,Dr. Rafael Souza,400,Realizado,PIX
+2026-03-16 18:30,Priscila Araújo,(61) 98218-2185,Microagulhamento,Marina (Esteticista),352,Realizado,Cartão Débito
+2026-03-16 11:30,Alexandre Batista,(61) 99247-8750,Massagem Modeladora,Marina (Esteticista),172,Realizado,PIX
+2026-03-16 03:30,Isabela Cunha,(61) 98127-2936,Drenagem Linfática,Dr. Rafael Souza,152,Agendado,Dinheiro
+2026-03-16 03:30,Marcelo Costa,(61) 98307-9475,Massagem Modeladora,Dr. Rafael Souza,155,Realizado,Cartão Crédito
+2026-03-15 12:00,Alexandre Batista,(61) 98385-4555,Harmonização Facial,Dra. Patrícia Lima,2711,Agendado,Dinheiro
+2026-03-15 11:00,Débora Pires,(61) 98373-3238,Depilação a Laser,Dra. Patrícia Lima,407,Agendado,Cartão Débito
+2026-03-15 10:30,Sérgio Lopes,(61) 98077-8917,Harmonização Facial,Dra. Patrícia Lima,4555,Agendado,Cartão Débito
+2026-03-15 08:00,Aline Coelho,(61) 99708-5979,Limpeza de Pele,Dra. Patrícia Lima,198,Realizado,PIX
+2026-03-15 06:30,Gustavo Fonseca,(61) 99985-9835,Peeling Químico,Dr. Rafael Souza,576,Agendado,Cartão Crédito
+2026-03-15 01:30,Patrícia Souza,(61) 98656-1317,Peeling Químico,Dr. Rafael Souza,531,Realizado,Cartão Crédito
+2026-03-14 17:00,Rodrigo Teixeira,(61) 99837-7436,Limpeza de Pele,Dra. Juliana Costa,191,Realizado,Cartão Crédito
+2026-03-14 12:00,Bruna Viana,(61) 98262-1887,Preenchimento Labial,Marina (Esteticista),2246,Realizado,Dinheiro
+2026-03-14 06:30,Carlos Silva,(61) 99028-8054,Limpeza de Pele,Dra. Patrícia Lima,187,Realizado,Cartão Crédito
+2026-03-14 06:30,Rodrigo Teixeira,(61) 98329-5178,Limpeza de Pele,Dr. Rafael Souza,174,Realizado,PIX
+2026-03-14 04:00,Gabriel Lima,(61) 98511-3396,Criolipólise,Dr. Rafael Souza,660,Realizado,Cartão Débito
+2026-03-14 02:00,Carlos Silva,(61) 98208-9796,Harmonização Facial,Marina (Esteticista),3342,Realizado,Cartão Crédito
+2026-03-13 20:00,Vanessa Moura,(61) 99724-8389,Preenchimento Labial,Dra. Juliana Costa,2202,Realizado,PIX
+2026-03-13 17:30,André Nascimento,(61) 98952-1136,Preenchimento Labial,Dra. Patrícia Lima,1323,Realizado,PIX
+2026-03-13 15:30,Matheus Rocha,(61) 99374-2927,Harmonização Facial,Bruna (Esteticista),3288,Realizado,Cartão Débito
+2026-03-13 15:00,Vanessa Moura,(61) 98130-6509,Microagulhamento,Bruna (Esteticista),661,Realizado,Cartão Débito
+2026-03-13 05:00,Priscila Araújo,(61) 98276-5945,Limpeza de Pele,Marina (Esteticista),124,Realizado,PIX
+2026-03-12 19:00,Felipe Correia,(61) 99534-5981,Massagem Modeladora,Marina (Esteticista),157,Agendado,Cartão Débito
+2026-03-11 23:30,Paulo Henrique,(61) 99222-4788,Peeling Químico,Dra. Juliana Costa,544,Realizado,PIX
+2026-03-11 21:30,Raphael Nunes,(61) 99028-9467,Harmonização Facial,Dra. Patrícia Lima,4450,Realizado,Cartão Crédito
+2026-03-10 14:30,Rebeca Farias,(61) 99282-3960,Limpeza de Pele,Dra. Juliana Costa,173,Realizado,PIX
+2026-03-10 13:30,João Pedro Santos,(61) 99524-3572,Harmonização Facial,Bruna (Esteticista),4668,Realizado,PIX
+2026-03-10 08:00,Marcelo Costa,(61) 99105-3450,Criolipólise,Dra. Juliana Costa,655,Agendado,Cartão Débito
+2026-03-09 23:30,Luana Azevedo,(61) 99047-3534,Harmonização Facial,Marina (Esteticista),3379,Realizado,PIX
+2026-03-09 11:00,Raphael Nunes,(61) 98641-5033,Microagulhamento,Dra. Patrícia Lima,536,Agendado,Cartão Crédito
+2026-03-09 05:00,Beatriz Moreira,(61) 99834-5602,Preenchimento Labial,Dra. Patrícia Lima,1253,Realizado,PIX
+2026-03-09 02:00,Paulo Henrique,(61) 98429-5760,Depilação a Laser,Dr. Rafael Souza,420,Realizado,Cartão Débito
+2026-03-08 13:00,Larissa Pinto,(61) 98346-6729,Massagem Modeladora,Dra. Juliana Costa,144,Realizado,Dinheiro
+2026-03-08 12:30,Daniel Freitas,(61) 99691-6299,Massagem Modeladora,Bruna (Esteticista),190,Faltou,Cartão Crédito
+2026-03-08 09:30,Priscila Araújo,(61) 98133-8787,Preenchimento Labial,Dra. Patrícia Lima,1876,Realizado,PIX
+2026-03-08 07:30,Rodrigo Teixeira,(61) 99247-5067,Microagulhamento,Bruna (Esteticista),660,Realizado,Cartão Débito
+2026-03-08 01:30,Fábio Duarte,(61) 99172-5380,Depilação a Laser,Dra. Juliana Costa,243,Realizado,PIX
+2026-03-07 22:00,Larissa Pinto,(61) 98545-7429,Peeling Químico,Dra. Patrícia Lima,316,Agendado,PIX
+2026-03-07 18:00,Lucas Martins,(61) 99427-9849,Limpeza de Pele,Bruna (Esteticista),132,Realizado,Cartão Débito
+2026-03-07 18:00,Vinícius Ramos,(61) 99119-9573,Peeling Químico,Dr. Rafael Souza,311,Realizado,Cartão Débito
+2026-03-07 16:30,Eduardo Cardoso,(61) 99706-5026,Preenchimento Labial,Marina (Esteticista),1601,Realizado,Dinheiro
+2026-03-07 06:30,Maria Fernanda Costa,(61) 99466-8414,Harmonização Facial,Dra. Juliana Costa,4361,Agendado,PIX
+2026-03-06 12:30,Bruno Ferreira,(61) 99069-7125,Harmonização Facial,Marina (Esteticista),2508,Realizado,PIX
+2026-03-06 04:00,Aline Coelho,(61) 99904-4996,Botox,Dr. Rafael Souza,823,Realizado,Cartão Crédito
+2026-03-05 12:30,Carolina Xavier,(61) 98353-5873,Criolipólise,Marina (Esteticista),716,Realizado,PIX
+2026-03-05 10:30,Rebeca Farias,(61) 99781-4714,Limpeza de Pele,Dra. Patrícia Lima,162,Realizado,PIX
+2026-03-05 03:30,Vanessa Moura,(61) 98652-7821,Peeling Químico,Marina (Esteticista),324,Realizado,Dinheiro
+2026-03-05 02:30,Tatiana Mendes,(61) 99718-1894,Harmonização Facial,Dr. Rafael Souza,4473,Agendado,PIX
+2026-03-05 01:00,Carolina Xavier,(61) 99883-7745,Preenchimento Labial,Dr. Rafael Souza,2101,Agendado,Dinheiro
+2026-03-04 20:30,Carlos Silva,(61) 98481-8073,Depilação a Laser,Dra. Patrícia Lima,410,Realizado,Dinheiro
+2026-03-04 18:00,Simone Machado,(61) 98573-8307,Criolipólise,Dra. Juliana Costa,776,Agendado,Cartão Crédito
+2026-03-04 17:00,Vanessa Moura,(61) 99238-1121,Peeling Químico,Bruna (Esteticista),496,Realizado,Dinheiro
+2026-03-04 16:30,Débora Pires,(61) 99614-6428,Botox,Bruna (Esteticista),1027,Realizado,Cartão Débito
+2026-03-04 04:00,Otávio Guimarães,(61) 99620-2759,Limpeza de Pele,Marina (Esteticista),127,Agendado,Cartão Crédito
+2026-03-03 23:00,Gustavo Fonseca,(61) 98483-8113,Drenagem Linfática,Dra. Patrícia Lima,200,Agendado,Cartão Débito
+2026-03-03 19:30,Aline Coelho,(61) 98947-8296,Criolipólise,Bruna (Esteticista),883,Realizado,Cartão Débito
+2026-03-03 17:00,Carolina Xavier,(61) 98177-5520,Preenchimento Labial,Dr. Rafael Souza,1273,Realizado,Dinheiro
+2026-03-03 16:00,Carlos Silva,(61) 98178-4070,Drenagem Linfática,Dr. Rafael Souza,263,Realizado,Dinheiro
+2026-03-03 15:00,Ricardo Brito,(61) 99086-8780,Massagem Modeladora,Marina (Esteticista),162,Realizado,PIX
+2026-03-03 12:30,Cristiane Reis,(61) 98040-7746,Massagem Modeladora,Dra. Juliana Costa,153,Realizado,PIX
+2026-03-03 05:00,Camila Rodrigues,(61) 98849-6410,Preenchimento Labial,Dr. Rafael Souza,1522,Realizado,PIX
+2026-03-03 04:30,Alexandre Batista,(61) 99546-4337,Criolipólise,Bruna (Esteticista),1178,Realizado,Dinheiro
+2026-03-02 23:30,Maria Fernanda Costa,(61) 98636-5593,Peeling Químico,Dra. Juliana Costa,437,Realizado,Dinheiro
+2026-03-02 22:30,Amanda Barbosa,(61) 98032-1108,Depilação a Laser,Bruna (Esteticista),316,Realizado,Dinheiro
+2026-03-02 22:00,Paulo Henrique,(61) 99023-2497,Microagulhamento,Dr. Rafael Souza,429,Cancelado,Cartão Débito
+2026-03-02 14:00,Carolina Xavier,(61) 98820-7557,Drenagem Linfática,Dra. Patrícia Lima,173,Realizado,Dinheiro
+2026-03-02 11:30,Beatriz Moreira,(61) 98498-4700,Criolipólise,Marina (Esteticista),680,Realizado,Cartão Débito
+2026-03-01 21:30,Renata Carvalho,(61) 99460-2204,Microagulhamento,Dr. Rafael Souza,688,Realizado,PIX
+2026-03-01 21:30,André Nascimento,(61) 98981-7566,Preenchimento Labial,Marina (Esteticista),2066,Agendado,Dinheiro
+2026-03-01 14:30,Ricardo Brito,(61) 98363-1029,Microagulhamento,Dr. Rafael Souza,439,Realizado,Dinheiro
+2026-03-01 11:30,Marcelo Costa,(61) 99116-4460,Massagem Modeladora,Bruna (Esteticista),211,Faltou,Cartão Crédito
+2026-03-01 06:30,Raphael Nunes,(61) 99969-8412,Depilação a Laser,Dra. Juliana Costa,254,Faltou,Dinheiro
+2026-03-01 04:30,Rebeca Farias,(61) 99293-3373,Peeling Químico,Bruna (Esteticista),340,Realizado,Cartão Crédito
+2026-03-01 04:00,Patrícia Souza,(61) 99638-6172,Drenagem Linfática,Dr. Rafael Souza,167,Realizado,Dinheiro
+2026-03-01 03:30,Cristiane Reis,(61) 99203-2275,Drenagem Linfática,Dra. Juliana Costa,194,Faltou,Cartão Débito
+2026-03-01 01:00,Mariana Castro,(61) 99269-6965,Limpeza de Pele,Dra. Patrícia Lima,184,Cancelado,Cartão Crédito
+2026-03-01 00:00,Priscila Araújo,(61) 98408-7112,Criolipólise,Marina (Esteticista),1088,Realizado,PIX
+2026-02-28 23:30,Fábio Duarte,(61) 98794-2387,Microagulhamento,Bruna (Esteticista),516,Cancelado,Cartão Crédito
+2026-02-28 10:30,Paulo Henrique,(61) 98110-1212,Limpeza de Pele,Marina (Esteticista),168,Realizado,Cartão Débito
+2026-02-28 01:00,André Nascimento,(61) 99450-4111,Criolipólise,Marina (Esteticista),1014,Faltou,Cartão Débito
+2026-02-27 20:00,Leonardo Gomes,(61) 98169-8796,Criolipólise,Dra. Juliana Costa,896,Agendado,PIX
+2026-02-27 16:30,Paulo Henrique,(61) 98779-8639,Microagulhamento,Dra. Juliana Costa,454,Realizado,Cartão Débito
+2026-02-27 16:30,Débora Pires,(61) 98951-9210,Preenchimento Labial,Dr. Rafael Souza,1949,Realizado,PIX
+2026-02-27 08:00,Juliana Ribeiro,(61) 98532-3848,Harmonização Facial,Dra. Juliana Costa,3957,Agendado,PIX
+2026-02-27 06:00,Camila Rodrigues,(61) 99430-8167,Depilação a Laser,Dra. Juliana Costa,283,Realizado,Cartão Crédito
+2026-02-27 04:00,Vanessa Moura,(61) 99261-9589,Harmonização Facial,Marina (Esteticista),4498,Realizado,Cartão Crédito
+2026-02-27 01:30,Eduardo Cardoso,(61) 98927-5455,Drenagem Linfática,Dra. Juliana Costa,230,Cancelado,Cartão Crédito
+2026-02-27 01:00,Patrícia Souza,(61) 98397-6415,Massagem Modeladora,Dr. Rafael Souza,163,Realizado,Cartão Débito
+2026-02-26 21:30,Leonardo Gomes,(61) 99584-6090,Depilação a Laser,Dra. Juliana Costa,211,Realizado,Cartão Débito
+2026-02-26 12:30,Rodrigo Teixeira,(61) 99623-8898,Harmonização Facial,Bruna (Esteticista),4615,Realizado,PIX
+2026-02-26 05:00,André Nascimento,(61) 99939-2404,Preenchimento Labial,Dra. Juliana Costa,2258,Realizado,Cartão Crédito
+2026-02-25 23:00,Amanda Barbosa,(61) 98033-5272,Massagem Modeladora,Dr. Rafael Souza,160,Agendado,Dinheiro
+2026-02-25 13:00,Rodrigo Teixeira,(61) 98872-5155,Harmonização Facial,Dr. Rafael Souza,3793,Realizado,Cartão Débito
+2026-02-25 11:30,Raphael Nunes,(61) 98886-6183,Harmonização Facial,Bruna (Esteticista),3559,Realizado,PIX
+2026-02-25 06:30,Vanessa Moura,(61) 98511-3675,Massagem Modeladora,Bruna (Esteticista),144,Agendado,Dinheiro
+2026-02-25 03:30,Carolina Xavier,(61) 98197-9572,Drenagem Linfática,Dra. Patrícia Lima,232,Agendado,PIX
+2026-02-25 02:30,Vinícius Ramos,(61) 99297-5961,Drenagem Linfática,Dr. Rafael Souza,167,Agendado,Cartão Crédito
+2026-02-24 18:30,Maria Fernanda Costa,(61) 99805-7204,Criolipólise,Bruna (Esteticista),1048,Realizado,Cartão Débito
+2026-02-24 04:00,Beatriz Moreira,(61) 98271-1960,Criolipólise,Dra. Patrícia Lima,1089,Realizado,Cartão Crédito
+2026-02-23 21:30,Maria Fernanda Costa,(61) 98983-4271,Massagem Modeladora,Marina (Esteticista),120,Realizado,PIX
+2026-02-23 16:00,Rebeca Farias,(61) 99458-2262,Limpeza de Pele,Dra. Juliana Costa,162,Realizado,Dinheiro
+2026-02-23 04:30,Gustavo Fonseca,(61) 99076-6797,Microagulhamento,Dra. Juliana Costa,497,Realizado,Cartão Crédito
+2026-02-23 04:00,Priscila Araújo,(61) 98002-4496,Drenagem Linfática,Dra. Patrícia Lima,209,Realizado,Dinheiro
+2026-02-22 20:30,Maria Fernanda Costa,(61) 99246-1901,Harmonização Facial,Marina (Esteticista),2853,Realizado,Cartão Débito
+2026-02-22 20:00,Gabriel Lima,(61) 98138-9732,Drenagem Linfática,Dra. Juliana Costa,184,Realizado,PIX
+2026-02-22 14:00,Fernanda Dias,(61) 99375-7776,Botox,Dra. Patrícia Lima,1072,Realizado,Dinheiro
+2026-02-22 05:30,Amanda Barbosa,(61) 99421-4869,Microagulhamento,Marina (Esteticista),570,Realizado,Cartão Crédito
+2026-02-21 21:00,André Nascimento,(61) 99660-6744,Massagem Modeladora,Dr. Rafael Souza,131,Realizado,Dinheiro
+2026-02-21 18:30,Vanessa Moura,(61) 98142-2781,Botox,Bruna (Esteticista),1641,Realizado,Dinheiro
+2026-02-21 05:30,Fernanda Dias,(61) 99754-9166,Botox,Dra. Patrícia Lima,1270,Cancelado,Dinheiro
+2026-02-21 00:30,Daniel Freitas,(61) 98137-5919,Peeling Químico,Dra. Juliana Costa,349,Agendado,PIX
+2026-02-21 00:00,Priscila Araújo,(61) 99208-4308,Criolipólise,Bruna (Esteticista),931,Agendado,Dinheiro
+2026-02-20 22:30,Rodrigo Teixeira,(61) 98952-5315,Massagem Modeladora,Bruna (Esteticista),143,Realizado,Cartão Crédito
+2026-02-20 20:00,Priscila Araújo,(61) 99233-9393,Massagem Modeladora,Bruna (Esteticista),157,Realizado,Cartão Débito
+2026-02-20 10:00,Marcelo Costa,(61) 98008-9689,Microagulhamento,Bruna (Esteticista),413,Agendado,PIX
+2026-02-20 07:00,Luana Azevedo,(61) 99336-3270,Microagulhamento,Dr. Rafael Souza,518,Agendado,Cartão Crédito
+2026-02-19 23:30,Patrícia Souza,(61) 99410-3161,Preenchimento Labial,Dr. Rafael Souza,2103,Realizado,Cartão Débito
+2026-02-19 23:00,Natália Monteiro,(61) 99101-7481,Botox,Marina (Esteticista),1262,Faltou,PIX
+2026-02-19 20:30,Larissa Pinto,(61) 99080-6134,Massagem Modeladora,Bruna (Esteticista),145,Realizado,Dinheiro
+2026-02-19 17:30,Patrícia Souza,(61) 99550-7790,Criolipólise,Dra. Patrícia Lima,820,Agendado,PIX
+2026-02-19 03:30,Letícia Siqueira,(61) 99629-9756,Limpeza de Pele,Dra. Patrícia Lima,131,Realizado,Dinheiro
+2026-02-19 02:30,Rebeca Farias,(61) 99765-1448,Harmonização Facial,Marina (Esteticista),3891,Realizado,Dinheiro
+2026-02-19 01:30,Juliana Ribeiro,(61) 98368-8444,Preenchimento Labial,Marina (Esteticista),2051,Realizado,Dinheiro
+2026-02-18 20:30,André Nascimento,(61) 99774-2166,Microagulhamento,Dra. Patrícia Lima,500,Cancelado,Dinheiro
+2026-02-18 14:30,Mariana Castro,(61) 98209-1120,Drenagem Linfática,Marina (Esteticista),205,Realizado,Cartão Débito
+2026-02-18 06:00,Thiago Pereira,(61) 99664-8672,Depilação a Laser,Dra. Patrícia Lima,220,Realizado,PIX
+2026-02-17 17:00,Mariana Castro,(61) 99763-5227,Drenagem Linfática,Dr. Rafael Souza,269,Cancelado,Cartão Débito
+2026-02-17 16:00,Leonardo Gomes,(61) 99401-5593,Harmonização Facial,Dra. Patrícia Lima,4821,Realizado,PIX
+2026-02-17 09:00,Débora Pires,(61) 99538-9055,Preenchimento Labial,Dra. Patrícia Lima,2235,Agendado,Cartão Débito
+2026-02-17 07:00,Bruno Ferreira,(61) 99578-7504,Botox,Dra. Patrícia Lima,1759,Realizado,PIX
+2026-02-17 07:00,Paulo Henrique,(61) 99393-2341,Depilação a Laser,Dr. Rafael Souza,433,Agendado,Dinheiro
+2026-02-17 05:30,Fábio Duarte,(61) 98334-5237,Peeling Químico,Dra. Juliana Costa,390,Realizado,PIX
+2026-02-17 03:00,Maria Fernanda Costa,(61) 98785-1881,Preenchimento Labial,Dra. Patrícia Lima,1259,Realizado,PIX
+2026-02-16 19:00,Vinícius Ramos,(61) 99230-3338,Microagulhamento,Bruna (Esteticista),591,Agendado,Cartão Crédito
+2026-02-16 09:00,Carolina Xavier,(61) 98902-1753,Limpeza de Pele,Bruna (Esteticista),136,Realizado,PIX
+2026-02-16 08:00,Vanessa Moura,(61) 98355-3103,Criolipólise,Marina (Esteticista),1199,Realizado,PIX
+2026-02-16 06:00,Alexandre Batista,(61) 98924-2207,Criolipólise,Dr. Rafael Souza,703,Realizado,PIX
+2026-02-15 22:30,Henrique Campos,(61) 98656-9419,Depilação a Laser,Dr. Rafael Souza,314,Realizado,PIX
+2026-02-15 16:30,Ana Beatriz Oliveira,(61) 99927-7150,Drenagem Linfática,Marina (Esteticista),265,Agendado,Dinheiro
+2026-02-15 00:30,Vanessa Moura,(61) 98344-6770,Massagem Modeladora,Bruna (Esteticista),152,Agendado,Cartão Crédito
+2026-02-14 18:00,Mariana Castro,(61) 98013-7718,Massagem Modeladora,Dr. Rafael Souza,195,Realizado,PIX
+2026-02-14 16:30,Beatriz Moreira,(61) 99698-5958,Criolipólise,Bruna (Esteticista),688,Agendado,Cartão Crédito
+2026-02-14 15:30,Amanda Barbosa,(61) 98691-9967,Criolipólise,Dra. Juliana Costa,816,Realizado,Cartão Crédito
+2026-02-13 21:30,Bruna Viana,(61) 98271-5603,Botox,Dra. Juliana Costa,929,Realizado,Cartão Débito
+2026-02-13 21:00,Mariana Castro,(61) 99920-9952,Peeling Químico,Marina (Esteticista),346,Realizado,Cartão Crédito
+2026-02-13 20:00,Henrique Campos,(61) 99891-8921,Limpeza de Pele,Dra. Juliana Costa,181,Faltou,Cartão Débito
+2026-02-13 19:00,Amanda Barbosa,(61) 99456-1612,Limpeza de Pele,Dra. Juliana Costa,195,Realizado,Dinheiro
+2026-02-13 12:30,Gustavo Fonseca,(61) 98936-2972,Depilação a Laser,Dr. Rafael Souza,208,Realizado,Dinheiro
+2026-02-13 12:00,Beatriz Moreira,(61) 98495-7102,Massagem Modeladora,Dra. Patrícia Lima,179,Realizado,Dinheiro
+2026-02-13 06:30,Simone Machado,(61) 99558-6771,Preenchimento Labial,Dra. Patrícia Lima,1564,Realizado,Dinheiro
+2026-02-13 05:30,Gabriel Lima,(61) 98133-1749,Botox,Dr. Rafael Souza,1192,Agendado,Cartão Débito
+2026-02-13 00:00,Raphael Nunes,(61) 98500-1753,Botox,Dra. Patrícia Lima,1033,Realizado,Dinheiro
+2026-02-12 15:30,Isabela Cunha,(61) 99978-7178,Botox,Bruna (Esteticista),1622,Agendado,Dinheiro
+2026-02-12 14:00,Carolina Xavier,(61) 99370-2562,Criolipólise,Bruna (Esteticista),1037,Realizado,Cartão Crédito
+2026-02-12 12:00,Letícia Siqueira,(61) 98127-7049,Limpeza de Pele,Dra. Juliana Costa,198,Realizado,PIX
+2026-02-12 11:00,Vinícius Ramos,(61) 98183-6798,Depilação a Laser,Dra. Patrícia Lima,342,Realizado,PIX
+2026-02-12 08:30,Luana Azevedo,(61) 99644-8692,Drenagem Linfática,Dra. Patrícia Lima,242,Realizado,Cartão Débito
+2026-02-12 00:30,Marcelo Costa,(61) 98931-8996,Botox,Dra. Juliana Costa,1212,Realizado,Cartão Débito
+2026-02-11 16:00,Felipe Correia,(61) 99701-2718,Botox,Bruna (Esteticista),1478,Realizado,PIX
+2026-02-11 14:30,Mariana Castro,(61) 99097-1306,Criolipólise,Marina (Esteticista),657,Realizado,Cartão Crédito
+2026-02-11 10:30,Juliana Ribeiro,(61) 99995-2391,Limpeza de Pele,Bruna (Esteticista),149,Realizado,PIX
+2026-02-11 05:00,Ricardo Brito,(61) 98605-1894,Drenagem Linfática,Bruna (Esteticista),202,Realizado,Cartão Crédito
+2026-02-11 02:30,Mariana Castro,(61) 99182-6114,Limpeza de Pele,Dra. Patrícia Lima,133,Faltou,Cartão Crédito
+2026-02-11 00:30,Carolina Xavier,(61) 99654-3947,Microagulhamento,Bruna (Esteticista),604,Faltou,Cartão Crédito
+2026-02-10 19:00,Vinícius Ramos,(61) 99358-6846,Preenchimento Labial,Dra. Patrícia Lima,1468,Realizado,Cartão Débito
+2026-02-10 04:30,Raphael Nunes,(61) 98750-4616,Criolipólise,Dra. Patrícia Lima,1101,Agendado,PIX
+2026-02-10 01:30,Marcelo Costa,(61) 99253-3619,Massagem Modeladora,Marina (Esteticista),130,Realizado,Dinheiro
+2026-02-10 00:00,Bruno Ferreira,(61) 99372-4492,Preenchimento Labial,Dr. Rafael Souza,2301,Realizado,Dinheiro
+2026-02-09 23:30,Carolina Xavier,(61) 99049-8687,Limpeza de Pele,Bruna (Esteticista),163,Cancelado,Cartão Débito
+2026-02-09 14:30,Ricardo Brito,(61) 99183-8326,Preenchimento Labial,Marina (Esteticista),2127,Realizado,Cartão Crédito
+2026-02-09 13:00,Matheus Rocha,(61) 98631-8591,Criolipólise,Bruna (Esteticista),723,Realizado,Cartão Débito
+2026-02-09 12:00,Matheus Rocha,(61) 99399-9151,Botox,Marina (Esteticista),1474,Realizado,Cartão Crédito
+2026-02-08 23:30,Gustavo Fonseca,(61) 98861-7068,Preenchimento Labial,Marina (Esteticista),2435,Realizado,PIX
+2026-02-08 08:30,Rodrigo Teixeira,(61) 99028-6269,Massagem Modeladora,Marina (Esteticista),181,Realizado,Dinheiro
+2026-02-08 06:30,Henrique Campos,(61) 98715-4624,Preenchimento Labial,Dra. Patrícia Lima,2051,Agendado,Cartão Crédito
+2026-02-08 00:30,Patrícia Souza,(61) 99866-9468,Criolipólise,Dra. Patrícia Lima,862,Realizado,Cartão Débito
+2026-02-07 22:30,Otávio Guimarães,(61) 98857-9773,Microagulhamento,Marina (Esteticista),466,Agendado,Dinheiro
+2026-02-07 21:00,Rebeca Farias,(61) 98167-5597,Drenagem Linfática,Marina (Esteticista),274,Realizado,Cartão Crédito
+2026-02-07 18:30,Simone Machado,(61) 98724-4580,Massagem Modeladora,Dra. Juliana Costa,129,Realizado,Cartão Débito
+2026-02-07 17:00,Priscila Araújo,(61) 98208-3290,Peeling Químico,Bruna (Esteticista),584,Realizado,PIX
+2026-02-07 16:00,Carolina Xavier,(61) 98965-6621,Drenagem Linfática,Dra. Juliana Costa,197,Realizado,Cartão Débito
+2026-02-07 15:30,Vinícius Ramos,(61) 98420-1152,Criolipólise,Dr. Rafael Souza,726,Realizado,Cartão Débito
+2026-02-07 13:30,Rodrigo Teixeira,(61) 98938-1202,Depilação a Laser,Marina (Esteticista),301,Realizado,Dinheiro
+2026-02-06 11:30,Gustavo Fonseca,(61) 98315-5726,Preenchimento Labial,Bruna (Esteticista),1585,Faltou,Cartão Crédito
+2026-02-06 10:30,Vanessa Moura,(61) 99633-7636,Preenchimento Labial,Dr. Rafael Souza,1877,Realizado,Cartão Crédito
+2026-02-06 04:00,Priscila Araújo,(61) 99091-8552,Botox,Dra. Juliana Costa,1133,Faltou,Dinheiro
+2026-02-06 03:30,Bruna Viana,(61) 99501-4161,Harmonização Facial,Bruna (Esteticista),3797,Realizado,PIX
+2026-02-05 21:00,Natália Monteiro,(61) 99849-9281,Massagem Modeladora,Marina (Esteticista),129,Realizado,Cartão Crédito
+2026-02-05 18:30,Alexandre Batista,(61) 99499-8674,Peeling Químico,Dra. Juliana Costa,397,Agendado,Cartão Débito
+2026-02-05 11:30,Lucas Martins,(61) 99547-3292,Microagulhamento,Bruna (Esteticista),473,Realizado,PIX
+2026-02-05 10:30,Matheus Rocha,(61) 99398-3830,Preenchimento Labial,Marina (Esteticista),1992,Realizado,Dinheiro
+2026-02-05 10:00,Thiago Pereira,(61) 99766-3954,Massagem Modeladora,Dra. Juliana Costa,172,Faltou,PIX
+2026-02-05 06:00,Vinícius Ramos,(61) 99923-6878,Preenchimento Labial,Bruna (Esteticista),1566,Realizado,PIX
+2026-02-05 03:30,Lucas Martins,(61) 99977-8052,Microagulhamento,Dra. Juliana Costa,372,Realizado,PIX
+2026-02-05 02:30,Amanda Barbosa,(61) 99470-6640,Massagem Modeladora,Bruna (Esteticista),158,Realizado,PIX
+2026-02-05 02:30,Bruno Ferreira,(61) 99251-7221,Criolipólise,Dr. Rafael Souza,1094,Realizado,Cartão Débito
+2026-02-04 20:30,Vanessa Moura,(61) 99686-7010,Depilação a Laser,Marina (Esteticista),228,Faltou,PIX
+2026-02-04 17:00,Beatriz Moreira,(61) 98637-6549,Preenchimento Labial,Dra. Patrícia Lima,1780,Realizado,Dinheiro
+2026-02-04 12:00,André Nascimento,(61) 99481-6319,Drenagem Linfática,Dra. Patrícia Lima,173,Realizado,Dinheiro
+2026-02-04 11:30,Alexandre Batista,(61) 98360-4875,Limpeza de Pele,Dr. Rafael Souza,148,Agendado,Cartão Débito
+2026-02-04 09:00,Ricardo Brito,(61) 99220-8584,Botox,Marina (Esteticista),1557,Realizado,Cartão Débito
+2026-02-04 06:00,Daniel Freitas,(61) 98727-6326,Microagulhamento,Dra. Juliana Costa,451,Realizado,Dinheiro
+2026-02-03 21:00,Rafael Almeida,(61) 98336-8365,Harmonização Facial,Dra. Patrícia Lima,3057,Agendado,Dinheiro
+2026-02-03 20:30,Carlos Silva,(61) 98018-1688,Preenchimento Labial,Dr. Rafael Souza,1765,Realizado,Dinheiro
+2026-02-03 17:00,Gustavo Fonseca,(61) 98507-4951,Depilação a Laser,Dra. Patrícia Lima,291,Realizado,Cartão Débito
+2026-02-03 12:30,Sérgio Lopes,(61) 98463-4187,Depilação a Laser,Dra. Juliana Costa,434,Realizado,Dinheiro
+2026-02-03 08:30,André Nascimento,(61) 98262-4842,Botox,Dra. Juliana Costa,1002,Realizado,PIX
+2026-02-02 22:00,Rebeca Farias,(61) 98441-1652,Botox,Dra. Juliana Costa,817,Realizado,PIX
+2026-02-02 18:00,Daniel Freitas,(61) 99882-2477,Criolipólise,Dra. Patrícia Lima,1015,Realizado,Cartão Débito
+2026-02-02 18:00,Letícia Siqueira,(61) 98533-9904,Microagulhamento,Marina (Esteticista),557,Realizado,Dinheiro
+2026-02-02 07:30,Vinícius Ramos,(61) 98342-4012,Massagem Modeladora,Bruna (Esteticista),215,Realizado,PIX
+2026-02-02 07:00,Patrícia Souza,(61) 98055-8563,Microagulhamento,Marina (Esteticista),452,Realizado,Cartão Crédito
+2026-02-02 02:00,Maria Fernanda Costa,(61) 99733-9622,Limpeza de Pele,Dra. Patrícia Lima,138,Realizado,Cartão Débito
+2026-02-01 23:00,Marcelo Costa,(61) 98098-2897,Drenagem Linfática,Dra. Patrícia Lima,162,Cancelado,Dinheiro
+2026-02-01 19:30,Henrique Campos,(61) 98380-8973,Criolipólise,Bruna (Esteticista),1028,Realizado,Cartão Crédito
+2026-02-01 12:00,João Pedro Santos,(61) 98430-6633,Limpeza de Pele,Dra. Juliana Costa,193,Realizado,Cartão Crédito
+2026-02-01 07:30,Eduardo Cardoso,(61) 99818-3192,Peeling Químico,Bruna (Esteticista),566,Realizado,Cartão Débito
+2026-01-31 19:00,André Nascimento,(61) 98757-3873,Limpeza de Pele,Bruna (Esteticista),134,Realizado,Cartão Débito
+2026-01-30 22:00,Natália Monteiro,(61) 99291-2279,Botox,Bruna (Esteticista),1335,Realizado,Cartão Débito
+2026-01-30 19:30,Marcelo Costa,(61) 98634-2294,Depilação a Laser,Dra. Patrícia Lima,337,Agendado,Cartão Crédito
+2026-01-30 16:30,João Pedro Santos,(61) 98843-8848,Microagulhamento,Bruna (Esteticista),667,Cancelado,PIX
+2026-01-30 03:30,Sérgio Lopes,(61) 98117-3871,Criolipólise,Marina (Esteticista),1010,Realizado,Dinheiro
+2026-01-30 03:00,Daniel Freitas,(61) 98796-4892,Peeling Químico,Marina (Esteticista),352,Realizado,Cartão Débito
+2026-01-29 19:30,Cristiane Reis,(61) 98703-2823,Limpeza de Pele,Dra. Patrícia Lima,151,Agendado,Cartão Débito
+2026-01-29 17:00,Letícia Siqueira,(61) 98786-2082,Criolipólise,Bruna (Esteticista),844,Agendado,Cartão Débito
+2026-01-29 16:00,Gabriel Lima,(61) 99019-9169,Harmonização Facial,Bruna (Esteticista),2514,Realizado,PIX
+2026-01-29 11:30,Carlos Silva,(61) 98685-8055,Criolipólise,Bruna (Esteticista),940,Agendado,Cartão Crédito
+2026-01-28 23:00,Vanessa Moura,(61) 98900-7521,Criolipólise,Dra. Juliana Costa,1128,Agendado,Cartão Débito
+2026-01-28 22:00,Alexandre Batista,(61) 99739-9309,Harmonização Facial,Dra. Patrícia Lima,3578,Realizado,PIX
+2026-01-28 19:30,Simone Machado,(61) 99865-2097,Criolipólise,Dra. Juliana Costa,806,Realizado,PIX
+2026-01-28 18:30,Natália Monteiro,(61) 99569-6864,Harmonização Facial,Dra. Patrícia Lima,4834,Realizado,Dinheiro
+2026-01-28 15:00,Daniel Freitas,(61) 98564-2015,Massagem Modeladora,Marina (Esteticista),165,Realizado,Cartão Débito
+2026-01-28 09:00,Larissa Pinto,(61) 98219-3219,Drenagem Linfática,Bruna (Esteticista),213,Agendado,Cartão Débito
+2026-01-28 07:30,Felipe Correia,(61) 98614-5111,Peeling Químico,Bruna (Esteticista),368,Faltou,PIX
+2026-01-28 04:30,Marcelo Costa,(61) 98162-3654,Massagem Modeladora,Dra. Patrícia Lima,173,Realizado,Cartão Débito
+2026-01-28 01:30,Priscila Araújo,(61) 99437-7590,Depilação a Laser,Bruna (Esteticista),273,Realizado,PIX
+2026-01-28 00:30,Letícia Siqueira,(61) 99310-9745,Microagulhamento,Marina (Esteticista),583,Realizado,Cartão Débito
+2026-01-27 19:30,Beatriz Moreira,(61) 98738-2745,Preenchimento Labial,Dra. Juliana Costa,1978,Realizado,PIX
+2026-01-27 15:00,Ana Beatriz Oliveira,(61) 99728-2892,Harmonização Facial,Bruna (Esteticista),3199,Realizado,Cartão Débito
+2026-01-27 15:00,Juliana Ribeiro,(61) 99946-6584,Microagulhamento,Bruna (Esteticista),666,Realizado,Cartão Débito
+2026-01-27 08:30,Sérgio Lopes,(61) 98614-3785,Harmonização Facial,Marina (Esteticista),4689,Cancelado,Cartão Crédito
+2026-01-27 02:00,Leonardo Gomes,(61) 98002-7164,Depilação a Laser,Dra. Juliana Costa,288,Cancelado,Cartão Débito
+2026-01-27 00:00,Gabriel Lima,(61) 99347-8155,Limpeza de Pele,Bruna (Esteticista),129,Realizado,Cartão Crédito
+2026-01-26 00:00,Matheus Rocha,(61) 98844-1587,Botox,Bruna (Esteticista),1309,Realizado,PIX
+2026-01-25 23:00,Simone Machado,(61) 98776-7179,Botox,Bruna (Esteticista),1469,Realizado,Dinheiro
+2026-01-25 14:30,Leonardo Gomes,(61) 99320-7479,Massagem Modeladora,Marina (Esteticista),160,Realizado,Cartão Débito
+2026-01-25 14:00,Lucas Martins,(61) 99420-6846,Criolipólise,Marina (Esteticista),1098,Agendado,Cartão Crédito
+2026-01-25 13:00,Renata Carvalho,(61) 99748-1531,Preenchimento Labial,Dr. Rafael Souza,1312,Realizado,Cartão Débito
+2026-01-25 13:00,Henrique Campos,(61) 99006-8763,Microagulhamento,Bruna (Esteticista),590,Realizado,Cartão Crédito
+2026-01-25 12:30,Lucas Martins,(61) 98761-3711,Drenagem Linfática,Dra. Patrícia Lima,173,Realizado,PIX
+2026-01-24 16:00,Priscila Araújo,(61) 98793-4029,Peeling Químico,Marina (Esteticista),550,Realizado,Cartão Débito
+2026-01-24 14:00,Maria Fernanda Costa,(61) 99342-9148,Microagulhamento,Dra. Patrícia Lima,556,Cancelado,Cartão Débito
+2026-01-24 12:00,Rafael Almeida,(61) 98618-6285,Massagem Modeladora,Dra. Juliana Costa,210,Realizado,Cartão Crédito
+2026-01-24 07:30,Vinícius Ramos,(61) 98068-9364,Limpeza de Pele,Dr. Rafael Souza,145,Realizado,Cartão Crédito
+2026-01-23 22:00,Fernanda Dias,(61) 99370-9095,Limpeza de Pele,Marina (Esteticista),121,Faltou,Cartão Crédito
+2026-01-22 17:30,Matheus Rocha,(61) 98206-6331,Limpeza de Pele,Marina (Esteticista),121,Realizado,Cartão Débito
+2026-01-22 05:00,Juliana Ribeiro,(61) 98492-3502,Criolipólise,Bruna (Esteticista),1133,Realizado,Dinheiro
+2026-01-22 00:30,Marcelo Costa,(61) 99133-3316,Preenchimento Labial,Dra. Patrícia Lima,1810,Agendado,PIX
+2026-01-21 23:30,Fábio Duarte,(61) 99409-8808,Harmonização Facial,Dra. Patrícia Lima,3445,Faltou,Cartão Crédito
+2026-01-21 23:00,Raphael Nunes,(61) 99282-8529,Peeling Químico,Dra. Patrícia Lima,475,Cancelado,PIX
+2026-01-21 22:00,Eduardo Cardoso,(61) 99505-9418,Peeling Químico,Dr. Rafael Souza,390,Agendado,PIX
+2026-01-21 15:00,Patrícia Souza,(61) 99711-6370,Botox,Dr. Rafael Souza,961,Realizado,Cartão Crédito
+2026-01-21 15:00,Henrique Campos,(61) 99567-8170,Botox,Dra. Juliana Costa,1096,Realizado,Dinheiro
+2026-01-21 12:00,Raphael Nunes,(61) 98550-5933,Depilação a Laser,Dr. Rafael Souza,243,Agendado,Cartão Débito
+2026-01-21 11:30,Thiago Pereira,(61) 98110-3470,Depilação a Laser,Bruna (Esteticista),230,Realizado,Cartão Crédito
+2026-01-21 07:30,Luana Azevedo,(61) 99308-5833,Preenchimento Labial,Dra. Patrícia Lima,2030,Realizado,Cartão Débito
+2026-01-21 03:00,Rodrigo Teixeira,(61) 98242-3924,Criolipólise,Dra. Juliana Costa,682,Realizado,Dinheiro
+2026-01-20 22:00,Patrícia Souza,(61) 99759-5578,Microagulhamento,Marina (Esteticista),596,Realizado,Dinheiro
+2026-01-20 17:30,Luana Azevedo,(61) 98363-7524,Massagem Modeladora,Dra. Juliana Costa,197,Realizado,Cartão Débito
+2026-01-20 04:00,Juliana Ribeiro,(61) 98186-2870,Drenagem Linfática,Dra. Patrícia Lima,232,Realizado,Dinheiro
+2026-01-20 02:00,Vanessa Moura,(61) 99193-9631,Peeling Químico,Bruna (Esteticista),372,Realizado,PIX
+2026-01-19 22:00,João Pedro Santos,(61) 99912-8734,Criolipólise,Dra. Patrícia Lima,952,Realizado,PIX
+2026-01-19 07:00,Alexandre Batista,(61) 99574-5067,Limpeza de Pele,Dra. Patrícia Lima,166,Realizado,Cartão Débito
+2026-01-19 03:00,Isabela Cunha,(61) 98796-1086,Depilação a Laser,Dr. Rafael Souza,357,Realizado,PIX
+2026-01-19 01:00,Gabriel Lima,(61) 98341-7505,Harmonização Facial,Dr. Rafael Souza,3530,Realizado,PIX
+2026-01-19 00:30,Bruno Ferreira,(61) 99529-3519,Harmonização Facial,Dra. Patrícia Lima,4702,Realizado,PIX
+2026-01-18 10:30,Letícia Siqueira,(61) 99655-1209,Microagulhamento,Bruna (Esteticista),691,Realizado,PIX
+2026-01-18 09:30,Simone Machado,(61) 98169-1505,Peeling Químico,Dr. Rafael Souza,512,Realizado,Cartão Crédito
+2026-01-18 04:30,Tatiana Mendes,(61) 98728-6119,Criolipólise,Marina (Esteticista),783,Realizado,Cartão Débito
+2026-01-18 03:00,André Nascimento,(61) 99063-9570,Massagem Modeladora,Dra. Juliana Costa,121,Realizado,PIX
+2026-01-18 01:00,André Nascimento,(61) 99070-2930,Harmonização Facial,Marina (Esteticista),2522,Realizado,PIX

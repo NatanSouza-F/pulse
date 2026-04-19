@@ -1,0 +1,201 @@
+﻿Cliente,Telefone,Seguradora,Ramo,Premio_Anual,Comissao_Mensal,Comissao_Anual,Data_Inicio,Data_Renovacao,Dias_Para_Renovacao,Status
+Marcelo Costa,(61) 99508-2679,Porto Seguro,Auto,3453,37.23,446.77,2025-10-29,2026-10-29,193,Ativo
+Simone Machado,(61) 98447-4811,Bradesco Seguros,Saúde,9312,80.56,966.72,2025-12-15,2026-12-15,240,Ativo
+Henrique Campos,(61) 98859-4611,Porto Seguro,Viagem,724,7.47,89.68,2024-05-24,2025-05-24,-330,Cancelado
+Vinícius Ramos,(61) 99429-7924,HDI Seguros,Viagem,156,2.48,29.8,2025-10-08,2026-10-08,172,Ativo
+Isabela Cunha,(61) 98778-2584,Tokio Marine,Vida,1481,26.52,318.22,2025-04-10,2026-04-10,-9,Vencido
+Daniel Freitas,(61) 99888-7201,HDI Seguros,Vida,777,12.15,145.74,2024-09-17,2025-09-17,-214,Vencido
+Juliana Ribeiro,(61) 99442-2139,HDI Seguros,Viagem,793,11.51,138.16,2025-03-15,2026-03-15,-35,Cancelado
+João Pedro Santos,(61) 99774-2654,SulAmérica,Saúde,7141,129.86,1558.36,2025-07-25,2026-07-25,97,Ativo
+Rodrigo Teixeira,(61) 98758-6820,Zurich,Vida,3203,53.41,640.9,2025-10-05,2026-10-05,169,Ativo
+Amanda Barbosa,(61) 99093-5010,HDI Seguros,Saúde,3569,51.48,617.78,2025-09-26,2026-09-26,160,Ativo
+Lucas Martins,(61) 98449-6313,Mapfre,Empresarial,7422,135.29,1623.51,2024-06-03,2025-06-03,-320,Cancelado
+Rebeca Farias,(61) 98432-6155,SulAmérica,Auto,1462,23.95,287.44,2025-02-03,2026-02-03,-75,Vencido
+Amanda Barbosa,(61) 98542-3287,Zurich,Saúde,8882,152.59,1831.13,2024-05-31,2025-05-31,-323,Cancelado
+Fernanda Dias,(61) 98449-3266,HDI Seguros,Saúde,11977,151.12,1813.46,2024-07-31,2025-07-31,-262,Cancelado
+Henrique Campos,(61) 98313-3621,Bradesco Seguros,Empresarial,15382,135.43,1625.17,2025-11-28,2026-11-28,223,Ativo
+Simone Machado,(61) 99988-1188,Bradesco Seguros,Empresarial,9304,113.04,1356.47,2024-11-26,2025-11-26,-144,Cancelado
+Simone Machado,(61) 98228-5808,Bradesco Seguros,Saúde,11197,177.38,2128.61,2024-01-23,2025-01-22,-452,Cancelado
+Tatiana Mendes,(61) 99025-3927,Zurich,Residencial,406,7.26,87.07,2024-03-14,2025-03-14,-401,Vencido
+Henrique Campos,(61) 98765-3646,HDI Seguros,Auto,5358,77.28,927.34,2025-10-15,2026-10-15,179,Ativo
+Alexandre Batista,(61) 98229-6947,Porto Seguro,Viagem,763,8.83,105.98,2026-03-01,2027-03-01,316,Ativo
+Luana Azevedo,(61) 98175-8962,Porto Seguro,Residencial,893,15.28,183.39,2025-12-30,2026-12-30,255,Ativo
+Rafael Almeida,(61) 99080-7932,Tokio Marine,Viagem,281,4.2,50.35,2024-09-04,2025-09-04,-227,Vencido
+Amanda Barbosa,(61) 98897-9479,SulAmérica,Viagem,880,10.08,120.92,2024-05-02,2025-05-02,-352,Cancelado
+Vinícius Ramos,(61) 99204-4770,SulAmérica,Auto,3040,27.28,327.36,2026-02-27,2027-02-27,314,Ativo
+Letícia Siqueira,(61) 98468-2104,Porto Seguro,Residencial,545,8.4,100.79,2026-01-19,2027-01-19,275,Ativo
+João Pedro Santos,(61) 99104-3167,Bradesco Seguros,Vida,2705,28.98,347.76,2024-05-04,2025-05-04,-350,Cancelado
+Sérgio Lopes,(61) 98193-2588,Zurich,Viagem,398,6.44,77.27,2023-12-15,2024-12-14,-491,Cancelado
+Ricardo Brito,(61) 99338-2612,Allianz,Empresarial,9939,123.68,1484.21,2024-03-04,2025-03-04,-411,Vencido
+Maria Fernanda Costa,(61) 98392-4116,Allianz,Empresarial,16116,273.17,3278.01,2025-07-09,2026-07-09,81,Ativo
+Alexandre Batista,(61) 99890-2235,Tokio Marine,Empresarial,9912,100.79,1209.45,2024-12-02,2025-12-02,-138,Vencido
+Vinícius Ramos,(61) 99984-2528,Bradesco Seguros,Viagem,201,2.99,35.83,2024-09-13,2025-09-13,-218,Cancelado
+Otávio Guimarães,(61) 99770-7570,Tokio Marine,Residencial,1232,16.25,195.0,2025-08-14,2026-08-14,117,Ativo
+Maria Fernanda Costa,(61) 99897-8454,Mapfre,Residencial,404,7.35,88.17,2025-06-22,2026-06-22,64,Ativo
+Eduardo Cardoso,(61) 99983-1958,Zurich,Empresarial,5536,56.65,679.75,2025-08-10,2026-08-10,113,Ativo
+Letícia Siqueira,(61) 99882-9701,Porto Seguro,Saúde,7538,67.13,805.51,2024-07-30,2025-07-30,-263,Cancelado
+Lucas Martins,(61) 99382-4853,Bradesco Seguros,Auto,2722,24.55,294.58,2026-01-10,2027-01-10,266,Ativo
+Priscila Araújo,(61) 99157-9565,SulAmérica,Auto,1525,22.15,265.85,2025-01-15,2026-01-15,-94,Cancelado
+Matheus Rocha,(61) 98543-7484,SulAmérica,Vida,3343,51.8,621.61,2025-07-19,2026-07-19,91,Ativo
+Gabriel Lima,(61) 98019-8508,HDI Seguros,Saúde,9891,113.7,1364.38,2024-02-10,2025-02-09,-434,Cancelado
+Carolina Xavier,(61) 99911-6718,Bradesco Seguros,Viagem,225,3.09,37.02,2024-10-18,2025-10-18,-183,Vencido
+Rafael Almeida,(61) 98619-9666,Allianz,Residencial,983,9.74,116.91,2023-11-18,2024-11-17,-518,Cancelado
+Carlos Silva,(61) 98541-2891,HDI Seguros,Saúde,4097,72.61,871.32,2025-11-03,2026-11-03,198,Ativo
+Bruno Ferreira,(61) 99469-6617,Tokio Marine,Saúde,6862,76.52,918.21,2025-08-17,2026-08-17,120,Ativo
+Amanda Barbosa,(61) 99299-7939,HDI Seguros,Saúde,10680,141.17,1694.1,2023-11-05,2024-11-04,-531,Vencido
+Beatriz Moreira,(61) 98330-8239,Porto Seguro,Auto,3932,63.09,757.04,2024-06-06,2025-06-06,-317,Cancelado
+Vanessa Moura,(61) 99935-3442,Mapfre,Saúde,11589,97.7,1172.35,2026-01-02,2027-01-02,258,Ativo
+Alexandre Batista,(61) 98631-6974,Allianz,Auto,2413,30.48,365.75,2026-02-06,2027-02-06,293,Ativo
+João Pedro Santos,(61) 98724-7658,SulAmérica,Vida,3393,36.74,440.9,2025-12-05,2026-12-05,230,Ativo
+Carolina Xavier,(61) 99805-7755,Tokio Marine,Saúde,6278,106.6,1279.16,2023-12-22,2024-12-21,-484,Cancelado
+Ana Beatriz Oliveira,(61) 99505-5065,Allianz,Residencial,2002,35.32,423.82,2023-12-20,2024-12-19,-486,Cancelado
+Beatriz Moreira,(61) 99672-8541,Bradesco Seguros,Residencial,1183,20.18,242.11,2024-11-24,2025-11-24,-146,Vencido
+Daniel Freitas,(61) 98816-6378,SulAmérica,Vida,1513,12.97,155.6,2025-09-04,2026-09-04,138,Ativo
+Beatriz Moreira,(61) 99727-9785,HDI Seguros,Auto,4076,60.11,721.36,2025-02-04,2026-02-04,-74,Cancelado
+Isabela Cunha,(61) 98078-2776,Bradesco Seguros,Auto,3339,33.79,405.45,2025-06-22,2026-06-22,64,Ativo
+Fábio Duarte,(61) 99047-2894,Allianz,Empresarial,14936,241.93,2903.13,2024-12-29,2025-12-29,-111,Cancelado
+Rodrigo Teixeira,(61) 99895-9821,SulAmérica,Viagem,410,3.6,43.18,2024-12-29,2025-12-29,-111,Vencido
+Simone Machado,(61) 99276-6143,SulAmérica,Saúde,8367,105.81,1269.74,2024-05-09,2025-05-09,-345,Cancelado
+Ricardo Brito,(61) 99427-5844,HDI Seguros,Auto,5354,61.18,734.11,2025-01-26,2026-01-26,-83,Cancelado
+Vanessa Moura,(61) 99848-3851,SulAmérica,Residencial,1261,18.89,226.72,2025-02-25,2026-02-25,-53,Cancelado
+Carolina Xavier,(61) 98622-5700,HDI Seguros,Viagem,565,7.8,93.65,2026-03-20,2027-03-20,335,Ativo
+Amanda Barbosa,(61) 98969-3780,Allianz,Empresarial,10618,135.39,1624.71,2024-04-28,2025-04-28,-356,Vencido
+Ricardo Brito,(61) 99676-4848,HDI Seguros,Auto,5422,81.18,974.13,2024-06-24,2025-06-24,-299,Cancelado
+Simone Machado,(61) 98501-8784,SulAmérica,Vida,1415,13.88,166.52,2026-02-01,2027-02-01,288,Ativo
+Carolina Xavier,(61) 99426-7291,Zurich,Auto,4595,79.01,948.12,2024-08-08,2025-08-08,-254,Vencido
+Bruna Viana,(61) 99828-2746,SulAmérica,Empresarial,5417,80.68,968.16,2026-03-15,2027-03-15,330,Ativo
+Rebeca Farias,(61) 98102-5082,SulAmérica,Empresarial,5881,96.3,1155.58,2024-04-07,2025-04-07,-377,Cancelado
+Patrícia Souza,(61) 99219-6198,Tokio Marine,Empresarial,16130,209.36,2512.36,2024-09-23,2025-09-23,-208,Cancelado
+Otávio Guimarães,(61) 99523-8777,Mapfre,Empresarial,16608,289.01,3468.13,2024-12-19,2025-12-19,-121,Cancelado
+Vinícius Ramos,(61) 99283-4919,SulAmérica,Vida,3211,35.66,427.95,2024-01-14,2025-01-13,-461,Cancelado
+Beatriz Moreira,(61) 98687-6238,Bradesco Seguros,Empresarial,14690,164.39,1972.68,2025-06-15,2026-06-15,57,Ativo
+Alexandre Batista,(61) 98438-2052,Tokio Marine,Auto,2435,25.92,311.07,2024-04-09,2025-04-09,-375,Vencido
+Felipe Correia,(61) 98423-7883,Allianz,Empresarial,11890,154.48,1853.78,2026-01-16,2027-01-16,272,Ativo
+Rodrigo Teixeira,(61) 99930-6763,Porto Seguro,Viagem,739,8.97,107.63,2026-03-14,2027-03-14,329,Ativo
+Luana Azevedo,(61) 99838-4613,Mapfre,Empresarial,11818,186.83,2241.9,2024-09-07,2025-09-07,-224,Cancelado
+Bruna Viana,(61) 99390-7624,HDI Seguros,Residencial,1292,17.04,204.49,2025-02-15,2026-02-15,-63,Cancelado
+Sérgio Lopes,(61) 98806-1444,Zurich,Residencial,661,11.99,143.89,2024-09-20,2025-09-20,-211,Vencido
+Juliana Ribeiro,(61) 98102-5262,Mapfre,Saúde,4623,78.6,943.19,2025-09-15,2026-09-15,149,Ativo
+Rodrigo Teixeira,(61) 98569-7906,SulAmérica,Vida,2462,28.56,342.76,2024-01-31,2025-01-30,-444,Cancelado
+André Nascimento,(61) 99949-6733,Zurich,Auto,1358,21.49,257.86,2026-01-26,2027-01-26,282,Ativo
+Leonardo Gomes,(61) 98408-1333,Bradesco Seguros,Saúde,3059,48.56,582.76,2025-07-10,2026-07-10,82,Ativo
+Carolina Xavier,(61) 99155-4571,SulAmérica,Residencial,658,8.6,103.19,2025-11-23,2026-11-23,218,Ativo
+Mariana Castro,(61) 99471-2876,HDI Seguros,Saúde,8443,84.52,1014.3,2024-07-07,2025-07-07,-286,Cancelado
+Rebeca Farias,(61) 99179-7149,HDI Seguros,Residencial,621,8.77,105.22,2025-05-05,2026-05-05,16,Vencendo
+Priscila Araújo,(61) 98208-5941,SulAmérica,Saúde,3645,51.96,623.48,2023-11-21,2024-11-20,-515,Cancelado
+Simone Machado,(61) 99354-7071,Bradesco Seguros,Viagem,729,11.78,141.36,2025-03-30,2026-03-30,-20,Cancelado
+Rafael Almeida,(61) 98887-6934,Allianz,Viagem,162,2.73,32.72,2023-11-29,2024-11-28,-507,Cancelado
+Marcelo Costa,(61) 98553-9817,Tokio Marine,Empresarial,10135,102.31,1227.72,2024-10-02,2025-10-02,-199,Cancelado
+Rebeca Farias,(61) 99744-5022,Zurich,Empresarial,10136,168.16,2017.96,2024-07-22,2025-07-22,-271,Vencido
+Juliana Ribeiro,(61) 98776-6511,Zurich,Vida,1598,25.31,303.71,2024-08-14,2025-08-14,-248,Cancelado
+Ana Beatriz Oliveira,(61) 98697-5581,Allianz,Empresarial,5979,78.98,947.71,2025-03-22,2026-03-22,-28,Cancelado
+Fábio Duarte,(61) 98175-4954,HDI Seguros,Saúde,11506,97.05,1164.62,2025-09-06,2026-09-06,140,Ativo
+Sérgio Lopes,(61) 99457-9041,Zurich,Empresarial,12096,192.51,2310.09,2024-04-12,2025-04-12,-372,Cancelado
+Vinícius Ramos,(61) 99359-7046,Bradesco Seguros,Auto,3610,38.08,457.0,2024-04-11,2025-04-11,-373,Vencido
+Gustavo Fonseca,(61) 99439-8434,Allianz,Viagem,585,10.71,128.46,2024-09-03,2025-09-03,-228,Cancelado
+Beatriz Moreira,(61) 98646-2958,HDI Seguros,Vida,1544,14.73,176.76,2025-09-04,2026-09-04,138,Ativo
+Cristiane Reis,(61) 99207-9595,Tokio Marine,Viagem,346,3.63,43.58,2024-11-10,2025-11-10,-160,Vencido
+Fábio Duarte,(61) 98028-9751,Bradesco Seguros,Vida,1395,15.76,189.09,2025-03-16,2026-03-16,-34,Vencido
+Gabriel Lima,(61) 99306-9042,Porto Seguro,Vida,823,11.41,136.95,2024-04-05,2025-04-05,-379,Cancelado
+Bruno Ferreira,(61) 98105-5136,HDI Seguros,Auto,5045,66.19,794.31,2025-04-06,2026-04-06,-13,Vencido
+Gustavo Fonseca,(61) 98109-3485,Bradesco Seguros,Auto,4482,59.39,712.68,2024-08-07,2025-08-07,-255,Cancelado
+Camila Rodrigues,(61) 99142-7818,HDI Seguros,Viagem,237,4.33,51.97,2025-11-19,2026-11-19,214,Ativo
+Fábio Duarte,(61) 99205-8025,SulAmérica,Viagem,685,8.31,99.77,2024-12-22,2025-12-22,-118,Vencido
+Luana Azevedo,(61) 99940-4404,Porto Seguro,Viagem,774,13.88,166.57,2025-12-09,2026-12-09,234,Ativo
+Marcelo Costa,(61) 98355-2229,HDI Seguros,Residencial,1752,16.02,192.27,2025-07-18,2026-07-18,90,Ativo
+Lucas Martins,(61) 98474-5720,Mapfre,Auto,4890,74.46,893.52,2024-11-24,2025-11-24,-146,Vencido
+Aline Coelho,(61) 99613-4241,Zurich,Vida,891,13.55,162.6,2025-06-23,2026-06-23,65,Ativo
+Tatiana Mendes,(61) 98122-3718,SulAmérica,Auto,2420,42.15,505.8,2023-11-25,2024-11-24,-511,Vencido
+Luana Azevedo,(61) 98824-5460,HDI Seguros,Viagem,599,5.74,68.84,2024-04-14,2025-04-14,-370,Cancelado
+Henrique Campos,(61) 99821-8078,Zurich,Viagem,598,5.46,65.57,2026-02-08,2027-02-08,295,Ativo
+Cristiane Reis,(61) 99178-1339,HDI Seguros,Vida,705,6.52,78.23,2024-04-29,2025-04-29,-355,Cancelado
+Otávio Guimarães,(61) 99062-8245,HDI Seguros,Saúde,11841,103.44,1241.27,2024-02-05,2025-02-04,-439,Vencido
+Beatriz Moreira,(61) 98962-6700,Mapfre,Residencial,1700,28.01,336.11,2025-12-17,2026-12-17,242,Ativo
+Felipe Correia,(61) 98675-7744,Allianz,Vida,3344,31.36,376.37,2025-10-07,2026-10-07,171,Ativo
+Paulo Henrique,(61) 98075-8451,HDI Seguros,Empresarial,13855,246.41,2956.98,2023-12-08,2024-12-07,-498,Cancelado
+Juliana Ribeiro,(61) 99053-1018,HDI Seguros,Vida,1924,18.26,219.16,2024-01-19,2025-01-18,-456,Cancelado
+Ricardo Brito,(61) 99549-9167,Zurich,Viagem,573,5.09,61.03,2024-10-06,2025-10-06,-195,Cancelado
+Marcelo Costa,(61) 99899-5719,Porto Seguro,Empresarial,6335,69.71,836.52,2025-11-06,2026-11-06,201,Ativo
+Vinícius Ramos,(61) 98490-3594,Zurich,Saúde,4389,37.84,454.1,2024-06-13,2025-06-13,-310,Cancelado
+Luana Azevedo,(61) 99723-2858,Porto Seguro,Viagem,715,8.88,106.51,2025-08-02,2026-08-02,105,Ativo
+Mariana Castro,(61) 99042-5479,Tokio Marine,Auto,5282,93.28,1119.35,2025-05-26,2026-05-26,37,Ativo
+Felipe Correia,(61) 98785-4122,Zurich,Empresarial,6993,90.22,1082.62,2025-10-23,2026-10-23,187,Ativo
+Fábio Duarte,(61) 98696-9318,Tokio Marine,Viagem,221,2.45,29.43,2024-01-02,2025-01-01,-473,Cancelado
+Beatriz Moreira,(61) 99002-3434,HDI Seguros,Auto,3645,60.9,730.81,2024-08-04,2025-08-04,-258,Cancelado
+Vinícius Ramos,(61) 98932-6272,Zurich,Viagem,503,5.86,70.37,2024-01-29,2025-01-28,-446,Cancelado
+Thiago Pereira,(61) 98651-8749,SulAmérica,Saúde,11768,143.13,1717.62,2024-01-16,2025-01-15,-459,Cancelado
+Aline Coelho,(61) 99014-1606,Mapfre,Empresarial,13873,225.54,2706.45,2024-05-22,2025-05-22,-332,Cancelado
+Gabriel Lima,(61) 99864-8486,Allianz,Viagem,252,4.3,51.64,2024-12-25,2025-12-25,-115,Vencido
+Carlos Silva,(61) 98153-8692,Tokio Marine,Saúde,9117,155.38,1864.54,2025-10-13,2026-10-13,177,Ativo
+André Nascimento,(61) 99759-9742,Mapfre,Vida,3261,29.79,357.53,2025-04-18,2026-04-18,-1,Cancelado
+Rodrigo Teixeira,(61) 98480-5708,Zurich,Vida,2816,24.48,293.73,2026-01-09,2027-01-09,265,Ativo
+Leonardo Gomes,(61) 99787-2646,Bradesco Seguros,Saúde,9510,172.29,2067.48,2024-02-01,2025-01-31,-443,Cancelado
+Vinícius Ramos,(61) 98734-7141,HDI Seguros,Residencial,459,4.04,48.43,2023-12-26,2024-12-25,-480,Vencido
+Tatiana Mendes,(61) 98348-3868,SulAmérica,Residencial,1487,18.52,222.23,2024-04-21,2025-04-21,-363,Cancelado
+Juliana Ribeiro,(61) 98293-4804,Mapfre,Viagem,784,11.89,142.67,2024-10-27,2025-10-27,-174,Cancelado
+Mariana Castro,(61) 99840-8622,HDI Seguros,Saúde,9929,108.09,1297.12,2026-03-11,2027-03-11,326,Ativo
+Eduardo Cardoso,(61) 98612-7951,Tokio Marine,Saúde,3610,46.03,552.36,2025-04-01,2026-04-01,-18,Cancelado
+Paulo Henrique,(61) 98218-4886,Zurich,Vida,1837,18.97,227.62,2025-02-20,2026-02-20,-58,Cancelado
+Rodrigo Teixeira,(61) 99699-7484,Allianz,Viagem,738,8.33,100.0,2024-04-03,2025-04-03,-381,Vencido
+Beatriz Moreira,(61) 99588-4770,Porto Seguro,Auto,5269,87.79,1053.49,2025-05-31,2026-05-31,42,Ativo
+Fábio Duarte,(61) 99388-3240,SulAmérica,Vida,3207,32.82,393.87,2025-07-07,2026-07-07,79,Ativo
+Marcelo Costa,(61) 99186-6977,Porto Seguro,Auto,3730,60.5,725.98,2026-02-14,2027-02-14,301,Ativo
+Sérgio Lopes,(61) 98270-9837,Bradesco Seguros,Residencial,1004,11.65,139.76,2025-01-19,2026-01-19,-90,Vencido
+Larissa Pinto,(61) 99981-5835,HDI Seguros,Viagem,318,3.47,41.61,2023-11-27,2024-11-26,-509,Cancelado
+Cristiane Reis,(61) 99544-4696,Bradesco Seguros,Vida,2518,45.23,542.75,2025-10-27,2026-10-27,191,Ativo
+Simone Machado,(61) 98541-9791,Mapfre,Saúde,11531,138.27,1659.23,2024-01-01,2024-12-31,-474,Cancelado
+Patrícia Souza,(61) 99197-7242,Allianz,Empresarial,14023,221.89,2662.71,2025-06-25,2026-06-25,67,Ativo
+Marcelo Costa,(61) 99268-6374,Bradesco Seguros,Vida,3364,35.9,430.79,2026-02-23,2027-02-23,310,Ativo
+Carolina Xavier,(61) 98836-2911,Bradesco Seguros,Residencial,1701,28.19,338.27,2024-04-02,2025-04-02,-382,Cancelado
+Gabriel Lima,(61) 98199-4846,Porto Seguro,Auto,3693,67.55,810.66,2025-11-22,2026-11-22,217,Ativo
+Alexandre Batista,(61) 99106-7866,Mapfre,Residencial,1329,16.01,192.07,2024-02-19,2025-02-18,-425,Cancelado
+Letícia Siqueira,(61) 98835-5583,Tokio Marine,Saúde,9197,136.88,1642.5,2023-11-18,2024-11-17,-518,Cancelado
+João Pedro Santos,(61) 99751-6942,Allianz,Saúde,5959,76.08,912.95,2025-07-22,2026-07-22,94,Ativo
+Bruno Ferreira,(61) 98815-5520,Allianz,Saúde,11320,196.41,2356.86,2024-05-29,2025-05-29,-325,Cancelado
+Thiago Pereira,(61) 99988-1349,Zurich,Auto,1950,29.17,350.09,2024-06-01,2025-06-01,-322,Cancelado
+Maria Fernanda Costa,(61) 98140-4394,SulAmérica,Vida,1115,18.07,216.8,2025-08-22,2026-08-22,125,Ativo
+Letícia Siqueira,(61) 98005-5542,SulAmérica,Residencial,1072,17.23,206.81,2024-01-03,2025-01-02,-472,Cancelado
+Camila Rodrigues,(61) 98269-1243,HDI Seguros,Residencial,2035,20.51,246.11,2024-05-13,2025-05-13,-341,Cancelado
+Daniel Freitas,(61) 98259-7897,Allianz,Residencial,432,4.35,52.23,2026-01-26,2027-01-26,282,Ativo
+Natália Monteiro,(61) 98223-8405,Bradesco Seguros,Auto,5101,65.38,784.5,2025-03-15,2026-03-15,-35,Cancelado
+Henrique Campos,(61) 98938-1510,Porto Seguro,Residencial,1889,30.54,366.44,2024-05-15,2025-05-15,-339,Cancelado
+Maria Fernanda Costa,(61) 98908-2204,Mapfre,Empresarial,9984,151.7,1820.4,2024-11-03,2025-11-03,-167,Cancelado
+Juliana Ribeiro,(61) 99123-6327,Tokio Marine,Vida,869,8.34,100.06,2024-06-19,2025-06-19,-304,Cancelado
+Rodrigo Teixeira,(61) 99437-2874,HDI Seguros,Viagem,614,8.22,98.65,2025-01-04,2026-01-04,-105,Vencido
+Débora Pires,(61) 98847-6553,SulAmérica,Saúde,9446,121.37,1456.45,2025-07-30,2026-07-30,102,Ativo
+Mariana Castro,(61) 98522-7132,Mapfre,Empresarial,14953,138.83,1665.92,2025-01-07,2026-01-07,-102,Cancelado
+Camila Rodrigues,(61) 98190-8075,Zurich,Saúde,3499,32.35,388.2,2025-12-23,2026-12-23,248,Ativo
+Bruno Ferreira,(61) 99150-6400,Allianz,Saúde,4531,62.97,755.61,2024-07-28,2025-07-28,-265,Cancelado
+Ricardo Brito,(61) 99875-1842,Mapfre,Auto,4096,69.92,839.0,2024-02-11,2025-02-10,-433,Cancelado
+Eduardo Cardoso,(61) 99344-8900,HDI Seguros,Viagem,510,4.78,57.34,2024-10-17,2025-10-17,-184,Vencido
+Leonardo Gomes,(61) 99175-4705,Allianz,Auto,4211,39.93,479.15,2025-06-08,2026-06-08,50,Ativo
+Tatiana Mendes,(61) 98059-3955,Porto Seguro,Viagem,773,13.62,163.48,2023-11-22,2024-11-21,-514,Cancelado
+Beatriz Moreira,(61) 99781-3347,HDI Seguros,Saúde,7967,94.36,1132.29,2025-09-16,2026-09-16,150,Ativo
+Raphael Nunes,(61) 98187-9691,Mapfre,Saúde,3540,34.52,414.27,2024-06-10,2025-06-10,-313,Cancelado
+Amanda Barbosa,(61) 98664-2391,Mapfre,Empresarial,10432,122.5,1469.95,2025-03-07,2026-03-07,-43,Cancelado
+Maria Fernanda Costa,(61) 98907-7947,Tokio Marine,Residencial,1945,28.22,338.7,2024-04-29,2025-04-29,-355,Vencido
+Bruna Viana,(61) 98706-8043,Zurich,Viagem,574,6.35,76.22,2024-02-06,2025-02-05,-438,Cancelado
+Patrícia Souza,(61) 98451-7475,Zurich,Vida,2758,41.38,496.59,2026-02-02,2027-02-02,289,Ativo
+Fábio Duarte,(61) 99571-3248,Porto Seguro,Auto,2874,32.61,391.35,2025-08-16,2026-08-16,119,Ativo
+Otávio Guimarães,(61) 98359-3116,HDI Seguros,Vida,1943,18.52,222.28,2024-10-27,2025-10-27,-174,Cancelado
+Rodrigo Teixeira,(61) 98147-7505,SulAmérica,Viagem,662,9.22,110.59,2024-05-05,2025-05-05,-349,Cancelado
+Cristiane Reis,(61) 99765-6129,Mapfre,Auto,1353,17.5,209.95,2025-12-31,2026-12-31,256,Ativo
+Raphael Nunes,(61) 98235-7636,Mapfre,Empresarial,14624,215.48,2585.77,2025-05-28,2026-05-28,39,Ativo
+Ana Beatriz Oliveira,(61) 98180-8155,Tokio Marine,Vida,3131,40.5,485.97,2024-04-13,2025-04-13,-371,Cancelado
+Bruno Ferreira,(61) 98810-6083,Mapfre,Residencial,1606,19.81,237.77,2025-12-30,2026-12-30,255,Ativo
+Cristiane Reis,(61) 99045-2868,SulAmérica,Vida,1964,31.67,380.02,2026-01-01,2027-01-01,257,Ativo
+Natália Monteiro,(61) 98302-4871,SulAmérica,Viagem,507,6.0,72.06,2023-12-03,2024-12-02,-503,Cancelado
+Bruno Ferreira,(61) 99556-2234,HDI Seguros,Residencial,804,8.1,97.14,2025-10-15,2026-10-15,179,Ativo
+Renata Carvalho,(61) 99394-6295,Zurich,Saúde,10001,158.79,1905.53,2024-02-01,2025-01-31,-443,Cancelado
+Marcelo Costa,(61) 99630-5500,Tokio Marine,Vida,2401,21.65,259.77,2024-12-23,2025-12-23,-117,Cancelado
+Letícia Siqueira,(61) 98116-7041,Allianz,Auto,5356,48.61,583.28,2024-12-03,2025-12-03,-137,Cancelado
+Eduardo Cardoso,(61) 99621-1672,Bradesco Seguros,Auto,5353,65.19,782.28,2024-08-03,2025-08-03,-259,Cancelado
+Vinícius Ramos,(61) 98126-8381,SulAmérica,Viagem,479,6.89,82.68,2024-10-23,2025-10-23,-178,Vencido
+Bruno Ferreira,(61) 98507-8172,Bradesco Seguros,Vida,2666,39.44,473.31,2026-02-08,2027-02-08,295,Ativo
+Vinícius Ramos,(61) 98793-7697,Tokio Marine,Viagem,522,6.3,75.56,2025-06-04,2026-06-04,46,Ativo
+Rebeca Farias,(61) 98675-2548,Porto Seguro,Vida,3184,47.14,565.72,2026-01-12,2027-01-12,268,Ativo
+Vanessa Moura,(61) 99234-3463,Mapfre,Saúde,7055,76.57,918.84,2024-05-17,2025-05-17,-337,Cancelado
+Isabela Cunha,(61) 98802-3112,Tokio Marine,Auto,4065,46.49,557.83,2024-05-18,2025-05-18,-336,Cancelado
+Fábio Duarte,(61) 99665-3093,Bradesco Seguros,Saúde,7472,104.03,1248.35,2024-05-31,2025-05-31,-323,Cancelado
+Ricardo Brito,(61) 98742-6060,Bradesco Seguros,Saúde,9337,125.29,1503.43,2026-03-02,2027-03-02,317,Ativo
+Renata Carvalho,(61) 98281-3538,Allianz,Residencial,1969,25.98,311.8,2025-08-01,2026-08-01,104,Ativo

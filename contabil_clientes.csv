@@ -1,0 +1,33 @@
+﻿Empresa,CNPJ,Regime_Tributario,Segmento,Faturamento_Mensal,Honorario_Mensal,Cliente_Desde,Status_Fechamento,Dias_Para_Entrega,Contato,Telefone
+Mercado Alpha ME,47.359.774/0001-58,Simples Nacional,Indústria,77696,2459,2023-03,Atrasado,13,Lucas Martins,(61) 99672-4271
+Mercado Global ME,07.581.814/0001-20,Lucro Presumido,Saúde,231073,1056,2024-08,Entregue,14,Henrique Campos,(61) 98301-8167
+Comércio Prime S/A,60.685.361/0001-57,Simples Nacional,Construção civil,21991,1319,2025-12,Entregue,10,Bruno Ferreira,(61) 99718-6493
+Mercado Real ME,72.779.010/0001-42,Simples Nacional,Comércio varejista,90203,1283,2021-06,Pendente,4,Vanessa Moura,(61) 99925-9647
+Distribuidora Central Eireli,10.369.711/0001-73,Lucro Presumido,Serviços,257889,467,2022-08,Pendente,16,Raphael Nunes,(61) 98495-3352
+Engenharia Nova Ltda,39.621.851/0001-77,Simples Nacional,Indústria,107488,2478,2021-09,Atrasado,16,Vanessa Moura,(61) 98041-7397
+Farmácia Alpha Ltda,54.051.531/0001-84,Lucro Real,Transporte,1111348,1761,2025-05,Entregue,1,Daniel Freitas,(61) 99118-6546
+Farmácia União ME,72.217.043/0001-15,Simples Nacional,Saúde,136798,1217,2021-03,Entregue,1,Matheus Rocha,(61) 99911-6080
+Consultoria Nova S/A,34.505.415/0001-65,Simples Nacional,Construção civil,24599,2038,2021-12,Entregue,14,Rodrigo Teixeira,(61) 98694-4060
+Transportes Capital S/A,41.616.928/0001-47,Simples Nacional,Construção civil,151125,1715,2025-07,Entregue,2,Matheus Rocha,(61) 99353-5843
+Engenharia Alpha S/A,75.705.964/0001-91,Lucro Presumido,Serviços,461635,634,2025-09,Entregue,20,Priscila Araújo,(61) 98744-9406
+Mercado Capital ME,97.021.355/0001-59,Simples Nacional,Comércio varejista,52428,532,2022-09,Entregue,4,Simone Machado,(61) 98921-7077
+Construções Alpha Ltda,85.654.310/0001-33,Simples Nacional,Indústria,51095,2444,2023-03,Pendente,12,Vanessa Moura,(61) 98241-5288
+Mercado Forte S/A,47.312.172/0001-66,Simples Nacional,Serviços,175399,759,2021-08,Entregue,10,Ricardo Brito,(61) 98711-2063
+Consultoria Modelo Eireli,25.831.323/0001-73,Lucro Presumido,Construção civil,182578,507,2024-02,Entregue,17,Raphael Nunes,(61) 98755-8657
+Mercado Modelo ME,14.678.669/0001-19,Lucro Presumido,Indústria,145201,913,2024-05,Entregue,20,Rafael Almeida,(61) 98921-8632
+Logística Modelo Eireli,92.268.018/0001-29,Simples Nacional,Serviços,159520,1645,2025-03,Atrasado,5,Matheus Rocha,(61) 99914-4694
+Construções Modelo Eireli,43.842.498/0001-21,MEI,Saúde,3646,2458,2022-07,Pendente,5,Letícia Siqueira,(61) 99928-3526
+Serviços União Eireli,00.109.439/0001-63,Simples Nacional,Saúde,162749,524,2023-05,Entregue,20,Alexandre Batista,(61) 98593-5949
+Transportes Prime S/A,10.276.773/0001-53,Lucro Presumido,Construção civil,337787,988,2024-05,Entregue,10,Sérgio Lopes,(61) 99762-6658
+Distribuidora Real Eireli,15.371.473/0001-28,Simples Nacional,Indústria,162233,796,2025-11,Entregue,9,Rodrigo Teixeira,(61) 99769-7850
+Tecnologia Gold ME,95.327.877/0001-49,Simples Nacional,Saúde,100835,2437,2026-01,Atrasado,2,Priscila Araújo,(61) 99035-8491
+Tecnologia Prime Eireli,47.974.801/0001-65,Simples Nacional,Comércio varejista,28248,948,2021-03,Entregue,8,Sérgio Lopes,(61) 98749-7606
+Construções Brasilia S/A,83.584.168/0001-67,Simples Nacional,Comércio varejista,164495,1545,2021-07,Entregue,19,Simone Machado,(61) 99251-2946
+Serviços Central S/A,85.239.868/0001-15,Simples Nacional,Construção civil,103889,585,2025-12,Entregue,4,Aline Coelho,(61) 98682-8761
+Consultoria Alpha ME,25.952.694/0001-85,MEI,Indústria,7223,1777,2023-04,Pendente,16,Alexandre Batista,(61) 99003-5911
+Transportes Gold Ltda,16.940.974/0001-93,MEI,Construção civil,5713,1332,2022-02,Pendente,1,Letícia Siqueira,(61) 98983-3793
+Consultoria União S/A,30.913.075/0001-63,Lucro Presumido,Serviços,456896,1020,2023-10,Atrasado,6,Felipe Correia,(61) 99027-8726
+Farmácia Gold Ltda,83.857.865/0001-32,Simples Nacional,Transporte,51197,2282,2021-01,Entregue,17,Isabela Cunha,(61) 99118-6804
+Logística Mega Eireli,33.484.344/0001-36,Simples Nacional,Indústria,141924,2402,2024-05,Entregue,15,Daniel Freitas,(61) 99147-5480
+Engenharia Central S/A,24.041.574/0001-71,Simples Nacional,Tecnologia,105474,1276,2025-01,Entregue,17,Beatriz Moreira,(61) 99910-5450
+Serviços Central ME,83.301.657/0001-22,Lucro Real,Serviços,406462,963,2026-02,Entregue,17,Lucas Martins,(61) 98833-8793
