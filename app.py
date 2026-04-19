@@ -1,7 +1,9 @@
 """
-Pulse — Demo Dashboard v6 (Cards 100% alinhados)
-Todos os cards com altura fixa de 130px, mesmo em diferentes nichos.
-Gráficos de pizza sem labels internos (apenas legenda).
+Pulse — Demo Dashboard v7 (Ajustes finos de layout)
+- Título "Pulse" mais abaixo (margin-top)
+- Frase centralizada
+- Espaçamento uniforme entre cards (gap de 12px)
+- Cards com altura fixa e alinhados
 """
 import streamlit as st
 import pandas as pd
@@ -44,7 +46,7 @@ pio.templates.default = "pulse_dark"
 MESES = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
 
 # ═══════════════════════════════════════════════════════════════
-# CSS GLOBAL (cards com altura fixa)
+# CSS GLOBAL (com ajustes de espaçamento e centralização)
 # ═══════════════════════════════════════════════════════════════
 st.markdown("""
 <style>
@@ -55,9 +57,13 @@ st.markdown("""
                     radial-gradient(ellipse at bottom, rgba(59,130,246,0.05) 0%, transparent 50%),
                     #0b1e2e;
     }
-    .block-container { max-width: 480px !important; padding: 1rem !important; }
+    /* Aumenta o padding superior do container principal para dar espaço ao título */
+    .block-container {
+        max-width: 480px !important;
+        padding: 2rem 1rem 1rem 1rem !important;
+    }
 
-    /* Card padrão com altura fixa de 130px */
+    /* Card padrão com altura fixa de 130px e margem inferior */
     .card-padrao {
         background: linear-gradient(135deg, #1a2e42 0%, #243b54 100%);
         border: 1px solid rgba(0,255,136,0.2);
@@ -71,6 +77,7 @@ st.markdown("""
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 12px;  /* Espaço uniforme entre cards */
     }
     .card-padrao::before {
         content: "";
@@ -131,7 +138,29 @@ st.markdown("""
     }
     /* Força colunas com mesma altura */
     .stColumn > div { height: 100%; }
-    /* Carrossel e outros elementos mantidos */
+
+    /* LOGO e SLOGAN centralizados e com espaçamento */
+    .pulse-logo {
+        font-size: 3rem;
+        font-weight: 900;
+        background: linear-gradient(135deg, #00ff88 0%, #14b8a6 50%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.3));
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .pulse-slogan {
+        text-align: center;
+        color: #94a3b8 !important;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    /* Carrossel e outros elementos */
     .carousel-wrapper {
         position: relative;
         width: 100%;
@@ -225,19 +254,10 @@ st.markdown("""
         border: 1px solid #334155;
         border-radius: 18px;
         padding: 1.3rem;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         transition: all 0.2s ease;
     }
     .perfil-card:hover { border-color: rgba(0, 255, 136, 0.4); box-shadow: 0 8px 25px rgba(0, 255, 136, 0.12); transform: translateY(-1px); }
-    .pulse-logo {
-        font-size: 3rem;
-        font-weight: 900;
-        background: linear-gradient(135deg, #00ff88 0%, #14b8a6 50%, #3b82f6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.3));
-    }
     .demo-badge {
         background: rgba(0, 255, 136, 0.12);
         border: 1px solid rgba(0, 255, 136, 0.4);
@@ -311,10 +331,12 @@ st.markdown("""
     }
     .export-title { color: #00ff88; font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; }
     @media (max-width: 480px) {
+        .block-container { padding: 1.5rem 1rem 1rem 1rem !important; }
         .carousel-wrapper { height: 160px; }
         .carousel-card { width: 260px; height: 140px; margin-left: -130px; padding: 16px 20px; }
-        .card-padrao { height: 110px; }
+        .card-padrao { height: 110px; margin-bottom: 10px; }
         .card-valor { font-size: 1.3rem; }
+        .pulse-logo { font-size: 2.5rem; margin-top: 0; }
     }
 </style>
 """, unsafe_allow_html=True)
