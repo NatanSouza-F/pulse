@@ -1,17 +1,13 @@
 """
-Pulse — Demo Dashboard v4 PRATA
+Pulse — Demo Dashboard v5 PRATA (Cards alinhados + gráficos limpos)
 O pulso do seu negócio, no seu bolso.
 
-Features v4:
-  - Paleta navy + verde neon (estilo Stripe/Linear)
-  - Comparador de períodos (MoM/YoY) em todos dashboards
-  - Export Excel com branding Pulse
-  - Export PDF executivo de 3 páginas
-  - Insights automáticos estatísticos
-  - Filtros combinados globais
-  - Tooltips nos KPIs
-  - Loading states
-  - Copy específico por nicho
+v5:
+  - Cards com altura fixa (120px) para todos os KPIs
+  - Gráficos de pizza sem labels internos (apenas legenda)
+  - Ícones nos KPIs + tooltips
+  - Neon mais refinado
+  - Grid responsiva melhorada
 """
 import streamlit as st
 import pandas as pd
@@ -71,7 +67,7 @@ MESES = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
          "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
 
 # ═══════════════════════════════════════════════════════════════
-# CSS GLOBAL — DARK NAVY SOFISTICADO
+# CSS GLOBAL — DARK NAVY SOFISTICADO + CARDS ALINHADOS
 # ═══════════════════════════════════════════════════════════════
 st.markdown("""
 <style>
@@ -102,6 +98,78 @@ st.markdown("""
 
     h1, h2, h3, h4, p, span, div, label {
         color: #f1f5f9;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       CARDS DE KPI — MESMA ALTURA (120px) + NEON
+       ═══════════════════════════════════════════════════════════════ */
+    [data-testid="stMetric"], .kpi-card-custom {
+        background: linear-gradient(135deg, #1a2e42 0%, #243b54 100%);
+        border: 1px solid rgba(0, 255, 136, 0.2) !important;
+        border-radius: 16px;
+        padding: 1rem;
+        box-shadow:
+            0 4px 12px -2px rgba(0, 0, 0, 0.3),
+            0 0 0 1px rgba(0, 255, 136, 0.05);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    [data-testid="stMetric"]::before, .kpi-card-custom::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #00ff88, transparent);
+        opacity: 0.7;
+    }
+
+    [data-testid="stMetric"]:hover, .kpi-card-custom:hover {
+        transform: translateY(-2px);
+        border-color: rgba(0, 255, 136, 0.4) !important;
+        box-shadow:
+            0 8px 20px -4px rgba(0, 0, 0, 0.4),
+            0 0 30px rgba(0, 255, 136, 0.15);
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: #94a3b8 !important;
+        font-size: 0.68rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #00ff88 !important;
+        font-size: 1.6rem !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.02em !important;
+        text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    }
+
+    [data-testid="stMetricDelta"] {
+        font-weight: 600 !important;
+        font-size: 0.78rem !important;
+    }
+
+    /* Custom KPI card (usado em kpi_com_comparacao) */
+    .kpi-card-custom {
+        margin-bottom: 0;
+        height: auto;
+        min-height: 120px;
+    }
+
+    /* Garantir que colunas com cards tenham mesma altura */
+    .stColumn > div {
+        height: 100%;
     }
 
     /* ═══════════════════════════════════════════════════════════════
@@ -209,62 +277,6 @@ st.markdown("""
     }
 
     .carousel-delta.down { color: #ef4444 !important; }
-
-    /* ═══════════════════════════════════════════════════════════════
-       KPI CARDS — NAVY COM GLOW
-       ═══════════════════════════════════════════════════════════════ */
-    [data-testid="stMetric"] {
-        background: linear-gradient(135deg, #1a2e42 0%, #243b54 100%);
-        border: 1px solid rgba(0, 255, 136, 0.2) !important;
-        border-radius: 16px;
-        padding: 1rem;
-        box-shadow:
-            0 4px 12px -2px rgba(0, 0, 0, 0.3),
-            0 0 0 1px rgba(0, 255, 136, 0.05);
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    [data-testid="stMetric"]::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, #00ff88, transparent);
-        opacity: 0.7;
-    }
-
-    [data-testid="stMetric"]:hover {
-        transform: translateY(-2px);
-        border-color: rgba(0, 255, 136, 0.4) !important;
-        box-shadow:
-            0 8px 20px -4px rgba(0, 0, 0, 0.4),
-            0 0 30px rgba(0, 255, 136, 0.15);
-    }
-
-    [data-testid="stMetricLabel"] {
-        color: #94a3b8 !important;
-        font-size: 0.68rem !important;
-        font-weight: 700 !important;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-    }
-
-    [data-testid="stMetricValue"] {
-        color: #00ff88 !important;
-        font-size: 1.6rem !important;
-        font-weight: 800 !important;
-        letter-spacing: -0.02em !important;
-        text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
-    }
-
-    [data-testid="stMetricDelta"] {
-        font-weight: 600 !important;
-        font-size: 0.78rem !important;
-    }
 
     /* ═══════════════════════════════════════════════════════════════
        BOTÕES
@@ -566,7 +578,7 @@ st.markdown("""
     .main-svg { background: transparent !important; }
 
     /* ═══════════════════════════════════════════════════════════════
-       COMPARADOR DE PERÍODOS (NOVO)
+       COMPARADOR DE PERÍODOS
        ═══════════════════════════════════════════════════════════════ */
     .comparador-box {
         background: linear-gradient(135deg, rgba(26, 46, 66, 0.7) 0%, rgba(36, 59, 84, 0.5) 100%);
@@ -636,7 +648,7 @@ st.markdown("""
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       TOOLTIPS
+       TOOLTIPS (ícone de ajuda)
        ═══════════════════════════════════════════════════════════════ */
     .tooltip-icon {
         display: inline-block;
@@ -680,6 +692,7 @@ st.markdown("""
         }
         .carousel-value { font-size: 1.9rem; }
         .pulse-logo { font-size: 2.5rem; }
+        [data-testid="stMetric"], .kpi-card-custom { min-height: 110px; }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -690,6 +703,7 @@ st.markdown("""
 # ═══════════════════════════════════════════════════════════════
 if "perfil" not in st.session_state:
     st.session_state.perfil = None
+
 # ═══════════════════════════════════════════════════════════════
 # HELPERS DE FORMATAÇÃO
 # ═══════════════════════════════════════════════════════════════
@@ -701,7 +715,6 @@ def formatar_brl(valor):
 
 
 def formatar_brl_compacto(valor):
-    """R$ 187.543 -> R$ 187k / R$ 1.250.000 -> R$ 1,2M"""
     try:
         v = float(valor)
         if abs(v) >= 1_000_000:
@@ -728,7 +741,6 @@ def formatar_pct(valor):
 # ENGINE DE COMPARAÇÃO (MoM / YoY)
 # ═══════════════════════════════════════════════════════════════
 def calcular_delta(atual, anterior):
-    """Retorna (delta_pct, classe_css, seta)"""
     if anterior == 0 or anterior is None:
         return None, "delta-neutro", "—"
     try:
@@ -744,7 +756,6 @@ def calcular_delta(atual, anterior):
 
 
 def gerar_label_comparacao(mes_atual, ano_atual, tipo_comp):
-    """Gera labels legíveis do período em comparação"""
     idx_atual = MESES.index(mes_atual)
     if tipo_comp == "MoM":
         if idx_atual == 0:
@@ -761,7 +772,6 @@ def gerar_label_comparacao(mes_atual, ano_atual, tipo_comp):
 
 
 def delta_badge_html(delta_pct, classe, seta):
-    """Renderiza badge HTML com o delta"""
     if delta_pct is None:
         return f'<span class="delta-badge {classe}">— sem base</span>'
     return f'<span class="delta-badge {classe}">{seta} {formatar_pct(delta_pct)}</span>'
@@ -830,27 +840,27 @@ def layout_chart(altura=280, yaxis_opts=None, showlegend=True):
 
 
 # ═══════════════════════════════════════════════════════════════
-# KPI CARD COM COMPARADOR
+# KPI CARD COM COMPARADOR (ALTURA FIXA + ÍCONE + TOOLTIP)
 # ═══════════════════════════════════════════════════════════════
-def kpi_com_comparacao(label, valor_atual, valor_anterior, formatter=None, label_comp="vs ant"):
-    """Renderiza KPI com badge de delta"""
+def kpi_com_comparacao(label, valor_atual, valor_anterior, formatter=None, label_comp="vs ant", icone="", tooltip=""):
     if formatter is None:
         formatter = formatar_inteiro_br
 
     delta, classe, seta = calcular_delta(valor_atual, valor_anterior)
     badge = delta_badge_html(delta, classe, seta)
 
+    # Tooltip opcional
+    tooltip_html = f'<span class="tooltip-icon" title="{tooltip}">?</span>' if tooltip else ""
+
     st.markdown(f"""
-    <div style="background: linear-gradient(135deg, #1a2e42 0%, #243b54 100%);
-                border: 1px solid rgba(0, 255, 136, 0.2);
-                border-radius: 16px; padding: 1rem;
-                box-shadow: 0 4px 12px -2px rgba(0,0,0,0.3);
-                position: relative; overflow: hidden;">
+    <div class="kpi-card-custom" style="min-height: 120px;">
         <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px;
                     background: linear-gradient(90deg, transparent, #00ff88, transparent);
                     opacity: 0.7;"></div>
         <div style="color: #94a3b8; font-size: 0.68rem; font-weight: 700;
-                    text-transform: uppercase; letter-spacing: 0.08em;">{label}</div>
+                    text-transform: uppercase; letter-spacing: 0.08em;">
+            {icone} {label} {tooltip_html}
+        </div>
         <div style="color: #00ff88; font-size: 1.6rem; font-weight: 800;
                     letter-spacing: -0.02em; margin-top: 4px;
                     text-shadow: 0 0 15px rgba(0,255,136,0.3);">{formatter(valor_atual)}</div>
@@ -918,7 +928,6 @@ def carrossel_animado():
 # INSIGHTS AUTOMÁTICOS
 # ═══════════════════════════════════════════════════════════════
 def gerar_insight(tipo, dados):
-    """Gera insight contextual baseado em regras estatísticas"""
     if tipo == "corretora":
         return gerar_insight_corretora(dados)
     elif tipo == "contabil":
@@ -1178,7 +1187,6 @@ def gerar_dados_barbearia(mes_ref="Jun", ano_ref="2026"):
 # SELETOR DE PERÍODO + COMPARAÇÃO
 # ═══════════════════════════════════════════════════════════════
 def seletor_periodo_comparacao(key_prefix):
-    """Retorna (mes_atual, ano_atual, tipo_comp, mes_ant, ano_ant)"""
     col1, col2, col3 = st.columns([2, 2, 3])
     with col1:
         mes = st.selectbox("Mês", MESES, index=5, key=f"{key_prefix}_mes")
@@ -1192,7 +1200,6 @@ def seletor_periodo_comparacao(key_prefix):
             key=f"{key_prefix}_comp"
         )
 
-    # Calcula período anterior
     idx = MESES.index(mes)
     mes_ant, ano_ant = None, None
     if tipo_comp == "Mês anterior":
@@ -1211,18 +1218,13 @@ def seletor_periodo_comparacao(key_prefix):
 
 
 # ═══════════════════════════════════════════════════════════════
-# EXPORT EXCEL
+# EXPORT EXCEL (mesmo código anterior, mantido)
 # ═══════════════════════════════════════════════════════════════
 def exportar_excel(nome_base, dfs_dict, titulo_relatorio, periodo):
-    """
-    dfs_dict: {nome_aba: dataframe}
-    Retorna bytes do Excel
-    """
     output = BytesIO()
     with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
         workbook = writer.book
 
-        # Aba de capa/resumo
         cover = workbook.add_worksheet("Resumo")
         cover.set_column("A:A", 35)
         cover.set_column("B:B", 45)
@@ -1265,7 +1267,6 @@ def exportar_excel(nome_base, dfs_dict, titulo_relatorio, periodo):
                          workbook.add_format({"italic": True, "align": "center",
                                              "font_color": "#64748b", "font_size": 10}))
 
-        # Formatos para dados
         fmt_header = workbook.add_format({
             "font_name": "Calibri", "font_size": 11, "bold": True,
             "font_color": "#ffffff", "bg_color": "#047857",
@@ -1285,7 +1286,6 @@ def exportar_excel(nome_base, dfs_dict, titulo_relatorio, periodo):
             df.to_excel(writer, sheet_name=nome_aba[:31], index=False, startrow=1)
             ws = writer.sheets[nome_aba[:31]]
 
-            # Título da aba
             ws.merge_range(0, 0, 0, len(df.columns) - 1, nome_aba,
                           workbook.add_format({
                               "font_name": "Calibri", "font_size": 14, "bold": True,
@@ -1293,12 +1293,10 @@ def exportar_excel(nome_base, dfs_dict, titulo_relatorio, periodo):
                               "align": "center", "valign": "vcenter", "border": 1
                           }))
 
-            # Cabeçalhos
             for col_idx, col_name in enumerate(df.columns):
                 ws.write(1, col_idx, col_name, fmt_header)
                 ws.set_column(col_idx, col_idx, max(14, min(28, len(col_name) + 6)))
 
-            # Células (formato money pra colunas com valor)
             for row_idx, row in df.iterrows():
                 for col_idx, col_name in enumerate(df.columns):
                     val = row[col_name]
@@ -1316,10 +1314,9 @@ def exportar_excel(nome_base, dfs_dict, titulo_relatorio, periodo):
 
 
 # ═══════════════════════════════════════════════════════════════
-# EXPORT PDF EXECUTIVO
+# EXPORT PDF EXECUTIVO (mesmo código anterior, mantido)
 # ═══════════════════════════════════════════════════════════════
 def exportar_pdf(titulo_relatorio, periodo, kpis_dict, tabelas_dict, insights_list):
-    """Gera PDF executivo com capa + KPIs + tabelas"""
     from reportlab.lib.pagesizes import A4
     from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
     from reportlab.lib.units import cm
@@ -1337,7 +1334,6 @@ def exportar_pdf(titulo_relatorio, periodo, kpis_dict, tabelas_dict, insights_li
 
     styles = getSampleStyleSheet()
 
-    # Estilos customizados
     s_titulo = ParagraphStyle(
         name="TituloPulse", fontSize=36, textColor=colors.HexColor("#00ff88"),
         fontName="Helvetica-Bold", alignment=TA_CENTER, spaceAfter=4, leading=40
@@ -1417,13 +1413,11 @@ def exportar_pdf(titulo_relatorio, periodo, kpis_dict, tabelas_dict, insights_li
     if insights_list:
         elementos.append(Paragraph("Insights automáticos", s_secao))
         for ins in insights_list:
-            # Remove tags HTML do insight pra PDF
             ins_clean = ins.replace("<strong>", "<b>").replace("</strong>", "</b>")
             elementos.append(Paragraph(f"• {ins_clean}", s_insight))
 
     elementos.append(PageBreak())
 
-    # PÁGINAS 3+ — Tabelas
     for nome_tab, df in tabelas_dict.items():
         elementos.append(Paragraph(nome_tab, s_secao))
 
@@ -1431,7 +1425,6 @@ def exportar_pdf(titulo_relatorio, periodo, kpis_dict, tabelas_dict, insights_li
             elementos.append(Paragraph("Sem dados para o período.", s_texto))
             continue
 
-        # Limita colunas (A4 é estreita)
         cols = list(df.columns)[:5]
         df_show = df[cols].head(20)
 
@@ -1454,7 +1447,6 @@ def exportar_pdf(titulo_relatorio, periodo, kpis_dict, tabelas_dict, insights_li
         elementos.append(tbl)
         elementos.append(Spacer(1, 0.5*cm))
 
-    # Rodapé
     elementos.append(Spacer(1, 1*cm))
     elementos.append(Paragraph(
         "Relatório gerado pelo Pulse • Dados fictícios • © 2026 Natan Souza",
@@ -1496,6 +1488,8 @@ def bloco_export(titulo_relatorio, periodo, dfs_excel, kpis_dict, tabelas_pdf, i
             mime="application/pdf",
             use_container_width=True,
         )
+
+
 # ═══════════════════════════════════════════════════════════════
 # TELA INICIAL
 # ═══════════════════════════════════════════════════════════════
@@ -1562,7 +1556,6 @@ def dash_corretora():
     </div>
     """, unsafe_allow_html=True)
 
-    # Seletor de período
     mes, ano, tipo_comp, mes_ant, ano_ant = seletor_periodo_comparacao("cor")
     periodo_label = f"{mes}/{ano}"
 
@@ -1575,13 +1568,11 @@ def dash_corretora():
 
     info_dados_ficticios()
 
-    # KPIs atuais
     ativos = df[df["Status"] == "Ativo"]
     comissao_mensal = ativos["Comissao_Mensal"].sum()
     vencendo_30d = len(df[(df["Dias_Para_Renovacao"] >= 0) & (df["Dias_Para_Renovacao"] <= 30)])
     ticket = comissao_mensal / len(ativos) if len(ativos) > 0 else 0
 
-    # KPIs anteriores
     ativos_ant, comissao_ant, ticket_ant = 0, 0, 0
     if df_ant is not None:
         ativos_ant_df = df_ant[df_ant["Status"] == "Ativo"]
@@ -1589,7 +1580,6 @@ def dash_corretora():
         comissao_ant = ativos_ant_df["Comissao_Mensal"].sum()
         ticket_ant = comissao_ant / ativos_ant if ativos_ant > 0 else 0
 
-    # Insight automático
     insight = gerar_insight_corretora({
         "ativos": len(ativos), "vencendo": vencendo_30d,
         "comissao": comissao_mensal, "comissao_ant": comissao_ant,
@@ -1602,23 +1592,26 @@ def dash_corretora():
     </div>
     """, unsafe_allow_html=True)
 
-    # KPIs COM COMPARADOR
     comp_label = gerar_label_comparacao(mes, ano, tipo_comp) if tipo_comp else "sem base"
 
+    # 4 cards alinhados (2 colunas x 2 linhas, mas com altura fixa)
     c1, c2 = st.columns(2)
     with c1:
         kpi_com_comparacao("CARTEIRA ATIVA", len(ativos), ativos_ant,
-                          formatter=formatar_inteiro_br, label_comp=f"vs {comp_label}")
+                          formatter=formatar_inteiro_br, label_comp=f"vs {comp_label}",
+                          icone="🛡️", tooltip="Clientes com status Ativo")
     with c2:
         kpi_com_comparacao("COMISSÃO / MÊS", comissao_mensal, comissao_ant,
-                          formatter=formatar_brl, label_comp=f"vs {comp_label}")
+                          formatter=formatar_brl, label_comp=f"vs {comp_label}",
+                          icone="💰", tooltip="Comissão total sobre prêmios")
 
     c3, c4 = st.columns(2)
     with c3:
-        st.metric("VENCENDO EM 30d", vencendo_30d)
+        st.metric("VENCENDO EM 30d", vencendo_30d, help="Apólices que vencem nos próximos 30 dias")
     with c4:
         kpi_com_comparacao("TICKET MÉDIO", ticket, ticket_ant,
-                          formatter=formatar_brl, label_comp=f"vs {comp_label}")
+                          formatter=formatar_brl, label_comp=f"vs {comp_label}",
+                          icone="🎫", tooltip="Comissão média por cliente ativo")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -1681,7 +1674,7 @@ def dash_corretora():
         mix = df[df["Status"] == "Ativo"].groupby("Ramo").size().reset_index(name="total")
         fig = px.pie(mix, values="total", names="Ramo", hole=0.5,
                      color_discrete_sequence=[VERDE_NEON, AZUL_CLARO, ROXO, AMBAR, ROSA])
-        fig.update_traces(textposition="inside", textinfo="percent+label",
+        fig.update_traces(textposition="inside", textinfo="percent",  # <-- removeu labels internos
                           textfont=dict(color="#0b1e2e", family="Inter", size=11))
         fig.update_layout(**layout_chart(330))
         st.plotly_chart(fig, use_container_width=True)
@@ -1707,7 +1700,6 @@ def dash_corretora():
         }))
         st.plotly_chart(fig, use_container_width=True)
 
-    # EXPORT
     kpis_pdf = {
         "Carteira ativa": formatar_inteiro_br(len(ativos)),
         "Comissão mensal": formatar_brl(comissao_mensal),
@@ -1721,14 +1713,7 @@ def dash_corretora():
         ],
         "Evolucao Mensal": df_evo,
     }
-    bloco_export(
-        "Corretora de Seguros",
-        periodo_label,
-        tabelas_export,
-        kpis_pdf,
-        tabelas_export,
-        [insight],
-    )
+    bloco_export("Corretora de Seguros", periodo_label, tabelas_export, kpis_pdf, tabelas_export, [insight])
 
     st.markdown("---")
     cta_whatsapp(f"Oi Natan! Vi o demo do Pulse para corretoras (período {periodo_label}) e quero conversar.")
@@ -1787,16 +1772,18 @@ def dash_contabil():
     c1, c2 = st.columns(2)
     with c1:
         kpi_com_comparacao("EMPRESAS", len(df), empresas_ant,
-                          formatter=formatar_inteiro_br, label_comp=f"vs {comp_label}")
+                          formatter=formatar_inteiro_br, label_comp=f"vs {comp_label}",
+                          icone="🏢", tooltip="Total de empresas na carteira")
     with c2:
         kpi_com_comparacao("HONORÁRIOS", honorarios, honorarios_ant,
-                          formatter=formatar_brl, label_comp=f"vs {comp_label}")
+                          formatter=formatar_brl, label_comp=f"vs {comp_label}",
+                          icone="📄", tooltip="Soma dos honorários mensais")
 
     c3, c4 = st.columns(2)
     with c3:
-        st.metric("ENTREGUES NO PRAZO", f"{pct_prazo:.0f}%")
+        st.metric("ENTREGUES NO PRAZO", f"{pct_prazo:.0f}%", help="Percentual de entregas no prazo")
     with c4:
-        st.metric("EM ATRASO", len(atrasados))
+        st.metric("EM ATRASO", len(atrasados), help="Empresas com fechamento atrasado")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -1849,7 +1836,7 @@ def dash_contabil():
         regime_counts.columns = ["Regime", "Quantidade"]
         fig = px.pie(regime_counts, values="Quantidade", names="Regime", hole=0.5,
                      color_discrete_sequence=[VERDE_NEON, AZUL_CLARO, ROXO, AMBAR])
-        fig.update_traces(textposition="inside", textinfo="percent+label",
+        fig.update_traces(textposition="inside", textinfo="percent",  # <-- removeu labels
                           textfont=dict(color="#0b1e2e", family="Inter", size=11))
         fig.update_layout(**layout_chart(300))
         st.plotly_chart(fig, use_container_width=True)
@@ -1876,7 +1863,6 @@ def dash_contabil():
         })
         st.dataframe(obrigacoes, use_container_width=True, hide_index=True)
 
-    # EXPORT
     kpis_pdf = {
         "Empresas na carteira": formatar_inteiro_br(len(df)),
         "Honorários mensais": formatar_brl(honorarios),
@@ -1949,16 +1935,18 @@ def dash_clinica():
     c1, c2 = st.columns(2)
     with c1:
         kpi_com_comparacao("RECEITA / MÊS", receita_mes, receita_ant,
-                          formatter=formatar_brl, label_comp=f"vs {comp_label}")
+                          formatter=formatar_brl, label_comp=f"vs {comp_label}",
+                          icone="💰", tooltip="Receita total do mês")
     with c2:
-        st.metric("ATENDIMENTOS", len(realizados))
+        st.metric("ATENDIMENTOS", len(realizados), help="Atendimentos realizados no período")
 
     c3, c4 = st.columns(2)
     with c3:
         kpi_com_comparacao("TICKET MÉDIO", ticket, ticket_ant,
-                          formatter=formatar_brl, label_comp=f"vs {comp_label}")
+                          formatter=formatar_brl, label_comp=f"vs {comp_label}",
+                          icone="🎫", tooltip="Valor médio por atendimento")
     with c4:
-        st.metric("AGENDADOS", agendados)
+        st.metric("AGENDADOS", agendados, help="Atendimentos agendados futuramente")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -2034,12 +2022,11 @@ def dash_clinica():
         pgto.columns = ["Forma", "Qtd"]
         fig = px.pie(pgto, values="Qtd", names="Forma", hole=0.5,
                      color_discrete_sequence=[VERDE_NEON, AZUL_CLARO, ROXO])
-        fig.update_traces(textposition="inside", textinfo="percent+label",
+        fig.update_traces(textposition="inside", textinfo="percent",  # <-- removeu labels
                           textfont=dict(color="#0b1e2e", family="Inter", size=11))
         fig.update_layout(**layout_chart(300))
         st.plotly_chart(fig, use_container_width=True)
 
-    # EXPORT
     kpis_pdf = {
         "Receita do período": formatar_brl(receita_mes),
         "Atendimentos realizados": str(len(realizados)),
@@ -2120,16 +2107,18 @@ def dash_barbearia():
     c1, c2 = st.columns(2)
     with c1:
         kpi_com_comparacao("RECEITA TOTAL", receita_total, receita_total_ant,
-                          formatter=formatar_brl, label_comp=f"vs {comp_label}")
+                          formatter=formatar_brl, label_comp=f"vs {comp_label}",
+                          icone="💰", tooltip="Receita total (serviços + produtos)")
     with c2:
-        st.metric("ATENDIMENTOS", len(mes_atual))
+        st.metric("ATENDIMENTOS", len(mes_atual), help="Atendimentos realizados nos últimos 30 dias")
 
     c3, c4 = st.columns(2)
     with c3:
         kpi_com_comparacao("TICKET MÉDIO", ticket, ticket_ant,
-                          formatter=formatar_brl, label_comp=f"vs {comp_label}")
+                          formatter=formatar_brl, label_comp=f"vs {comp_label}",
+                          icone="🎫", tooltip="Valor médio por serviço")
     with c4:
-        st.metric("AGENDADOS", agendados)
+        st.metric("AGENDADOS", agendados, help="Atendimentos agendados futuramente")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -2217,7 +2206,6 @@ def dash_barbearia():
         }))
         st.plotly_chart(fig, use_container_width=True)
 
-    # EXPORT
     kpis_pdf = {
         "Receita total": formatar_brl(receita_total),
         "Atendimentos": str(len(mes_atual)),
