@@ -849,39 +849,45 @@ def kpi_card(label, valor_atual, valor_anterior=None, formatter=None, label_comp
     """
     KPI card customizado com comparador.
     Se valor_anterior for fornecido, mostra badge de delta.
+
+    NOTA TÉCNICA: o HTML é intencionalmente minificado (sem quebras de linha)
+    porque o Streamlit, ao receber markdown com indentação ≥4 espaços,
+    interpreta como bloco de código e renderiza as tags como texto literal.
     """
     if formatter is None:
         formatter = formatar_inteiro_br
 
+    # Linha de comparação (minificada)
     if valor_anterior is not None:
         delta, classe, seta = calcular_delta(valor_atual, valor_anterior)
         badge = delta_badge_html(delta, classe, seta)
-        comp_line = f"""
-        <div style="color: #94a3b8; font-size: 0.72rem; margin-top: 4px;">
-            {label_comp}: <strong style="color: #cbd5e1;">{formatter(valor_anterior)}</strong>
-            {badge}
-        </div>
-        """
+        comp_line = (
+            f'<div style="color:#94a3b8;font-size:0.72rem;margin-top:4px;">'
+            f'{label_comp}: <strong style="color:#cbd5e1;">{formatter(valor_anterior)}</strong> '
+            f'{badge}</div>'
+        )
     else:
         comp_line = ""
 
-    st.markdown(f"""
-    <div style="background: linear-gradient(135deg, #1a2e42 0%, #243b54 100%);
-                border: 1px solid rgba(0, 255, 136, 0.2);
-                border-radius: 16px; padding: 1rem;
-                box-shadow: 0 4px 12px -2px rgba(0,0,0,0.3);
-                position: relative; overflow: hidden; margin-bottom: 12px;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px;
-                    background: linear-gradient(90deg, transparent, #00ff88, transparent);
-                    opacity: 0.7;"></div>
-        <div style="color: #94a3b8; font-size: 0.68rem; font-weight: 700;
-                    text-transform: uppercase; letter-spacing: 0.08em;">{label}</div>
-        <div style="color: #00ff88; font-size: 1.6rem; font-weight: 800;
-                    letter-spacing: -0.02em; margin-top: 4px;
-                    text-shadow: 0 0 15px rgba(0,255,136,0.3);">{formatter(valor_atual)}</div>
-        {comp_line}
-    </div>
-    """, unsafe_allow_html=True)
+    # Card principal (minificado em uma linha)
+    html = (
+        '<div style="background:linear-gradient(135deg,#1a2e42 0%,#243b54 100%);'
+        'border:1px solid rgba(0,255,136,0.2);border-radius:16px;padding:1rem;'
+        'box-shadow:0 4px 12px -2px rgba(0,0,0,0.3);position:relative;'
+        'overflow:hidden;margin-bottom:12px;">'
+        '<div style="position:absolute;top:0;left:0;right:0;height:2px;'
+        'background:linear-gradient(90deg,transparent,#00ff88,transparent);'
+        'opacity:0.7;"></div>'
+        f'<div style="color:#94a3b8;font-size:0.68rem;font-weight:700;'
+        f'text-transform:uppercase;letter-spacing:0.08em;">{label}</div>'
+        f'<div style="color:#00ff88;font-size:1.6rem;font-weight:800;'
+        f'letter-spacing:-0.02em;margin-top:4px;'
+        f'text-shadow:0 0 15px rgba(0,255,136,0.3);">{formatter(valor_atual)}</div>'
+        f'{comp_line}'
+        '</div>'
+    )
+
+    st.markdown(html, unsafe_allow_html=True)
 
 
 def carrossel_animado():
